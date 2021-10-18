@@ -15,17 +15,17 @@ Prokaryotes -o fna/ -f Genome1_genomic.fna -N
 
 2.Generating med file from genome annotation provided by Refseq database
 ```
-./Prokaryotes -o med/ -nc Genome1  -a Genome1_feature_table.txt   -M
+./Prokaryotes -o med/ -nc Genome1 -a Genome1_feature_table.txt -M
 ```
 
 3.Translation initiation site correction
 ```
-./TriTISA  Genome1.fna  Genome1.med Tritisa/Genome1
+./TriTISA Genome1.fna Genome1.med Tritisa/Genome1
 ```
 
 4.Extracting TIS upstream sequences
 ```
-./extract -o TISseq/ -g Genome1 -p tis -r result/Genome1.tritisa.rec.dat -n Genome1_genomic.fna"   -l 20 -R 
+./extract -o TISseq/ -g Genome1 -p tis -r result/Genome1.tritisa.rec.dat -n Genome1_genomic.fna -l 20 -R 
 ```
 
 5.Probabilistic modeling for translation initiation signal
