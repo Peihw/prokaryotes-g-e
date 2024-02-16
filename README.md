@@ -1,44 +1,18 @@
-# Prokaryotic genome evolution: a moderate profusion of genetic elements
+# SoDpipe
 
 ## Description
-Ferther details of the codes and results related to the paper can be found herewithin. We provide scripts that allow you to reproduce the results or manage your own data.
+  We developed SoDpipe, an automated bioinformatic pipeline for the identification of redundant genes and translation regulatory elements. The basic protocols consist of redundant gene and translation initiation signal annotation, which in conjunction with virulence factors and resistance genes annotation facilitate large-scale analysis of evolutionary events dominated by redundant genes for prokaryotes, especially for pathogens.
+  The pipeline can handle different types of genomic data for various implementation requirements, including but not limited to genome assembly data and whole genome sequencing data. For genome assembly data from GenBank/RefSeq, the pipeline mainly includes the identification of redundant genes, translation initiation site correction, translation initiation signal annotation, and VF/AMR annotation. Quality control, genome assembly, and genome annotation were also implemented when processing whole genome sequencing data. The final report generated contains detailed information on the redundant clusters, types of translation initiation signals (SD-like, TA-like, or no signal), signal motifs, and the start site of the signal.
 
 
-### Analysis of translation initiation signal 
-*Genome1_genomic.fna and Genome1_feature_table.txt are files of genome sequences and annotations, respectively, which can be download from the Refseq database. (ftp://ftp.ncbi.nlm.nih.gov/genomes/)*
+### For installation
 
 
-1.Splitting the fasta file of genome assembly into fasta file containing single chromosome 
+
+1.Docker 
 ```
-Prokaryotes -o fna/ -f Genome1_genomic.fna -N
+docker pull peihw/sodpipe:1.00
 ```
 
-2.Generating med file from genome annotation provided by Refseq database
-```
-./Prokaryotes -o med/ -nc Genome1 -a Genome1_feature_table.txt -M
-```
+2.Download from the website
 
-3.Translation initiation site correction
-```
-./TriTISA Genome1.fna Genome1.med Tritisa/Genome1
-```
-
-4.Extracting TIS upstream sequences
-```
-./extract -o TISseq/ -g Genome1 -p tis -r result/Genome1.tritisa.rec.dat -n Genome1_genomic.fna -l 20 -R 
-```
-
-5.Probabilistic modeling for translation initiation signal
-```
-./TIS -o model -g Genome1 -f result/Genome1.tis.fa -pb Genome1_genomic.fna -mj 0.52 -mn 0.16 -ep 1.0e-4 -tr 4 -k 10 -r 20 -m 2 -w 8 -M
-```
-
-6.Signal classification 
-```
-./TIS -o signal/Bacteria.sig -g Genome1 -r Bacteria.ref.dat -q model/ -sd 6 -ta 0.75  -l 5 -C
-```
-
-7.Signal scanning
-```
-./TIS -o signal/ -g Genome1  -q model/ -f TISseq/ -d signal/Bacteria.sig -R
-```
