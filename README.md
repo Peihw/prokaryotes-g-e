@@ -5,7 +5,7 @@
 
 ## Workflow
 ![Alt Text](./workflow.png)
-<img src="./image.png" alt="Alt Text" width="300" height="200">
+<img src="./workflow.png" alt="Alt Text" width="300" height="200">
 
 
 ### Installation
