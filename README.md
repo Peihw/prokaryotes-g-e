@@ -45,16 +45,22 @@ snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs
 ```
 4. Output files
    
-   \#reannotation feature file.
-   
-   result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat    
-   result/TISseq/GCF_000005845.2_ASM584v2.tis.fa    #FASTA format of untranslated sequence upstream translation initiation site.
-   result/records/GCF_000005845.2_ASM584v2.tis.rec.dat    #translation initiation signal annotation of all genes within the genome.
-   result/duplication/GCF_000005845.2_ASM584v2.dup    #duplicated gene clustered at setting threshold.
-   result/duplication/GCF_000005845.2_ASM584v2.dup.tis    #translation initiation signal annotation of duplicated genes within the genome.
-   result/TSseq/GCF_000005845.2_ASM584v2.tis.fa    #untranslated sequence for promoter detection
-   result/promoter/GCF_000005845.2_ASM584v2.mp.proseq    #promoter sequence of the maximum posibility.
-   result/duplication/GCF_000005845.2_ASM584v2.info    #a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.
+   \# reannotation feature file.
+   result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat
+   \# FASTA format of untranslated sequence upstream translation initiation site.
+   result/TISseq/GCF_000005845.2_ASM584v2.tis.fa
+   \#translation initiation signal annotation of all genes within the genome.
+   result/records/GCF_000005845.2_ASM584v2.tis.rec.dat
+   \#duplicated gene clustered at setting threshold.
+   result/duplication/GCF_000005845.2_ASM584v2.dup
+   \#translation initiation signal annotation of duplicated genes within the genome.
+   result/duplication/GCF_000005845.2_ASM584v2.dup.tis
+   \#untranslated sequence for promoter detection   
+   result/TSseq/GCF_000005845.2_ASM584v2.tis.fa
+   \#promoter sequence of the maximum posibility.   
+   result/promoter/GCF_000005845.2_ASM584v2.mp.proseq
+   \#a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.   
+   result/duplication/GCF_000005845.2_ASM584v2.info    
 
 ### For whole genome sequencing data
 1. Input files
