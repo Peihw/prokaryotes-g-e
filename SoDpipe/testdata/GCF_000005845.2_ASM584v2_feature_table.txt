@@ -3834,20 +3834,20 @@ gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	191
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1910276	1911649	+	NP_416342.4	WP_001127216.1		putative transporter YebQ	yebQ	946048	b1828	1374	457	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1911695	1912576	-					htpX	946076	b1829	882		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1911695	1912576	-	NP_416343.1	WP_000984520.1		protease HtpX	htpX	946076	b1829	882	293	
-gene	protein_coding	GCF_000005845.2	Primary romosome		NC_000913.3	1916258	1917541	+	NP_416347.1	WP_001207282.1		intermembrane transport protein LetA	letA	946353	b1833	1284	427	
-gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1917510	1920143	+					letB	946352	b1834	2634		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1917510	1920143	+	NP_416348.2	WP_001326728.1		lipophilic envelope spanning tunnel	letB	946352	b1834	2634	877	
-gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1920223	1921662	+					rsmF	946348	b1835	1440		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1920223	1921662	+	NP_416349.2	WP_001352260.1		16S rRNA m(5)C1407 methyltransferase	rsmF	946348	b1835	1440	479	
-gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1921780	1922016	+					yebV	946347	b1836	237		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1921780	1922016	+	NP_416350.4	WP_001295499.1		DUF1480 domain-containing proteAssembly	chromosome		NC_000913.3	1912768	1914816	-					prc	946096	b1830	2049		
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1912768	1914816	-					prc	946096	b1830	2049		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1912768	1914816	-	NP_416344.1	WP_001055791.1		tail-specific protease	prc	946096	b1830	2049	682	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1914836	1915534	-					proQ	948950	b1831	699		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1914836	1915534	-	YP_026161.1	WP_000431381.1		RNA chaperone ProQ	proQ	948950	b1831	699	232	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1915631	1916128	-					msrC	946086	b1832	498		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1915631	1916128	-	NP_416346.4	WP_001043877.1		free methionine-(R)-sulfoxide reductase	msrC	946086	b1832	498	165	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1916258	1917541	+					letA	946353	b1833	1284		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chin YebV	yebV	946347	b1836	237	78	
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1916258	1917541	+	NP_416347.1	WP_001207282.1		intermembrane transport protein LetA	letA	946353	b1833	1284	427	
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1917510	1920143	+					letB	946352	b1834	2634		
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1917510	1920143	+	NP_416348.2	WP_001326728.1		lipophilic envelope spanning tunnel	letB	946352	b1834	2634	877	
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1920223	1921662	+					rsmF	946348	b1835	1440		
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1920223	1921662	+	NP_416349.2	WP_001352260.1		16S rRNA m(5)C1407 methyltransferase	rsmF	946348	b1835	1440	479	
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1921780	1922016	+					yebV	946347	b1836	237		
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1921780	1922016	+	NP_416350.4	WP_001295499.1		DUF1480 domain-containing protein YebV	yebV	946347	b1836	237	78	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1922121	1922312	+					yebW	946354	b1837	192		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1922121	1922312	+	NP_416351.2	WP_000457842.1		DUF1482 domain-containing protein YebW	yebW	946354	b1837	192	63	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	1922313	1922969	-					pphA	946356	b1838	657		
@@ -4780,20 +4780,20 @@ CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	240155
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2402055	2403845	-					nuoC	946759	b2286	1791		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2402055	2403845	-	NP_416789.2	WP_001384057.1		NADH:quinone oxidoreductase subunit CD	nuoC	946759	b2286	1791	596	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2403951	2404613	-					nuoB	946738	b2287	663		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_00 AlaA	alaA	946772	b2290	1218	405	
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2403951	2404613	-	NP_416790.1	WP_000386733.1		NADH:quinone oxidoreductase subunit B	nuoB	946738	b2287	663	220	
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2404629	2405072	-					nuoA	946764	b2288	444		
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2404629	2405072	-	NP_416791.3	WP_000062997.1		NADH:quinone oxidoreductase subunit A	nuoA	946764	b2288	444	147	
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2405703	2406641	-					lrhA	946769	b2289	939		
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2405703	2406641	-	NP_416792.1	WP_000622280.1		DNA-binding transcriptional dual regulator LrhA	lrhA	946769	b2289	939	312	
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2407561	2408778	+					alaA	946772	b2290	1218		
+CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2407561	2408778	+	NP_416793.1	WP_000074527.1		glutamate--pyruvate aminotransferase AlaA	alaA	946772	b2290	1218	405	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2408862	2409461	+					yfbR	946771	b2291	600		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2408862	2409461	+	NP_416794.1	WP_000813859.1		dCMP phosphohydrolase	yfbR	946771	b2291	600	199	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2409520	2411352	-					yfbS	946766	b2292	1833		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2409520	2411352	-	NP_416795.1	WP_001012899.1		putative transporter YfbS	yfbS	946766	b2292	1833	610	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2411439	2412089	-					hxpA	946777	b2293	651		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2411439	2412089	-	NP_416796.2	WP_001203392.1		hexitol phosphatase A	hxpA	946777	b2293	651	216	
-gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2412100	2412594	-					yfbU	94670913.3	2403951	2404613	-	NP_416790.1	WP_000386733.1		NADH:quinone oxidoreductase subunit B	nuoB	946738	b2287	663	220	
-gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2404629	2405072	-					nuoA	946764	b2288	444		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2404629	2405072	-	NP_416791.3	WP_000062997.1		NADH:quinone oxidoreductase subunit A	nuoA	946764	b2288	444	147	
-gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2405703	2406641	-					lrhA	946769	b2289	939		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2405703	2406641	-	NP_416792.1	WP_000622280.1		DNA-binding transcriptional dual regulator LrhA	lrhA	946769	b2289	939	312	
-gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2407561	2408778	+					alaA	946772	b2290	1218		
-CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2407561	2408778	+	NP_416793.1	WP_000074527.1		glutamate--pyruvate aminotransferase67	b2294	495		
+gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2412100	2412594	-					yfbU	946767	b2294	495		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2412100	2412594	-	NP_416797.2	WP_000426124.1		PF03887 family protein YfbU	yfbU	946767	b2294	495	164	
 gene	protein_coding	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2412677	2413132	-					yfbV	946774	b2295	456		
 CDS	with_protein	GCF_000005845.2	Primary Assembly	chromosome		NC_000913.3	2412677	2413132	-	NP_416798.1	WP_000106627.1		PF04217 family membrane protein YfbV	yfbV	946774	b2295	456	151	

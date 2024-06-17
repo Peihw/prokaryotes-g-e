@@ -1,0 +1,14 @@
+#Input genome assembly files
+Genomefna: testdata/GCF_000005845.2_ASM584v2_genomic.fna
+Annotation: testdata/GCF_000005845.2_ASM584v2_feature_table.txt
+List: testdata/GCF_000005845.2_ASM584v2.list
+cds: testdata/GCF_000005845.2_ASM584v2_translated_cds.faa
+
+#parameters
+Reference: bin/parameters/Bacteria.ref.dat
+Length: 20
+identity: 80
+coverage: 0.8
+query_id: 60
+query_cover: 50
+

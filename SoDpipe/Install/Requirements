@@ -1,0 +1,5 @@
+snakemake=4.3.0
+prokka=1.13
+spades=3.13.0
+perl=5.22
+perl-xml-simple

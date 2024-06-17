@@ -1,0 +1,16 @@
+#Input Whole Genome Sequencing files
+Fastq1: testdata/SRR19707997_1.fastq
+Fastq2: testdata/SRR19707997_2.fastq
+Fasta: result/spades_out/SRR19707997/contigs.fasta
+
+
+#parameters
+Genus: Acinetobacter
+Species: baumannii
+Reference: bin/parameters/Bacteria.ref.dat
+Length: 20
+identity: 80
+coverage: 0.8
+query_id: 60
+query_cover: 50
+

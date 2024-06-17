@@ -1,0 +1,251 @@
+configfile: "config_a.yaml"
+
+
+rule all:
+	input:
+		"result/duplication/{sample}.info"
+
+
+## signal annotation pipeline
+
+rule fna_split:
+	input:
+		expand("{genome}",genome=config["Genomefna"])
+	output:
+		temp(touch("result/prepare/fna/{sample}.done"))
+	params:
+		dir="result/prepare/fna/"
+	shell:
+		"./bin/protisa/codes/Prokaryotes -o {params.dir} -f {input} -N"
+
+
+rule med_split:
+	input:
+		list=expand("{list}",list=config["List"]),
+		ft=expand("{ft}",ft=config["Annotation"])
+	output:
+		temp(touch("result/prepare/med/{sample}.done"))
+	params:
+		dir="result/prepare/med/"
+	shell:
+		"while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -a {input.ft} -M; done < {input.list} "
+	
+
+### annotation with tritisa(enable or depress the rule by adding or removing the "#"  at the beginning of the sentence)
+rule tritisa:
+	input:
+		fna="result/prepare/fna/{sample}.done",
+		med="result/prepare/med/{sample}.done",
+		list=expand("{list}",list=config["List"]),
+		ft=expand("{ft}",ft=config["Annotation"])
+	output:
+		"result/Tritisa/{sample}.tritisa.rec.dat"
+	params:
+		dir="result/Tritisa/{sample}"
+	shell:
+		"""
+		./tritisa.sh {input.list}
+		while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -m prepare/Tritisa/$line.tritisa.dat -a {input.ft} -T; done < {input.list} 
+		rm -rf result/prepare/med result/prepare/fna
+		"""	
+		
+
+### annotation without tritisa(enable or depress the rule by adding or removing the "#"  at the beginning of the sentence)
+#rule without_tritisa:
+#	input:
+#		fna="result/prepare/fna/{sample}.done",
+#		med="result/prepare/med/{sample}.done",
+#		list=expand("{list}",list=config["List"]),
+#		ft=expand("{ft}",ft=config["Annotation"])
+#	output:
+#		"result/Tritisa/{sample}.tritisa.rec.dat"
+#	params:
+#		dir="result/Tritisa/{sample}"
+#	shell:
+#		"""
+#		while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -a {input.ft} -T; done < {input.list}
+#		rm -rf result/prepare/med result/prepare/fna
+#		"""
+
+
+rule utr_sequence:
+	input:
+		rec="result/Tritisa/{sample}.tritisa.rec.dat",
+		genome=expand("{genome}",genome=config["Genomefna"])
+	output:
+		"result/TISseq/{sample}.tis.fa"
+	params:
+		dir="result/TISseq/",
+		len=expand("{length}",length=config["Length"])
+	shell:
+		"./bin/extract/extract -o {params.dir} -g {wildcards.sample} -p tis -r {input.rec} -n {input.genome} -l {params.len} -R"
+	
+
+rule signal_identification:
+	input:
+		TISseq="result/TISseq/{sample}.tis.fa",
+		genome=expand("{genome}",genome=config["Genomefna"])
+	output:
+		"result/signal/model/{sample}.sig.dat"
+	params:
+		dir="result/signal/model/"
+	shell:
+		"./bin/TIS/codes/TIS -o {params.dir} -g {wildcards.sample} -f {input.TISseq} -pb {input.genome} -mj 0.52 -mn 0.16 -ep 1.0e-4 -tr 3 -k 9 -r 30 -m 3 -w 8 -M"
+
+
+rule signal_classification:
+	input:
+		TISseq="result/TISseq/{sample}.tis.fa",
+		model="result/signal/model/{sample}.sig.dat"
+	output:
+		sig="result/signal/signal/{sample}.sig",
+	params:
+		ref=expand("{ref}",ref=config["Reference"]),
+		dir="result/signal/model/"
+	shell:
+		"./bin/FP/codes/TIS -o {output.sig} -g {wildcards.sample} -r {params.ref} -q {params.dir} -sd 6 -ta 0.75 -l 5 -C"
+
+
+rule signal_scanning:
+	input:
+		tritisa="result/Tritisa/{sample}.tritisa.rec.dat",
+		model="result/signal/model/{sample}.sig.dat",
+		sig="result/signal/signal/{sample}.sig",
+		TISseq="result/TISseq/{sample}.tis.fa"
+	output:
+		"result/records/{sample}.tis.rec.dat"
+	params:
+		dir="result/records/"
+	shell:
+		"./bin/FP/codes/TIS -o {params.dir} -g {wildcards.sample} -rd result/Tritisa/ -q result/signal/model/ -f result/TISseq/ -d {input.sig} -R"
+
+
+## Promoters detection 
+
+rule longer_utr_sequence:
+	input:
+		rec="result/Tritisa/{sample}.tritisa.rec.dat",
+		genome=expand("{genome}",genome=config["Genomefna"]),
+		dup="result/duplication/{sample}.dup"
+	output:
+		seq1="result/TSseq/{sample}.tis.fa",
+		seq2="result/TSseq/{sample}.dup.tis.fa",
+		list="result/TSseq/{sample}.list"
+	params:
+		dir="result/TSseq/"
+	shell:
+		"""
+		./bin/extract/extract -o {params.dir} -g {wildcards.sample} -p tis -r {input.rec} -n {input.genome} -l 400 -R
+		awk '/^>/&&NR>1 {{print "";}}{{ printf "%s",/^>/ ? $0"%":$0,n="\\n" }}END {{ printf "%s", n }}' {output.seq1} > result/TSseq/{wildcards.sample}.c
+		awk -F'[|\\t]' 'NR==FNR{{a[$3]=$0;}}NR!=FNR && a[$2] {{print a[$2]}}' result/TSseq/{wildcards.sample}.c {input.dup} |tr -s "%" "\n" > {output.seq2}
+		mkdir -p result/TSseq/{wildcards.sample}.seq
+		split -l 2 {output.seq2} result/TSseq/{wildcards.sample}.seq/{wildcards.sample}
+		ls -1 result/TSseq/{wildcards.sample}.seq/ > {output.list}
+		rm -f result/TSseq/{wildcards.sample}.c
+		"""
+		
+rule promoters:
+	input:
+		"result/TSseq/{sample}.list"
+	output:
+		"result/promoter/{sample}.mp.proseq"
+	shell:
+		"""
+		cd bin/promotech/
+		while read line; do python promotech.py -pg -m RF-HOT -f ../../result/TSseq/{wildcards.sample}.seq/$line -o ../../result/promoter/{wildcards.sample}/$line; python promotech.py -g -t 0.6 -i ../../result/promoter/{wildcards.sample}/$line -o ../../result/promoter/{wildcards.sample}/$line; awk -F'\\t' '$5=="+"{{print$0}}' ../../result/promoter/{wildcards.sample}/$line/genome_predictions.csv >> ../../result/promoter/{wildcards.sample}.all.proseq; awk -F'\\t' '$5=="+"{{print$0}}' ../../result/promoter/{wildcards.sample}/$line/genome_predictions.csv | awk -F'\\t'  'BEGIN {{max = 0}} {{if ($4+0 > max+0) {{max=$4 ;content=$0}} }} END {{print content}}' >> ../../result/promoter/{wildcards.sample}.mp.proseq; done < ../../{input}
+		cd ../../
+		rm -rf result/promoter/{wildcards.sample}
+		rm -rf result/TSseq/{wildcards.sample}.seq
+		""" 
+
+
+## Gene duplication pipeline
+
+rule duplication_1:
+	input:
+		cds=expand("{cds}",cds=config["cds"]),
+	output:
+		locus=temp("result/duplication/{sample}.locus"),
+		clust1="result/duplication/{sample}.clust",
+		clust2=temp("result/duplication/{sample}.c2"),
+		vfca="result/duplication/{sample}.vfca"
+	params:
+		idttfd=expand("{idttfd}",idttfd=config["identity"]),
+		coverfd=expand("{coverfd}",coverfd=config["coverage"]),
+		qid=expand("{qid}",qid=config["query_id"]),
+		qc=expand("{qc}",qc=config["query_cover"]),
+	shell:
+		"""
+		awk -F"locus_tag=" '!/^>/ {{ print $0; n = ""}} /^>/ {{ print n ">"$2}} END {{printf "%s", n }}' {input.cds} | awk -F"]" '{{print$1}}' > {output.locus}
+		./bin/blast/bin/blastclust -i {output.locus} -o {output.clust1} -e F -S {params.idttfd} -L {params.coverfd} -b T
+		awk '{{if (NF >1) print $0}}' {output.clust1} | sed 's/ /\\n/g' > {output.clust2}
+		diamond blastp --db bin/db/VFDB --query {output.locus} --out result/duplication/temp.vf1 --outfmt 6 --sensitive --max-target-seqs 1 --evalue 1e-5 --id {params.qid} --query-cover {params.qc} --index-chunks 1
+		diamond blastp --db bin/db/CARD --query {output.locus} --out result/duplication/temp.ca1 --outfmt 6 --sensitive --max-target-seqs 1 --evalue 1e-5 --id {params.qid} --query-cover {params.qc} --index-chunks 1
+		cat result/duplication/temp.vf1 result/duplication/temp.ca1 |awk -F'[\\t@]' '{{print$1"\\t"$3}}' > result/duplication/temp.vfca
+		awk -F'\\t' 'NR==FNR{{a[$1]=$2;}}NR!=FNR && a[$1] {{print $0"\\t"a[$1]}}' result/duplication/temp.vfca {output.clust2} > {output.vfca}
+		rm -f  result/duplication/temp.*
+		"""
+
+
+rule duplication_2:
+	input:
+		"result/duplication/{sample}.c2"
+	output:
+		"result/duplication/{sample}.dup"
+	run:
+		with open(output[0], "w") as fileout:
+			with open(input[0], "r") as filein:
+				newmol = True
+				ele = 1
+				for line in filein:
+					newmol = True
+					if line == '\n':
+						ele = ele + 1
+						newmol = False
+					if newmol == True:
+						fileout.write(str(ele) + '\t' + str(line))	
+
+
+rule integrate_tis:
+	input:
+		dup="result/duplication/{sample}.dup",
+		tis="result/records/{sample}.tis.rec.dat",
+		vfca="result/duplication/{sample}.vfca"
+	output:
+		fin="result/duplication/{sample}.dup.tis"
+	shell:
+		"""
+		cut -f 1-10,17- {input.tis} > result/duplication/{wildcards.sample}.tis
+		awk -F'\\t' 'NR==FNR{{a[$1]=$2;}}NR!=FNR {{print $0"\\t"a[$2]}}'  {input.vfca} {input.dup} >  result/duplication/{wildcards.sample}.dup.vfca
+		awk -F'\\t' 'NR==FNR{{a[$3]=$0;}}NR!=FNR && a[$2] {{print $1"\\t"$3"\\t"a[$2]}}' result/duplication/{wildcards.sample}.tis result/duplication/{wildcards.sample}.dup.vfca > {output.fin}
+		header=`head -n 1 result/duplication/{wildcards.sample}.tis`
+		sed -i '1i\\Cluster Number\tVF/AMR\t'"$header"'' {output.fin}
+		rm -f result/duplication/{wildcards.sample}.tis result/duplication/{wildcards.sample}.dup.vfca
+		"""
+
+
+rule integrate_pro:
+	input:
+		pro="result/promoter/{sample}.mp.proseq",
+		dup="result/duplication/{sample}.dup",
+	output:
+		fin="result/duplication/{sample}.dup.pro"
+	shell:
+		"""
+		awk -F'[|\\t]' 'NR==FNR{{a[$3]=$3"\\t"$0;}}NR!=FNR && a[$2] {{print $1"\\t"a[$2]}}' {input.pro} {input.dup} > {output.fin}
+		sed -i '1i\\Cluster Number\tLocus\tChrom\tStart\tEnd\tScore\tStrand\tPromoter sequence' {output.fin}
+		"""
+
+
+rule integrate_all:
+	input:
+		pro="result/promoter/{sample}.mp.proseq",
+		tis="result/duplication/{sample}.dup.tis"
+	output:
+		"result/duplication/{sample}.info"
+	shell:
+		"""
+		awk -F'[|\\t]' 'NR==FNR{{a[$3]=$NF;}}NR!=FNR{{print $0"\\t"a[$5]}}' {input.pro} {input.tis} > {output}
+		header=`head -n 1 {input.tis}`
+		sed -i '1i\\'"$header"'\tPromoter sequence' {output}
+		"""
