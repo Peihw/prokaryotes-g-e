@@ -44,7 +44,7 @@ docker pull peihw/sodpipe:1.20
 snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs 20
 ```
 4. Output files
-   
+```
    \# reannotation feature file.
    result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat
    \# FASTA format of untranslated sequence upstream translation initiation site.
@@ -61,6 +61,7 @@ snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs
    result/promoter/GCF_000005845.2_ASM584v2.mp.proseq
    \#a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.   
    result/duplication/GCF_000005845.2_ASM584v2.info    
+```
 
 ### For whole genome sequencing data
 1. Input files
