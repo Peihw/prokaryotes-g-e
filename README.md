@@ -45,21 +45,21 @@ snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs
 ```
 4. Output files
 ```
-   \# reannotation feature file.
+   # reannotation feature file.
    result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat
-   \# FASTA format of untranslated sequence upstream translation initiation site.
+   # FASTA format of untranslated sequence upstream translation initiation site.
    result/TISseq/GCF_000005845.2_ASM584v2.tis.fa
-   \#translation initiation signal annotation of all genes within the genome.
+   # translation initiation signal annotation of all genes within the genome.
    result/records/GCF_000005845.2_ASM584v2.tis.rec.dat
-   \#duplicated gene clustered at setting threshold.
+   # duplicated gene clustered at setting threshold.
    result/duplication/GCF_000005845.2_ASM584v2.dup
-   \#translation initiation signal annotation of duplicated genes within the genome.
+   # translation initiation signal annotation of duplicated genes within the genome.
    result/duplication/GCF_000005845.2_ASM584v2.dup.tis
-   \#untranslated sequence for promoter detection   
+   # untranslated sequence for promoter detection   
    result/TSseq/GCF_000005845.2_ASM584v2.tis.fa
-   \#promoter sequence of the maximum posibility.   
+   # promoter sequence of the maximum posibility.   
    result/promoter/GCF_000005845.2_ASM584v2.mp.proseq
-   \#a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.   
+   # a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.   
    result/duplication/GCF_000005845.2_ASM584v2.info    
 ```
 
@@ -73,15 +73,24 @@ snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs
 snakemake -s Snakefile.s result/duplication/SRR19707997.info --job 20
 ```
 4. Output files
-   result/spades_out/SRR19707997/    #genome assembly files.
-   result/prokka_out/SRR19707997/    #genome annotation files.
-   result/Tritisa/SRR19707997.tritisa.rec.dat    #reannotation feature file.
-   result/TISseq/SRR19707997.tis.fa    #FASTA format of untranslated sequence upstream translation initiation site.
-   result/records/SRR19707997.tis.rec.dat    #translation initiation signal annotation of all genes within the genome.
-   result/duplication/SRR19707997.dup    #duplicated gene clustered at setting thresholds.   
-   result/duplication/SRR19707997.dup.tis    #translation initiation signal annotation of duplicated genes within the genome.
-   result/duplication/SRR19707997.info    #a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.
-
+```
+   # genome assembly files.
+   result/spades_out/SRR19707997/
+   # genome annotation files.    
+   result/prokka_out/SRR19707997/
+   # reannotation feature file.
+   result/Tritisa/SRR19707997.tritisa.rec.dat
+   # FASTA format of untranslated sequence upstream translation initiation site.
+   result/TISseq/SRR19707997.tis.fa
+   # translation initiation signal annotation of all genes within the genome.    
+   result/records/SRR19707997.tis.rec.dat
+   # duplicated gene clustered at setting thresholds.     
+   result/duplication/SRR19707997.dup
+   # translation initiation signal annotation of duplicated genes within the genome.
+   result/duplication/SRR19707997.dup.tis
+   # a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.
+   result/duplication/SRR19707997.info    
+```
 ## Tips
 1. The run time for a genome assembly on a "normal" desktop computer is about .
 2. Users can enable or disable the function of translation initiation site reannotation (See SoDpipe/REAME for more details).
