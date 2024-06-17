@@ -44,14 +44,14 @@ docker pull peihw/sodpipe:1.20
 snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs 20
 ```
 4. Output files
-   result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat #reannotation feature file.
-   result/TISseq/GCF_000005845.2_ASM584v2.tis.fa   #FASTA format of untranslated sequence upstream translation initiation site.
-   result/records/GCF_000005845.2_ASM584v2.tis.rec.dat     #translation initiation signal annotation of all genes within the genome.
-   result/duplication/GCF_000005845.2_ASM584v2.dup #duplicated gene clustered at setting threshold.
-   result/duplication/GCF_000005845.2_ASM584v2.dup.tis     #translation initiation signal annotation of duplicated genes within the genome.
+   result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat    #reannotation feature file.
+   result/TISseq/GCF_000005845.2_ASM584v2.tis.fa    #FASTA format of untranslated sequence upstream translation initiation site.
+   result/records/GCF_000005845.2_ASM584v2.tis.rec.dat    #translation initiation signal annotation of all genes within the genome.
+   result/duplication/GCF_000005845.2_ASM584v2.dup    #duplicated gene clustered at setting threshold.
+   result/duplication/GCF_000005845.2_ASM584v2.dup.tis    #translation initiation signal annotation of duplicated genes within the genome.
    result/TSseq/GCF_000005845.2_ASM584v2.tis.fa    #untranslated sequence for promoter detection
-   result/promoter/GCF_000005845.2_ASM584v2.mp.proseq      #promoter sequence of the maximum posibility.
-   result/duplication/GCF_000005845.2_ASM584v2.info        #a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.
+   result/promoter/GCF_000005845.2_ASM584v2.mp.proseq    #promoter sequence of the maximum posibility.
+   result/duplication/GCF_000005845.2_ASM584v2.info    #a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.
 
 ### For whole genome sequencing data
 1. Input files
@@ -63,14 +63,14 @@ snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs
 snakemake -s Snakefile.s result/duplication/SRR19707997.info --job 20
 ```
 4. Output files
-   result/spades_out/SRR19707997/  #genome assembly files.
-   result/prokka_out/SRR19707997/  #genome annotation files.
-   result/Tritisa/SRR19707997.tritisa.rec.dat      #reannotation feature file.
-   result/TISseq/SRR19707997.tis.fa        #FASTA format of untranslated sequence upstream translation initiation site.
-   result/records/SRR19707997.tis.rec.dat  #translation initiation signal annotation of all genes within the genome.
-   result/duplication/SRR19707997.dup      #duplicated gene clustered at setting thresholds.   
-   result/duplication/SRR19707997.dup.tis  #translation initiation signal annotation of duplicated genes within the genome.
-   result/duplication/SRR19707997.info     #a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.
+   result/spades_out/SRR19707997/    #genome assembly files.
+   result/prokka_out/SRR19707997/    #genome annotation files.
+   result/Tritisa/SRR19707997.tritisa.rec.dat    #reannotation feature file.
+   result/TISseq/SRR19707997.tis.fa    #FASTA format of untranslated sequence upstream translation initiation site.
+   result/records/SRR19707997.tis.rec.dat    #translation initiation signal annotation of all genes within the genome.
+   result/duplication/SRR19707997.dup    #duplicated gene clustered at setting thresholds.   
+   result/duplication/SRR19707997.dup.tis    #translation initiation signal annotation of duplicated genes within the genome.
+   result/duplication/SRR19707997.info    #a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms, translation initiation signal motifs, and possible promoter sequences.
 
 ## Tips
 1. The run time for a genome assembly on a "normal" desktop computer is about .
