@@ -44,7 +44,9 @@ docker pull peihw/sodpipe:1.20
 snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs 20
 ```
 4. Output files
+   
    \#reannotation feature file.
+   
    result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat    
    result/TISseq/GCF_000005845.2_ASM584v2.tis.fa    #FASTA format of untranslated sequence upstream translation initiation site.
    result/records/GCF_000005845.2_ASM584v2.tis.rec.dat    #translation initiation signal annotation of all genes within the genome.
