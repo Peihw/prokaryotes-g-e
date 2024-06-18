@@ -1,0 +1,3 @@
+WorkflowError in line 1 of /data4/phwang/snakemake/tool/TriTISA/codes/testfile:
+Workflow defines configfile config.yaml but it is not present or accessible.
+  File "/data4/phwang/snakemake/tool/TriTISA/codes/testfile", line 1, in <module>

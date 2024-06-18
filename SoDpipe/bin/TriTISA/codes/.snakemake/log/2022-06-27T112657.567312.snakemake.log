@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /data4/phwang/snakemake/tool/TriTISA/codes/testfile:
+Missing input files for rule tritisa:
+    affected files:
+        com-data/GCF_000005845.2_ASM584v2.list

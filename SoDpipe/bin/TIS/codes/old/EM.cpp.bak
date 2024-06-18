@@ -1,0 +1,595 @@
+#include "EM.h"
+using namespace std;
+
+align dynamic_program(Str Ref, Str Que) {
+	align res;
+	res.score = 0;
+	Ve_Ve_P mat;
+	Pa_I_I fin;
+	for (int i = 0; i < Ref.length(); i++) {
+		Ve_P col;
+		for (int j = 0; j < Que.length(); j++) {
+			dp tmp;
+			tmp.trace = make_pair(i - 1, j - 1);
+			if (!i || !j) {
+				if (Ref[i] == Que[j])
+					tmp.continuous = tmp.score = 1;
+				else
+					tmp.continuous = tmp.score = 0;
+			}
+			else {
+				if (Ref[i] == Que[j]) {
+					tmp.score = mat[i - 1][j - 1].score + 1;
+					tmp.continuous = mat[i - 1][j - 1].continuous + 1;
+				}
+				else {
+					tmp.score = mat[i - 1][j - 1].score;
+					tmp.continuous = 0;
+				}
+			}
+			if (tmp.score > res.score && (j == Que.length() - 1 || i == Ref.length() - 1)) {
+				res.score = tmp.score;
+				fin = make_pair(i, j);
+			}
+			col.push_back(tmp);
+		}
+		mat.push_back(col);
+	}
+	while (fin.first >= 0 && fin.second >= 0) {
+		res.trace.push_back(fin);
+		fin = mat[fin.first][fin.second].trace;
+	}
+	return res;
+}
+
+Ve_Str alignment(Ma_Str_Str fa, int wid, int thr, int mod) {
+	Ve_Str res;
+	Ma_Str_I count;
+	for (Ma_Str_Str::const_iterator iter = fa.begin(); iter != fa.end(); iter++) {
+		for (int i = 0; i < iter->second.length() - wid + 1; i++) {
+			Str Kmer = iter->second.substr(i, wid);
+			count[Kmer] ++;
+		}
+	}
+	Ve_Pa_Str_I rank(count.begin(), count.end());
+	sort(rank.begin(), rank.end(), CmpByValue());
+	Ve_Pa_Str_I filter;
+	int r = rank.size();
+	r *= 0.03;
+	int inc = 0;
+	for (int i = 0; i < r; i++) 
+		filter.push_back(rank[i]);
+	Ve_Ve_A cand;
+	Ma_Str_I mem;
+	Ma_Str_Se_Str ini;
+	for (int i = 0; i < filter.size(); i++) {
+		Ve_A tmp;
+		mem[filter[i].first] = filter[i].second;
+		for (int j = 0; j < filter.size(); j++) {
+			if (i <= j) {
+				align alg = dynamic_program(filter[i].first, filter[j].first);
+				tmp.push_back(alg);
+				if (alg.score == 7) {
+					ini[filter[i].first].insert(filter[j].first);
+					ini[filter[j].first].insert(filter[i].first);
+				}
+			}
+		}
+		for (Se_Str::iterator iter = ini[filter[i].first].begin(); iter != ini[filter[i].first].end(); iter++){
+			mem[filter[i].first] += count[*iter];
+            mem[*iter] += filter[i].second;
+        }
+		cand.push_back(tmp);
+	}
+	Ma_Str_Str belong;
+	Ma_Str_Se_Str types;
+	for (int i = 0; i < filter.size(); i++) {
+		bool FIND = false;
+		Str Type;
+		if (!belong[filter[i].first].empty())
+			Type = belong[filter[i].first];
+		else {
+			Ma_Str_I cov;
+			if (!ini[filter[i].first].empty()) {
+				for (Se_Str::const_iterator iter = ini[filter[i].first].begin(); iter != ini[filter[i].first].end(); iter++) {
+					if (!belong[*iter].empty())
+						cov[belong[*iter]] += count[*iter];
+				}
+				int best = 0;
+				for (Ma_Str_I::const_iterator ite = cov.begin(); ite != cov.end(); ite++) {
+					if (ite->second > mem[filter[i].first] * 0.3 && ite->second > best) {
+						Type = ite->first;
+						best = ite->second;
+					}
+				}
+				if (Type.empty())
+					Type = filter[i].first;
+			}
+			else
+				Type = filter[i].first;
+			if (!ini[filter[i].first].empty()) {
+				for (Se_Str::const_iterator iter = ini[filter[i].first].begin(); iter != ini[filter[i].first].end(); iter++) {
+					if (belong[*iter].empty()) {
+						types[Type].insert(*iter);
+						belong[*iter] = Type;
+					}
+				}
+			}
+			types[Type].insert(filter[i].first);
+			belong[filter[i].first] = Type;
+		}
+	}
+	Se_Str sub;
+	for (int i = 0; i < filter.size(); i++)
+		sub.insert(belong[filter[i].first]);
+	Ve_Pa_Str_I chosen;
+	for (Se_Str::iterator iter = sub.begin(); iter != sub.end(); iter++) {
+		Str Rep = *iter;
+		int tat = Rep.find("TATAA");
+		int ata = Rep.find("ATAAT");
+		int taa = Rep.find("TAAAAT");
+		int tata = Rep.find("TATAAT");
+		int tac = Rep.find("TATAC");
+		int tatc = Rep.find("TATACT");
+		if (*iter == "TTATTTTT") {
+			bool COR = false;
+			int max = 0;
+			for (Se_Str::iterator ite = types[*iter].begin(); ite != types[*iter].end(); ite++) {
+				Str Tmp = *ite;
+				int pos = Tmp.find("TTTG");
+				if (count[*ite] > max && pos != Str::npos) {
+					Rep = *ite;
+					max = count[*ite];
+					COR = true;
+				}
+			}
+			if (!COR)
+				Rep = "";
+		}
+		else if ((tat != Str::npos || ata != Str::npos || taa != Str::npos) && tata == Str::npos) {
+			bool COR = false;
+			int max = 0;
+			for (Se_Str::iterator ite = types[*iter].begin(); ite != types[*iter].end(); ite++) {
+				Str Tmp = *ite;
+				int pos = Tmp.find("TATAAT");
+				if (count[*ite] > max && pos != Str::npos) {
+					Rep = *ite;
+					max = count[*ite];
+					COR = true;
+				}
+			}
+			if (!COR)
+				Rep = "";
+		}
+		else if (tac != Str::npos && tatc == Str::npos) {
+			bool COR = false;
+			int max = 0;
+			for (Se_Str::iterator ite = types[*iter].begin(); ite != types[*iter].end(); ite++) {
+				Str Tmp = *ite;
+				int pos = Tmp.find("TATACT");
+				if (count[*ite] > max && pos != Str::npos) {
+					Rep = *ite;
+					max = count[*ite];
+					COR = true;
+				}
+			}
+			if (!COR)
+				Rep = "";
+
+		}
+		int hit = 0;
+		for (Se_Str::iterator ite = types[*iter].begin(); ite != types[*iter].end(); ite++)
+			hit += count[*ite];
+		if (!Rep.empty())
+			chosen.push_back(make_pair(Rep, hit));
+	}
+	sort(chosen.begin(), chosen.end(), CmpByValue());
+	bool AG = false;
+	bool CG = false;
+	Str SD = "AAGGAGGTGA";
+	int ch = 0;
+	for (int i = 0; i < chosen.size(); i ++) {
+		bool FIND = false;
+		bool CGF = false;
+		for (int j = 0; j < chosen[i].first.length() - 5; j++) {
+			int a = 0;
+			int g = 0;
+			int c = 0;
+			int cont = 0;
+			int bestcont = 0;
+			Str Chk = chosen[i].first.substr(j, 6);
+			int pos = SD.find(Chk);
+			for (int k = 0; k < 6; k++) {
+				if (chosen[i].first[j + k] == 'A') {
+					a++;
+					cont++;
+				}
+				else if (chosen[i].first[j + k] == 'G') {
+					g++;
+					cont++;
+				}
+				else if (chosen[i].first[j + k] == 'C') 
+					c++;
+				else {
+					if (cont > bestcont)
+						bestcont = cont;
+					cont = 0;
+				}
+			}
+			if (cont > bestcont)
+				bestcont = cont;
+			if (((a + g > 4 || bestcont > 3) && a > 0 && g > 0) || pos != Str::npos)
+				FIND = true;
+			if (c + g > 4 && c > 0 && g > 0)
+				CGF = true;
+		}
+		if ((!FIND || !AG) && (!CGF || !CG)){
+			if (ch < thr) {
+				res.push_back(chosen[i].first);
+				ch++;
+			}
+			if (FIND && !AG)
+				AG = true;
+			if (CGF && !CG)
+				CG = true;
+		}
+	}
+	int m = res.size();
+	m = min(m, thr);
+	if (m < mod) {
+		res.clear();
+		if (chosen.size() > mod) {
+			m = chosen.size();
+			m = min(m, thr);
+			for (int i = 0; i < m; i++)
+				res.push_back(chosen[i].first);
+		}
+		else {
+			for (int i = 0; i < thr; i++)
+				res.push_back(filter[i].first);
+		}
+	}
+	return res;
+}
+
+/*Ve_Str kmer(Ma_Str_Str fa, int wid, int thr, Str Out) {
+	Str Log = Out + ".log";
+	Ofs log(Log.data());
+	Ve_Str res;
+	Ma_Str_I count, cand;
+	for (Ma_Str_Str::const_iterator iter = fa.begin(); iter != fa.end(); iter++) {
+		for (int i = 0; i < iter->second.length() - wid + 1; i++) {
+			Str Kmer = iter->second.substr(i, wid);
+			count[Kmer] ++;
+		}
+	}
+	cout << "All k-mer types: " << count.size() << endl;
+	Ve_Pa_Str_I rank(count.begin(), count.end());
+	sort(rank.begin(), rank.end(), CmpByValue());
+	int chosen = 0;
+	bool AG = false;
+	bool CG = false;
+	for (int i = 0; i < rank.size(); i++) {
+		Str Tmp = nonredundant(rank[i].first, AG, CG, rank[i].second, cand);
+		//Str Tmp = nonredundant(rank[i].first, rank[i].second, cand);
+		log << rank[i].first << "\t" << rank[i].second << "\t" << Tmp << endl;
+		if (!i) {
+			cand[rank[i].first] = rank[i].second;
+			chosen++;
+		}
+		else if (Tmp != "Abandoned") {
+			cand[rank[i].first] = rank[i].second;
+			chosen++;
+		}
+		if (Tmp == "AG rich")
+			AG = true;
+		if (Tmp == "CG rich")
+			CG = true;
+		if (chosen == thr)
+			break;
+	}
+	log.close();
+	for (Ma_Str_I::const_iterator ite = cand.begin(); ite != cand.end(); ite++)
+		res.push_back(ite->first);
+	return res;
+}*/
+
+Ve_Ma_C_D pwm_assign(Str Seq, Ma_C_D pb, double maj, double min) {
+	Ve_Ma_C_D res;
+	for (int i = 0; i < Seq.size(); i++) {
+		Ma_C_D temp;
+		for (int j = 0; j < Base.size(); j++) {
+			if (Base[j] == Seq[i])
+				temp[Seq[i]] = maj / pb[Seq[i]];
+			else
+				temp[Base[j]] = min / pb[Seq[i]];
+		}
+		res.push_back(temp);
+	}
+	return res;
+}
+
+Ma_C_D background(Ma_Str_Str fa) {
+	Ma_C_D res;
+	int sum = 0;
+	for (Ma_Str_Str::const_iterator iter = fa.begin(); iter != fa.end(); iter++) {
+		for (int i = 0; i < iter->second.length(); i++) {
+			if (Base.find(iter->second[i] != Str::npos)) {
+				res[iter->second[i]] ++;
+				sum++;
+			}
+		}
+	}
+	//for (int j = 0; j < Base.length(); j++)
+		//res[Base[j]] /= sum;
+	return res;
+}
+
+Ma_Str_D background_score(Ma_Str_Str fa, Ma_C_D pb) {
+	Ma_Str_D res;
+	for (Ma_Str_Str::const_iterator iter = fa.begin(); iter != fa.end(); iter++) {
+		double b = 0;
+		for (int i = 0; i < iter->second.size(); i++)
+			b += log2(pb[iter->second[i]]);
+		res[iter->first] = b;
+	}
+	return res;
+}
+
+motif EM(motif test, Ma_Str_Str fa, int mod, int reg, double eps, int step) {
+	motif res = test;
+	for (int n = 0; n < step; n++) {
+		Ma_C_D B;
+		for (int v = 0; v < Base.length(); v++)
+			B[Base[v]] = 0;
+		Ve_Ve_Ma_C_D D;
+		for (int m = 0; m < mod; m++) {
+			Ve_Ma_C_D tem;
+			for (int i = 0; i < res.rwm[m].size(); i++) {
+				tem.push_back(B);
+			}
+			D.push_back(tem);
+		}
+		Ve_Ve_D C(mod, Ve_D(reg - res.rwm[0].size() + 1, 0));
+		Ve_Ve_Ve_D lam(mod, Ve_Ve_D(fa.size(), Ve_D(reg - res.rwm[0].size() + 1, 0)));
+		Ma_Str_D bs = background_score(fa, res.pb);
+		int k = 0;
+		double p0 = 0;
+		for (Ma_Str_Str::const_iterator iter = fa.begin(); iter != fa.end(); iter++) {
+			double sumk = res.p0;
+			for (int j = 0; j < reg - res.rwm[0].size() + 1; j++) {
+				for (int m = 0; m < mod; m++) {
+					double prod = 1;
+					for (int i = 0; i < res.rwm[m].size(); i++) {
+						prod *= res.rwm[m][i][iter->second[i + j]];
+					}
+					lam[m][k][j] = prod * res.pj[m][j];
+					sumk += lam[m][k][j];
+				}
+			}
+			res.loglike += log2(sumk) + bs[iter->first];
+			//cout << n << "\t" << iter->first << "\t" << bs[iter->first] << "\t" << res.loglike << endl;
+			p0 += res.p0 / sumk;
+			for (int j = 0; j < reg - res.rwm[0].size() + 1; j++) {
+				for (int m = 0; m < mod; m++) {
+					lam[m][k][j] /= sumk;
+					C[m][j] += lam[m][k][j];
+					for (int i = 0; i < res.rwm[m].size(); i++) {
+						D[m][i][iter->second[i + j]] += lam[m][k][j];
+						B[iter->second[i + j]] -= lam[m][k][j];
+					}
+					//cout << B['C'] << "\t" << lam[m][k][j] << endl;
+				}
+			}
+			k++;
+			//cout << "Background log likelihood:\t" << bs[iter->first] << "\tLog likelihood:\t" << res.loglike << endl;
+		}
+		if (abs(res.loglike - res.last) > eps * abs(res.loglike)) {
+			//cout << res.loglike << endl;
+			res.trace.push_back(res.loglike);
+			res.last = res.loglike;
+			res.loglike = 0;
+			double sumb = 0;
+			for (int v = 0; v < Base.length(); v++) {
+				B[Base[v]] += res.pc[Base[v]];
+				sumb += B[Base[v]];
+			}
+			//pb estimation
+			for (int v = 0; v < Base.length(); v++) {
+				res.pb[Base[v]] = B[Base[v]] / sumb;
+				if (res.pb[Base[v]] < 0)
+					res.pb[Base[v]] = fabs(res.pb[Base[v]]);
+				//cout << Base[v] << "\t" << res.pc[Base[v]] << "\t" << B[Base[v]] << "\t" << res.pb[Base[v]] << endl;
+			}
+			double sumc = 0;
+			for (int m = 0; m < mod; m++) {
+				//cout << endl << m << endl;
+				for (int i = 0; i < res.rwm[m].size(); i++) {
+					double sumd = 0;
+					//cout << i;
+					for (int v = 0; v < Base.length(); v++)
+						sumd += D[m][i][Base[v]];
+					//RWM estimation
+					for (int v = 0; v < Base.length(); v++) {
+						D[m][i][Base[v]] /= sumd;
+						res.rwm[m][i][Base[v]] = D[m][i][Base[v]] / res.pb[Base[v]];
+						//cout << "\t" << res.rwm[m][i][Base[v]];
+					}
+					//cout << endl;
+				}
+				for (int j = 0; j < C[m].size(); j++)
+					sumc += C[m][j];
+			}
+			for (int m = 0; m < mod; m++) {
+				//pj estimation
+				//cout << m << ":";
+				for (int j = 0; j < C[m].size(); j++) {
+					res.pj[m][j] = C[m][j] / (sumc + p0);
+					//cout << "\t" << res.pj[m][j];
+				}
+				//cout << endl;
+			}
+			//p0 estimation
+			res.p0 = p0 / (sumc + p0);
+			//cout << res.p0 << endl;
+		}
+		else {
+			res.trace.push_back(res.loglike);
+			res.last = res.loglike;
+			res.entropy.clear();
+			for (int m = 0; m < mod; m++) {
+				double entropy = 0;
+				for (int i = 0; i < res.rwm[m].size(); i++) {
+					for (int v = 0; v < Base.length(); v++) {
+						if (res.rwm[m][i][Base[v]] == 0)
+							entropy += 0;
+						else
+							entropy += res.pb[Base[v]] * res.rwm[m][i][Base[v]] * log2(res.rwm[m][i][Base[v]]);
+					}
+				}
+				res.entropy.push_back(entropy);
+			}
+			break;
+		}
+	}
+	return res;
+}
+
+Str TIS_motif(Str Out, Str GenoID, Ma_Str_Str fa, double thr, int mod, int wid, double maj, double min, double eps, int trial, Ma_C_D pb) {
+	Str Mod;
+	convertFromNumber(Mod, mod);
+	Out += GenoID + ".sig.dat";
+	Ve_Str km = alignment(fa, wid, thr, mod);
+    Ma_Str_Str::const_iterator ir = fa.begin();
+    int reg = ir->second.length();
+	Ofs out(Out.data());
+	out << "Selected K-mers:" << endl;
+	for (int l = 0; l < km.size(); l++) 
+		out << km[l] << endl;
+	cout << "Selected K-mer types: " << km.size() << endl;
+	long long int max = 1;
+	Ve_I limit;
+	motif res;
+	res.last = -1.0e16;
+	for (int m = 0; m < mod; m++) {
+		limit.push_back(km.size() - mod + 1);
+		max *= km.size() - mod + 1;
+	}
+	int ins = 0;
+	Ve_M cand;
+	Ve_Str fin;
+	for (int k = 0; k < max; k++) {
+		De_I sub = subscript(k, limit);
+		bool Check = true;
+		for (int m = 1; m < mod; m++) {
+			//cout << sub[m - 1] + m - 1 << "\t" << sub[m] + m << endl;
+			if (sub[m - 1] + m - 1 >= sub[m] + m)
+				Check = false;
+		}
+		if (Check) {
+			ins++;
+			cout << "Initialization times: " << ins << endl;
+			motif temp;
+			temp.pb = pb;
+			temp.pc = background(fa);
+			temp.p0 = 1.0 / ((reg - wid + 1) * mod + 1);
+			cout << "Initial Sequences:";
+			Ve_Str ini;
+			for (int m = 0; m < mod; m++) {
+				temp.rwm.push_back(pwm_assign(km[sub[m] + m], temp.pb, maj, min));
+				temp.cons.push_back(km[sub[m] + m]);
+				cout << "\t" << km[sub[m] + m];
+				ini.push_back(km[sub[m] + m]);
+			}
+			Ve_D pj;
+			pj.resize(reg - wid + 1, 1.0 / ((reg - wid + 1) * mod + 1));
+			for (int m = 0; m < mod; m++)
+				temp.pj.push_back(pj);
+			temp.entropy.resize(mod, 0);
+			temp = EM(temp, fa, mod, reg, eps, trial);
+			cout << "\t" << temp.p0 << "\t" << temp.last << endl;
+			if (temp.last > res.last) {
+				res = temp;
+				fin = ini;
+			}
+			/*if (cand.empty())
+				cand.push_back(temp);
+			else {
+				bool INS = false;
+				for (Ve_M::iterator iter = cand.begin(); iter != cand.end(); iter++) {
+					if (temp.last > iter->last) {
+						INS = true;
+						cand.insert(iter, temp);
+						break;
+					}
+				}
+				if (!INS)
+					cand.push_back(temp);
+			}*/
+		}
+	}
+	cout << "Finally chosen K-mers for initialization:" << endl;
+	for (int k = 0; k < fin.size(); k++)
+		cout << "\t" << fin[k];
+	cout << endl;
+	res = EM(res, fa, mod, reg, eps);
+	/*for (int i = 0; i < 1; i++) {
+		motif tmp;
+		tmp = EM(cand[i], fa, mod, reg, eps);
+		if (tmp.last > res.last)
+			res = tmp;
+		cout << i << "\t" << tmp.last << "\t" << res.last << endl;
+	}*/
+	out << "Initial k-mer:";
+	for (int m = 0; m < mod; m++)
+		out << "\t" << res.cons[m];
+	out << endl;
+	out << "Genome:" << endl
+		<< GenoID << endl
+		<< "Features of translation initiation site (TIS) signal:" << endl
+		<< "Final likelihood score of this model:\t" << res.loglike << endl
+		<< "Probability of background nucleotide bias:" << endl
+		<< "\tA\tC\tG\tT" << endl;
+	for (int r = 0; r < Base.length(); r++)
+		out << "\t" << res.pb[Base[r]];
+	out << endl << "Probabilities of TIS start position:" << endl
+		<< "No signal:" << endl << "\t" << res.p0 << endl;
+	for (int r = 0; r < res.pj.size(); r++) {
+		out << "Motif" << r + 1 << ":" << endl;
+		for (int q = 0; q < res.pj[r].size(); q++)
+			out << "\t" << res.pj[r][q];
+		out << endl;
+	}
+	bool EXC = false;
+	for (int s = 0; s < Base.length(); s++) {
+		if (res.pb[Base[s]] > 0.4) {
+			cout << Base[s] << " as " << res.pb[Base[s]] << " exceeds 0.4!" << endl;
+			EXC = true;
+		}
+	}
+	for (int r = 0; r < res.rwm.size(); r++) {
+		Str Motif;
+		out << "Position weight matrix (PWM) of Motif" << r + 1 << ":" << endl;
+		//<< "\tA\tC\tG\tT" << endl;
+		for (int q = 0; q < res.rwm[r].size(); q++) {
+			//out << q + 1;
+			double last = 0;
+			int base = 0;
+			for (int s = 0; s < Base.length(); s++) {
+				if (res.rwm[r][q][Base[s]] * res.pb[Base[s]] > last) {
+					last = res.rwm[r][q][Base[s]] * res.pb[Base[s]];
+					base = s;
+				}
+			}
+			Motif += Base[base];
+			for (int s = 0; s < Base.length(); s++)
+				out << "\t" << res.rwm[r][q][Base[s]] * res.pb[Base[s]];
+			out << endl;
+		}
+		out << "Consensus sequenece of Motif" << r + 1 << ":\t" << Motif << endl;
+		out << "Relative entropy of Motif" << r + 1 << ":\t" << res.entropy[r] << endl;
+	}
+	out.close();
+	return "TIS signals of " + Mod + " types have been modeled!";
+}
+

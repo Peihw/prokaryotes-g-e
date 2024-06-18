@@ -1,0 +1,122 @@
+Signal type:
+SD-like
+Features of standard Shine-Dalgarno RBS TIS signal in Bacteria:
+Final likelihood score of this model:	-291222
+Probability of background nucleotide bias:
+	A	C	G	T
+	0.146808	0.422899	0.186143	0.24415
+Position weight matrix (PWM) of Motif1:
+	0.989965	7.72103e-72	0.000250407	0.00978507
+	1	2.26517e-23	4.1506e-08	1.41805e-27
+	0.00317641	3.79861e-33	0.985807	0.0110161
+	0.000462755	2.034e-36	0.999537	1.2032e-91
+	0.999585	9.37977e-28	0.000164544	0.000250407
+	0.000423229	1.21718e-28	0.999317	0.000259626
+	0.0150228	3.79658e-43	0.984709	0.000268407
+	5.38188e-72	1.04369e-40	1.70786e-08	1
+	0.0386878	1.81514e-121	0.961312	7.64967e-27
+	0.973527	0.000250525	5.58958e-08	0.0262228
+	3.24064e-95	5.1042e-66	3.08999e-83	1
+Consensus sequenece of Motif1:	AAGGAGGTGAT
+Relative entropy of Motif1:	31.7552
+Signal type:
+TA-like
+Features of canonical leaderless TIS signal in bacteria (GCF_000005845.2_ASM584v2):
+Final likelihood score of this model:	-129114
+Probability of background nucleotide bias:
+	A	C	G	T
+	0.274547	0.210829	0.211234	0.303391
+Position weight matrix (PWM) of Motif2:
+	0.0451217	0.090846	0.0515363	0.812496
+	0.936807	0.000631329	0.0307691	0.0317927
+	0.24566	0.138882	0.147783	0.467675
+	0.532446	0.126622	0.13196	0.208973
+	0.516937	0.248007	0.127179	0.107878
+	0.0249048	0.0216436	0.004034	0.949418
+Consensus sequenece of Motif2:	TATAAT
+Relative entropy of Motif2:	4.25122
+Signal type:
+AC-rich RBS
+Features of non-canonical AC-rich RBS TIS signal in halophilic archaea (GCF_001190965.1_ASM119096v1):
+Final likelihood score of this model:	-214140
+Probability of background nucleotide bias:
+	A	C	G	T
+	0.1958	0.332843	0.2934	0.177957
+Position weight matrix (PWM) of Motif2:
+	0.324264	0.285409	0.150566	0.239761
+	0.119465	0.665671	0.144604	0.0702601
+	0.180242	0.110081	0.595354	0.114323
+	0.537896	0.143398	0.0929183	0.225788
+	0.112671	0.8048	0.0578197	0.0247094
+	0.0931642	0.141843	0.651552	0.113441
+Consensus sequenece of Motif2:	ACGACG
+Relative entropy of Motif2:	3.0852
+Signal type:
+A-rich RBS
+Features of non-canonical A-rich RBS TIS signal in Bacteroidetes (GCF_000022945.1_ASM2294v1):
+Final likelihood score of this model:	-15065
+Probability of background nucleotide bias:
+	A	C	G	T
+	0.479056	0.0451796	0.0770942	0.39867
+Position weight matrix (PWM) of Motif1:
+	0.569603	0.0116518	0.182641	0.236103
+	0.842437	1.40554e-08	0.023392	0.134171
+	0.852174	0.00126363	0.141876	0.00468728
+	0.9245	0.0712688	0.000546498	0.00368439
+	0.939552	0.00988495	0.00280335	0.0477598
+	0.710254	0.000109329	0.189764	0.0998723
+	0.76556	0.0426157	0.13815	0.0536743
+	0.898384	0.038573	0.00944344	0.0535996
+Consensus sequenece of Motif1:	AAAAAAAA
+Relative entropy of Motif1:	4.57367
+Signal type:
+TANNTTTG-like
+Features of non-canonical leaderless TIS signal in Bacteroidetes (GCF_000025925.1_ASM2592v1):
+Final likelihood score of this model:	-218018
+Probability of background nucleotide bias:
+	A	C	G	T
+	0.376674	0.157703	0.170585	0.295039
+Position weight matrix (PWM) of Motif2:
+	0.00618181	0.00931003	0.0136493	0.970859
+	0.952162	0.0108985	0.0165202	0.0204188
+	0.245143	0.309984	0.00676762	0.438106
+	0.10171	0.567668	0.0101579	0.320465
+	0.00444929	0.00515547	0.0183388	0.972056
+	0.00073158	0.00283196	0.00700564	0.989431
+	7.68355e-05	0.00206472	0.000552341	0.997306
+	0.00189343	0.00870116	0.975751	0.0136547
+Consensus sequenece of Motif2:	TATCTTTG
+Relative entropy of Motif2:	11.1726
+Signal type:
+RPS1 RBS
+Features of non-canonical RBS TIS signal recognized by RPS1 (GCF_000016085.1_ASM1608v1):
+Final likelihood score of this model:	-138801
+Probability of background nucleotide bias:
+	A	C	G	T
+	0.293447	0.264117	0.205193	0.237243
+Position weight matrix (PWM) of Motif1:
+	0.139737	0.12567	0.203528	0.531066
+	0.0621709	0.150968	0.112296	0.674565
+	0.0772423	0.143174	0.0661833	0.7134
+	0.03508	0.144073	0.027674	0.793173
+	0.0279236	0.189632	0.0699368	0.712507
+	0.0870538	0.200989	0.137254	0.574703
+	0.120714	0.174645	0.0554214	0.64922
+	0.137015	0.241613	0.142902	0.478471
+Consensus sequenece of Motif1:	TTTTTTTT
+Relative entropy of Motif1:	4.87251
+Signal type:
+C-rich RPS1 RBS
+Features of C-rich non-canonical RBS TIS signal recognized by RPS1 in Cyanobacteria (GCF_000284135.1_ASM28413v1):
+Final likelihood score of this model:	-124459
+Probability of background nucleotide bias:
+	A	C	G	T
+	0.278584	0.22379	0.159354	0.338271
+Position weight matrix (PWM) of Motif2:
+	0.188043	0.205719	0.0941608	0.512078
+	0.229781	0.295737	0.135565	0.338917
+	0.271547	0.321679	0.249803	0.156971
+	0.00471247	0.92897	0.00790582	0.058412
+	0.0378177	0.714763	0.00954966	0.237869
+Consensus sequenece of Motif1:	TCCCC
+Relative entropy of Motif1:	2.98477

@@ -1,0 +1,17 @@
+__pycache__
+genome/__pycache__
+sequences/__pycache__
+core/__pycache__
+ui/__pycache__
+models/RF-TETRA.model
+models/RF-HOT.model
+models/RF-HOT.model
+*.model
+*.pyc
+*.pyc
+ui/__pycache__/GUI.cpython-36.pyc
+commands.txt
+Dockerfile
+.vscode
+.DS_Store
+/.idea
