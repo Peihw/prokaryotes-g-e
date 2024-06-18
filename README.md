@@ -4,7 +4,7 @@
   We developed SoDpipe, an automated bioinformatic pipeline for the identification of redundant genes and translation regulatory elements. The basic protocols consist of redundant gene and translation initiation signal annotation, which in conjunction with virulence factors and resistance genes annotation facilitate large-scale analysis of evolutionary events dominated by redundant genes for prokaryotes, especially for pathogens. The pipeline can handle different types of genomic data for various implementation requirements, including but not limited to genome assembly data and whole genome sequencing data. For genome assembly data from GenBank/RefSeq, the pipeline mainly includes the identification of redundant genes, translation initiation site correction, translation initiation signal annotation, and VF/AMR annotation. Quality control, genome assembly, and genome annotation were also implemented when processing whole genome sequencing data. The final report generated contains detailed information on the redundant clusters, types of translation initiation signals (SD-like, TA-like, or no signal), signal motifs, and the start site of the signal.
 
 ## Workflow
-<img src="./workflow.png" alt="Alt Text" width="600" height="800">
+<img src="./workflow.png" alt="Alt Text" width="550" height="800">
 
 
 ## Installation
@@ -15,7 +15,7 @@
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 bash miniconda.sh -b
 ```
-2. Download SoDpipe.
+2. Download SoDpipe and use conda to create an environment.
 ```
 cd SoDpipe
 conda env create --name SoDpipe --file Install/environment.yaml
@@ -92,6 +92,7 @@ snakemake -s Snakefile.s result/duplication/SRR19707997.info --job 20
    result/duplication/SRR19707997.info    
 ```
 ## Tips
-1. The run time for a genome assembly on a "normal" desktop computer is about .
-2. Users can enable or disable the function of translation initiation site reannotation (See SoDpipe/REAME for more details).
-3. For genomic data in other formats, We recommend reannotating the genome with Prokka and continuing the following analyses with "Snakefile.s" or "Snakefile.st". Users can edit the "Fasta" option in "config_s.yaml" with the information of your FASTA file.
+1. Creating the SoDpipe environment on a normal desktop computer (RAM:32GB) takes about 9 minutes.
+2. Running an end-to-end command on a genome assembly using a normal desktop computer (RAM:32GB) takes about .
+3. Users can enable or disable the function of translation initiation site reannotation (See SoDpipe/REAME for more details).
+4. For genomic data in other formats, We recommend reannotating the genome with Prokka and continuing the following analyses with "Snakefile.s" or "Snakefile.st". Users can edit the "Fasta" option in "config_s.yaml" with the information of your FASTA file.
