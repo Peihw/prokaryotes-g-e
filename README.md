@@ -64,15 +64,15 @@ snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs
 ```
 
 ### For whole genome sequencing data
-1. Input files
+#### 1. Input files
    SoDpipe also takes paired-end whole genome sequencing data (*_1.fastq, *_2.fastq) as input.
-2. Configuration
+#### 2. Configuration
    The config_s.yaml file allows you to define the parameters and their values (See SoDpipe/REAME for more details).
-3. Command for an end-to-end test that will execute the entire pipeline in one go.
+#### 3. Command for an end-to-end test that will execute the entire pipeline in one go.
 ```
 snakemake -s Snakefile.s result/duplication/SRR19707997.info --job 20
 ```
-4. Output files
+#### 4. Output files
 ```
    # genome assembly files.
    result/spades_out/SRR19707997/
