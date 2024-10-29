@@ -94,5 +94,5 @@ snakemake -s Snakefile.s result/duplication/SRR19707997.info --job 20
 ## Tips
 1. Creating the SoDpipe environment on a normal desktop computer (RAM:32GB) takes about 9 minutes.
 2. Running an end-to-end command on a genome assembly using a normal desktop computer (RAM:32GB) takes about 138 minutes.
-3. Users can enable or disable the function of translation initiation site reannotation (See SoDpipe/REAME for more details).
-4. For genomic data in other formats, We recommend reannotating the genome with Prokka and continuing the following analyses with "Snakefile.s" or "Snakefile.st". Users can edit the "Fasta" option in "config_s.yaml" with the information of your FASTA file.
+3. Users can enable or disable the function of translation initiation site reannotation by specifying their preferences in the config_a.yaml or config_s.yaml files.
+4. Users can choose between blastclust, CD-HIT, or MMseqs2 for identifying duplicated genes by specifying their preferences in the config_a.yaml or config_s.yaml files.
