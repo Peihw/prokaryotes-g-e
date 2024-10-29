@@ -1,7 +1,7 @@
 # SoDpipe
 
 ## Description
-  We developed SoDpipe, an automated bioinformatic pipeline for the identification of redundant genes and translation regulatory elements. The basic protocols consist of redundant gene and translation initiation signal annotation, which in conjunction with virulence factors and resistance genes annotation facilitate large-scale analysis of evolutionary events dominated by redundant genes for prokaryotes, especially for pathogens. The pipeline can handle different types of genomic data for various implementation requirements, including but not limited to genome assembly data and whole genome sequencing data. For genome assembly data from GenBank/RefSeq, the pipeline mainly includes the identification of redundant genes, translation initiation site correction, translation initiation signal annotation, and VF/AMR annotation. Quality control, genome assembly, and genome annotation were also implemented when processing whole genome sequencing data. The final report generated contains detailed information on the redundant clusters, types of translation initiation signals (SD-like, TA-like, or no signal), signal motifs, and the start site of the signal.
+  We developed SoDpipe, an automated bioinformatic pipeline for the identification of redundant genes and translation regulatory elements. SoDpipe provides a framework to support genomic surveillance of the occurrence, gene expression and adaptive evolution from the perspective of gene redundancy for prokaryotes, especially for pathogen. SoDpipe takes both genome assembly data and whole genome sequencing data as input and automatically performs the analysis of the data all through a single command-line instruction. It generates a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms (SD-like, TA-like, Atypical, or no signal), translation initiation signal motifs, and possible promoter sequences.
 
 ## Workflow
 <img src="./workflow.png" alt="Alt Text" width="550" height="800">
@@ -35,15 +35,15 @@ docker pull peihw/sodpipe:1.20
 
 ## Step-by-Step tutorial
 ### For genome assembly from GenBank/RefSeq
-1. Input files
+#### 1. Input files
    SoDpipe takes FASTA format of the genomic sequences (*_genomic.fna), tab-delimited text file reporting annotated features (*_feature_table.txt), FASTA format of the sequences corresponding to all CDS (*_translated_cds.faa or other translated amino acid sequence) as input.
-2. Configuration
+#### 2. Configuration
    The config_a.yaml file allows you to define the parameters and their values (See SoDpipe/REAME for more details).
-3. Command for an end-to-end test that will execute the entire pipeline in one go.
+#### 3. Command for an end-to-end test that will execute the entire pipeline in one go.
 ```
 snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs 20
 ```
-4. Output files
+#### 4. Output files
 ```
    # reannotation feature file.
    result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat
