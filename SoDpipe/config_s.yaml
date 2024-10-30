@@ -1,16 +1,32 @@
-#Input Whole Genome Sequencing files
+## Input Whole Genome Sequencing files
 Fastq1: testdata/SRR19707997_1.fastq
 Fastq2: testdata/SRR19707997_2.fastq
 Fasta: result/spades_out/SRR19707997/contigs.fasta
 
 
-#parameters
+## Parameters
 Genus: Acinetobacter
 Species: baumannii
 Reference: bin/parameters/Bacteria.ref.dat
 Length: 20
-identity: 80
-coverage: 0.8
 query_id: 60
 query_cover: 50
+
+## Tools: blastclust, cdhit, mmseqs
+Tools: mmseqs
+  #threshold for blastclust
+identity_b: 80
+coverage_b: 0.8
+  #threshold for cdhit
+identity_c: 0.8
+coverage_c: 0.8
+  #threshold for mmseqs:
+identity_m: 0.8
+coverage_m: 0.8
+covmode: 5
+clustermode: 2
+
+## Enable Tritisa
+Tritisa: False 
+
 

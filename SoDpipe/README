@@ -1,7 +1,7 @@
  ==================================
 	Introduction
  ===================================
-SoDpipe is an integration pipeline for automatically analyzing redundant genes and their regulations in prokaryotes. SoDpipe provides a framework to support genomic surveillance of the occurrence, gene expression and adaptive evolution from the perspective of gene redundancy for prokaryotes, especially for pathogen. SoDpipe takes both genome assembly and whole genome sequencing data as input and automatically performs the analysis of the data all through a single command-line instruction. It generates a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms (SD-like, TA-like, Atypical, or no signal), translation initiation signal motifs, and possible promoter sequences.
+SoDpipe is an integration pipeline for automatically analyzing redundant genes and their regulation elements in prokaryotes. SoDpipe provides a framework to support genomic surveillance of the occurrence, gene expression and adaptive evolution from the perspective of gene redundancy for prokaryotes, especially for pathogen. SoDpipe takes both genome assembly and whole genome sequencing data as input and automatically performs the analysis of the data all through a single command-line instruction. It generates a detailed report of the duplicated gene clusters, function annotation, virulence factors, antimicrobe resistance, types of translation initiation mechanisms (SD-like, TA-like, Atypical, or no signal), translation initiation signal motifs, and possible promoter sequences.
  ===================================
 	Step-by-Step tutorial
  ===================================
@@ -22,7 +22,7 @@ SoDpipe is an integration pipeline for automatically analyzing redundant genes a
 	- diamond makedb --in bin/db/VFDB.faa -d bin/db/VFDB
 
 ## Docker
-	- docker pull peihw/sodpipe:1.20 
+	- docker pull peihw/sodpipe:2.00 
 
 # Invoking SoDpipe
 
@@ -34,19 +34,35 @@ SoDpipe is an integration pipeline for automatically analyzing redundant genes a
    2. Configuration
 	The config_a.yaml file allows you to define the parameters and their values.
 	----------------------------------------------------------------------------
-	#Input genome assembly files
+	## Input genome assembly files
 	Genomefna: path to your genomic sequence file, e.g., testdata/GCF_000005845.2_ASM584v2_genomic.fna.
 	Annotation: path to your annotation file, e.g., testdata/GCF_000005845.2_ASM584v2_feature_table.txt.
 	cds: path to your CDS sequence file, e.g., testdata/GCF_000005845.2_ASM584v2_translated_cds.faa.
 	List: path to your file with a list of accession numbers in the genomic file, e.g., testdata/GCF_000005845.2_ASM584v2.list.
 
-	#Parameters
+	## Parameters
 	Reference: bin/parameters/Bacteria.ref.dat	#Bacteria.ref.dat for bacteria and Archaea.ref.dat for archaea.
 	Length: 20	#length of untranslated regions upstream translation initiation site. 20 was recommended for bacteria and 30 for archaea.
-	identity: 80	#identity threshold of duplicated genes.
-	coverage: 0.8		#coverage threshold of duplicated genes.
-	query_id: 60	#minimum identity% for VF/AMR annotation.
-	query_cover: 50	#minimum query cover% for VF/AMR annotation.
+	query_id: 60	#0-100; minimum identity% for VF/AMR annotation.
+	query_cover: 50	#0-100; minimum query cover% for VF/AMR annotation.
+	
+	## Tools: blastclust, cdhit, mmseqs
+	Tools: mmseqs	#blastclust, cdhit, or mmseqs; tools for identifying duplicated genes.
+	  #threshold for blastclust
+	identity_b: 80	#0-100; identity threshold of duplicated genes.
+	coverage_b: 0.8	#0-1; coverage threshold of duplicated genes.
+	  #threshold for cdhit
+	identity_c: 0.8	#0-1; identity threshold of duplicated genes.
+	coverage_c: 0.8	#0-1; coverage threshold of duplicated genes.
+	  #threshold for mmseqs:
+	identity_m: 0.8	#0-1; identity threshold of duplicated genes.
+	coverage_m: 0.8	#0-1; coverage threshold of duplicated genes.
+	covmode: 5      #0: coverage of query and target; 1: coverage of target; 2: coverage of query; 3: target seq. length has to be at least x% of query length; 4: query seq. length has to be at least x% of target length; 5: short seq. needs to be at least x% of the other seq. length.   
+
+        clustermode: 2  #0: Set-Cover (greedy); 1: Connected component (BLASTclust); 2,3: Greedy clustering by sequence length (CDHIT).
+
+	## Enable Tritisa
+	Tritisa: True	#True or False; reannotation of translation initiation site with Tritisa. 
         ----------------------------------------------------------------------------
 
    3. Software usage
@@ -61,7 +77,6 @@ SoDpipe is an integration pipeline for automatically analyzing redundant genes a
 	#Getting detailed report of duplicated genes.
 	- snakemake -s Snakefile.a result/duplication/GCF_000005845.2_ASM584v2.info --jobs 20
 
-	#Translation initiation site reannotation was enabled by default, users can enable or depress the rule of tritisa or without_tritisa by adding or removing the "#" at the beginning of the sentence in Snakefile.a.
 
    4. Output files
 	result/Tritisa/GCF_000005845.2_ASM584v2.tritisa.rec.dat	#reannotation feature file. 
@@ -82,20 +97,34 @@ SoDpipe is an integration pipeline for automatically analyzing redundant genes a
    2. Configuration
 	The config_s.yaml file allows you to define the parameters and their values.
         ----------------------------------------------------------------------------
-	#Input Whole Genome Sequencing files
+	## Input Whole Genome Sequencing files
 	Fastq1: path to your FASTQ format file, e.g., testdata/SRR19707997_1.fastq.
 	Fastq2: path to your FASTQ format file, e.g., testdata/SRR19707997_2.fastq.
 	Fasta: path to your FASTA format file, e.g., result/spades_out/SRR19707997/contigs.fasta. It can be the output file of Spades or your FASTA format file.
 
-	#Parameters
+	## Parameters
 	Genus: Acinetobacter	#specify a genus for prokka.
 	Species: baumannii	#specify a species for prokka.
 	Reference: bin/parameters/Bacteria.ref.dat	#Bacteria.ref.dat for bacteria and Archaea.ref.dat for archaea.
 	Length: 20	#length of untranslated regions upstream translation initiation site. 20 was recommended for bacteria and 30 for archaea.
-	identity: 80	#identity threshold of duplicated genes.
-	coverage: 0.8		#coverage threshold of duplicated genes.
-	query_id: 60    #minimum identity% for VF/AMR annotation.
-        query_cover: 50 #minimum query cover% for VF/AMR annotation.
+	query_id: 60    #0-100; minimum identity% for VF/AMR annotation.
+        query_cover: 50 #0-100; minimum query cover% for VF/AMR annotation.
+
+	## Tools: blastclust, cdhit, mmseqs
+	Tools: mmseqs   #blastclust, cdhit, or mmseqs; tools for identifying duplicated genes.
+	  #threshold for blastclust
+	identity_b: 80  #0-100; identity threshold of duplicated genes.
+	coverage_b: 0.8 #0-1; coverage threshold of duplicated genes.
+	  #threshold for cdhit
+	identity_c: 0.8 #0-1; identity threshold of duplicated genes.
+	coverage_c: 0.8 #0-1; coverage threshold of duplicated genes.
+	  #threshold for mmseqs:
+	identity_m: 0.8 #0-1; identity threshold of duplicated genes.
+	coverage_m: 0.8 #0-1; coverage threshold of duplicated genes.
+	covmode: 5	#0: coverage of query and target; 1: coverage of target; 2: coverage of query; 3: target seq. length has to be at least x% of query length; 4: query seq. length has to be at least x% of target length; 5: short seq. needs to be at least x% of the other seq. length.	
+	clustermode: 2	#0: Set-Cover (greedy); 1: Connected component (BLASTclust); 2,3: Greedy clustering by sequence length (CDHIT).
+	## Enable Tritisa
+	Tritisa: True   #True or False; reannotation of translation initiation site with Tritisa.
         ----------------------------------------------------------------------------
 
    3. Software usage
@@ -107,8 +136,6 @@ SoDpipe is an integration pipeline for automatically analyzing redundant genes a
 	- snakemake -s Snakefile.s result/duplication/SRR19707997.dup.tis --jobs 20
 	#Getting detailed report of duplicated genes.
 	- snakemake -s Snakefile.s result/duplication/SRR19707997.info --job 20
-	#Translation initiation site reannotation was disabled by default when analyzing contigs data, users can enable tritisa by using the “Snakefile.st”file. e.g.,
-	- snakemake -s Snakefile.st result/records/SRR19707997.tis.rec.dat --jobs 20
 	Users can also take scaffolds as input by editing the config_s.yaml file, e.g.,
 		Fasta: result/spades_out/SRR19707997/scaffolds.fasta
 

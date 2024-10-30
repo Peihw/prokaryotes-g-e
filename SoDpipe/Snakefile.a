@@ -1,5 +1,5 @@
 configfile: "config_a.yaml"
-
+import re
 
 rule all:
 	input:
@@ -31,41 +31,41 @@ rule med_split:
 		"while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -a {input.ft} -M; done < {input.list} "
 	
 
-### annotation with tritisa(enable or depress the rule by adding or removing the "#"  at the beginning of the sentence)
-rule tritisa:
-	input:
-		fna="result/prepare/fna/{sample}.done",
-		med="result/prepare/med/{sample}.done",
-		list=expand("{list}",list=config["List"]),
-		ft=expand("{ft}",ft=config["Annotation"])
-	output:
-		"result/Tritisa/{sample}.tritisa.rec.dat"
-	params:
-		dir="result/Tritisa/{sample}"
-	shell:
-		"""
-		./tritisa.sh {input.list}
-		while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -m prepare/Tritisa/$line.tritisa.dat -a {input.ft} -T; done < {input.list} 
-		rm -rf result/prepare/med result/prepare/fna
-		"""	
-		
+# annotation with tritisa
+if config["Tritisa"] == True:
+	rule tritisa:
+		input:
+			fna="result/prepare/fna/{sample}.done",
+			med="result/prepare/med/{sample}.done",
+			list=expand("{list}",list=config["List"]),
+			ft=expand("{ft}",ft=config["Annotation"])
+		output:
+			"result/Tritisa/{sample}.tritisa.rec.dat"
+		params:
+			dir="result/Tritisa/{sample}"
+		shell:
+			"""
+			./tritisa.sh {input.list}
+			while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -m prepare/Tritisa/$line.tritisa.dat -a {input.ft} -T; done < {input.list} 
+			rm -rf result/prepare/med result/prepare/fna
+			"""	
 
-### annotation without tritisa(enable or depress the rule by adding or removing the "#"  at the beginning of the sentence)
-#rule without_tritisa:
-#	input:
-#		fna="result/prepare/fna/{sample}.done",
-#		med="result/prepare/med/{sample}.done",
-#		list=expand("{list}",list=config["List"]),
-#		ft=expand("{ft}",ft=config["Annotation"])
-#	output:
-#		"result/Tritisa/{sample}.tritisa.rec.dat"
-#	params:
-#		dir="result/Tritisa/{sample}"
-#	shell:
-#		"""
-#		while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -a {input.ft} -T; done < {input.list}
-#		rm -rf result/prepare/med result/prepare/fna
-#		"""
+elif config["Tritisa"] == False:
+	rule without_tritisa:
+		input:
+			fna="result/prepare/fna/{sample}.done",
+			med="result/prepare/med/{sample}.done",
+			list=expand("{list}",list=config["List"]),
+			ft=expand("{ft}",ft=config["Annotation"])
+		output:
+			"result/Tritisa/{sample}.tritisa.rec.dat"
+		params:
+			dir="result/Tritisa/{sample}"
+		shell:
+			"""
+			while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir} -nc $line -a {input.ft} -T; done < {input.list}
+			rm -rf result/prepare/med result/prepare/fna
+			"""
 
 
 rule utr_sequence:
@@ -161,56 +161,117 @@ rule promoters:
 
 ## Gene duplication pipeline
 
-rule duplication_1:
+rule duplication_pre:
 	input:
 		cds=expand("{cds}",cds=config["cds"]),
 	output:
-		locus=temp("result/duplication/{sample}.locus"),
-		clust1="result/duplication/{sample}.clust",
-		clust2=temp("result/duplication/{sample}.c2"),
-		vfca="result/duplication/{sample}.vfca"
+		locus="result/duplication/{sample}.locus",
+		vfca="result/duplication/{sample}.all_vfca"
 	params:
-		idttfd=expand("{idttfd}",idttfd=config["identity"]),
-		coverfd=expand("{coverfd}",coverfd=config["coverage"]),
 		qid=expand("{qid}",qid=config["query_id"]),
 		qc=expand("{qc}",qc=config["query_cover"]),
 	shell:
 		"""
 		awk -F"locus_tag=" '!/^>/ {{ print $0; n = ""}} /^>/ {{ print n ">"$2}} END {{printf "%s", n }}' {input.cds} | awk -F"]" '{{print$1}}' > {output.locus}
-		./bin/blast/bin/blastclust -i {output.locus} -o {output.clust1} -e F -S {params.idttfd} -L {params.coverfd} -b T
-		awk '{{if (NF >1) print $0}}' {output.clust1} | sed 's/ /\\n/g' > {output.clust2}
 		diamond blastp --db bin/db/VFDB --query {output.locus} --out result/duplication/temp.vf1 --outfmt 6 --sensitive --max-target-seqs 1 --evalue 1e-5 --id {params.qid} --query-cover {params.qc} --index-chunks 1
 		diamond blastp --db bin/db/CARD --query {output.locus} --out result/duplication/temp.ca1 --outfmt 6 --sensitive --max-target-seqs 1 --evalue 1e-5 --id {params.qid} --query-cover {params.qc} --index-chunks 1
-		cat result/duplication/temp.vf1 result/duplication/temp.ca1 |awk -F'[\\t@]' '{{print$1"\\t"$3}}' > result/duplication/temp.vfca
-		awk -F'\\t' 'NR==FNR{{a[$1]=$2;}}NR!=FNR && a[$1] {{print $0"\\t"a[$1]}}' result/duplication/temp.vfca {output.clust2} > {output.vfca}
+		cat result/duplication/temp.vf1 result/duplication/temp.ca1 |awk -F'[\\t@]' '{{print$1"\\t"$3}}' > {output.vfca}
 		rm -f  result/duplication/temp.*
 		"""
 
+if config["Tools"] == "blastclust":
+	rule blastclust:
+		input:
+			locus="result/duplication/{sample}.locus",
+		output:
+			clust1="result/duplication/{sample}.clust",
+			dup="result/duplication/{sample}.dup"
+		params:
+			coverfd=config["coverage_b"],
+			idttfd=config["identity_b"]
+		run:
+			shell_cmd1 = f"./bin/blast/bin/blastclust -i {input.locus} -o {output.clust1} -e F -S {params.idttfd} -L {params.coverfd} -b T"
+			shell(shell_cmd1)
+			with open(output[0], 'r') as infile, open(output[1], 'w') as outfile:
+				cluster_id = 1
+				for line in infile:
+					elements = line.strip().split()
+					if len(elements) > 1:
+						for item in elements:
+							outfile.write(f"{cluster_id}\t{item}\n")
+						cluster_id += 1
 
-rule duplication_2:
-	input:
-		"result/duplication/{sample}.c2"
-	output:
-		"result/duplication/{sample}.dup"
-	run:
-		with open(output[0], "w") as fileout:
-			with open(input[0], "r") as filein:
-				newmol = True
-				ele = 1
-				for line in filein:
-					newmol = True
-					if line == '\n':
-						ele = ele + 1
-						newmol = False
-					if newmol == True:
-						fileout.write(str(ele) + '\t' + str(line))	
+elif config["Tools"] == "cdhit":
+	rule cdhit:
+		input:
+			locus="result/duplication/{sample}.locus",
+		output:
+			dup="result/duplication/{sample}.dup",
+			clstr1="result/duplication/{sample}.clstr",
+		params:
+			coverfd=config["coverage_c"],
+			idttfd=config["identity_c"],
+			dir="result/duplication/{sample}"
+		run:
+			shell_cmd = f"cd-hit -i {input.locus} -o {params.dir} -c {params.idttfd} -aS {params.coverfd} -d 0"
+			shell(shell_cmd)
+			with open(output[1], "r") as f, open(output[0], "w") as out_f:
+				new_cluster_id = 1
+				cluster_entries = []
+				for line in f:
+					if line.startswith(">Cluster"):
+						if len(cluster_entries) > 1:
+							for entry in cluster_entries:
+								out_f.write(f"{new_cluster_id}\t{entry}\n")
+							new_cluster_id += 1
+						cluster_entries = []
+					else:
+						entry = re.search(r'>([^ ]+?)(?=\.\.\.| |$)', line)
+						if entry:
+							cluster_entries.append(entry.group(1))
+				if len(cluster_entries) > 1:
+					for entry in cluster_entries:
+						out_f.write(f"{new_cluster_id}\t{entry}\n")
 
-
+elif config["Tools"] == "mmseqs":
+	rule mmseqs:
+		input:
+			locus="result/duplication/{sample}.locus",
+		output:
+			dup="result/duplication/{sample}.dup",
+			clust="result/duplication/{sample}_cluster.tsv"
+		params:
+			coverfd=config["coverage_m"],
+			idttfd=config["identity_m"],
+			covmod=config["covmode"],
+			clustermode=config["clustermode"],
+			dir="result/duplication/{sample}"
+		run:
+			shell_cmd = f"mmseqs easy-cluster {input.locus} {params.dir} result/duplication/tmp --min-seq-id {params.idttfd} -c {params.coverfd} --cov-mode {params.covmod}  --cluster-mode {params.clustermode}"
+			shell(shell_cmd)
+			with open(output[1], "r") as f, open(output[0], "w") as out_f:
+				clusters = []
+				cluster_id = 1
+				for line in f:
+					first, second = line.strip().split()
+					if not clusters or clusters[-1][0] != first:
+						if len(clusters) > 1:
+							for item in clusters:
+								out_f.write(f"{cluster_id}\t{item[1]}\n")
+							cluster_id += 1
+						clusters = [(first, second)]
+					else:
+						clusters.append((first, second))
+				if len(clusters) > 1:
+					for item in clusters:
+						out_f.write(f"{cluster_id}\t{item[1]}\n")
+			
+	
 rule integrate_tis:
 	input:
 		dup="result/duplication/{sample}.dup",
 		tis="result/records/{sample}.tis.rec.dat",
-		vfca="result/duplication/{sample}.vfca"
+		vfca="result/duplication/{sample}.all_vfca"
 	output:
 		fin="result/duplication/{sample}.dup.tis"
 	shell:

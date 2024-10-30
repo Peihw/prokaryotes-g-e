@@ -1,12 +1,12 @@
 configfile: "config_s.yaml"
-
+import re
 
 rule all:
 	input:
 		"result/duplication/{sample}.info"
 
 
-##Assembly pipeline
+## Assembly pipeline
 
 rule data_clean:
 	input:
@@ -57,28 +57,52 @@ rule Prokka:
 		"""
 	
 
-##Signal annotation pipeline
+## Signal annotation pipeline
 
-rule data_reformat:
-	input:
-		gff="result/prokka_out/{sample}/{sample}.gff",
-	output:
-		ft="result/prokka_out/{sample}/{sample}.ft",
-		dat="result/wtotri/{sample}.tritisa.rec.dat"
-	shell:
-		"""
-		awk -F'[\\t=;]' -v name={wildcards.sample} '!/^#/{{print$3"\\t""\\t"name.1"\\t""\\t""\\t""\\t"$1"\\t"$4"\\t"$5"\\t"$7"\\t"$16"\\t""\\t""\\t"$24"\\t""\\t"$14"\\t"$10"\\t""\\t""\\t"0}}' {input.gff} > {output.ft} 
-		sed -i '1i#' {output.ft}
-		sed -i '/^	/d' {output.ft}
-		grep "CDS" {output.ft} | awk -F'\\t' '{{print$7"\\t"$10"\\t"$17"\\t""\\t""\\t"$8"\\t"$9"\\t""\\t""NA""\\t""CDS"}}' > {output.dat} 
-		header="Genomic Accession\tStrand\tLocus\tGene Name\tProduct\tGene Start\tGene End\tAnnotation Reference\tStart Codon Shift(5'-,3'+)\tFeature"
-		sed -i '1i\\'"$header"'' {output.dat}
-		"""
+if config["Tritisa"] == True:
+	rule tritisa:
+		input:
+			ft="result/prokka_out/{sample}/{sample}.ft",
+			genome="result/prokka_out/{sample}/{sample}.fna"
+		output:
+			list=temp("result/prokka_out/{sample}/{sample}.list"),
+			tritisa="result/Tritisa/{sample}.tritisa.rec.dat"
+		params:
+			dir1="result/prepare/fna/",
+			dir2="result/prepare/med/",
+			dir3="result/Tritisa/{sample}"
+		shell:
+			"""
+			./bin/protisa/codes/Prokaryotes -o {params.dir1} -f {input.genome} -N
+			awk -F'\\t' '{{print$7}}' {input.ft} |sort|uniq > {output.list}
+			while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir2} -nc $line -a {input.ft} -M; done < {output.list}
+			./tritisa.sh {output.list}
+			while read line; do ./bin/protisa/codes/Prokaryotes -o {params.dir3} -nc $line -m prepare/Tritisa/$line.tritisa.dat -a {input.ft} -T; done < {output.list}
+			rm -rf result/prepare/fna/
+			rm -rf result/prepare/med/
+			"""
+
+elif config["Tritisa"] == False:
+	rule without_tritisa:
+		input:
+			gff="result/prokka_out/{sample}/{sample}.gff",
+		output:
+			ft="result/prokka_out/{sample}/{sample}.ft",
+			dat="result/Tritisa/{sample}.tritisa.rec.dat"
+		shell:
+			"""
+			awk -F'[\\t=;]' -v name={wildcards.sample} '!/^#/{{print$3"\\t""\\t"name.1"\\t""\\t""\\t""\\t"$1"\\t"$4"\\t"$5"\\t"$7"\\t"$16"\\t""\\t""\\t"$24"\\t""\\t"$14"\\t"$10"\\t""\\t""\\t"0}}' {input.gff} > {output.ft} 
+			sed -i '1i#' {output.ft}
+			sed -i '/^	/d' {output.ft}
+			grep "CDS" {output.ft} | awk -F'\\t' '{{print$7"\\t"$10"\\t"$17"\\t""\\t""\\t"$8"\\t"$9"\\t""\\t""NA""\\t""CDS"}}' > {output.dat} 
+			header="Genomic Accession\tStrand\tLocus\tGene Name\tProduct\tGene Start\tGene End\tAnnotation Reference\tStart Codon Shift(5'-,3'+)\tFeature"
+			sed -i '1i\\'"$header"'' {output.dat}
+			"""
 
 
 rule utr_sequence:
 	input:
-		dat="result/wtotri/{sample}.tritisa.rec.dat",
+		dat="result/Tritisa/{sample}.tritisa.rec.dat",
 		genome="result/prokka_out/{sample}/{sample}.fna"
 	output:
 		"result/TISseq/{sample}.tis.fa"
@@ -116,7 +140,7 @@ rule signal_classification:
 
 rule signal_scanning:
 	input:
-		dat="result/wtotri/{sample}.tritisa.rec.dat",
+		dat="result/Tritisa/{sample}.tritisa.rec.dat",
 		model="result/signal/model/{sample}.sig.dat",
 		sig="result/signal/signal/{sample}.sig",
 		TISseq="result/TISseq/{sample}.tis.fa"
@@ -132,7 +156,7 @@ rule signal_scanning:
 
 rule longer_utr_sequence:
 	input:
-		rec="result/wtotri/{sample}.tritisa.rec.dat",
+		rec="result/Tritia/{sample}.tritisa.rec.dat",
 		genome="result/prokka_out/{sample}/{sample}.fna",
 		dup="result/duplication/{sample}.dup"
 	output:
@@ -168,56 +192,124 @@ rule promoters:
 		"""
 
 
-##Gene duplication pipeline
+## Gene duplication pipeline
 
-rule duplication_1:
+rule duplication_pre:
 	input:
 		cds="result/prokka_out/{sample}/{sample}.faa",
 	output:
-		clust1="result/duplication/{sample}.clust",
-		clust2=temp("result/duplication/{sample}.c2"),
-		vfca="result/duplication/{sample}.vfca"
+		#clust1="result/duplication/{sample}.clust",
+		#clust2=temp("result/duplication/{sample}.c2"),
+		vfca="result/duplication/{sample}.all_vfca"
 	params:
-		idttfd=expand("{idttfd}",idttfd=config["identity"]),
-		coverfd=expand("{coverfd}",coverfd=config["coverage"]),
+		#idttfd=expand("{idttfd}",idttfd=config["identity"]),
+		#coverfd=expand("{coverfd}",coverfd=config["coverage"]),
 		qid=expand("{qid}",qid=config["query_id"]),
 		qc=expand("{qc}",qc=config["query_cover"]),
 	shell:
 		"""
-		./bin/blast/bin/blastclust -i {input.cds} -o {output.clust1} -e F -S {params.idttfd} -L {params.coverfd} -b T
-		awk '{{if (NF >1) print $0}}' {output.clust1} | sed 's/ /\\n/g' > {output.clust2}
+		#./bin/blast/bin/blastclust -i {input.cds} -o {output.clust1} -e F -S {params.idttfd} -L {params.coverfd} -b T
+		#awk '{{if (NF >1) print $0}}' {output.clust1} | sed 's/ /\\n/g' > {output.clust2}
 		diamond blastp --db bin/db/VFDB --query {input.cds} --out result/duplication/temp.vf1 --outfmt 6 --sensitive --max-target-seqs 1 --evalue 1e-5 --id {params.qid} --query-cover {params.qc} --index-chunks 1
 		diamond blastp --db bin/db/CARD --query {input.cds} --out result/duplication/temp.ca1 --outfmt 6 --sensitive --max-target-seqs 1 --evalue 1e-5 --id {params.qid} --query-cover {params.qc} --index-chunks 1
-		cat result/duplication/temp.vf1 result/duplication/temp.ca1 |awk -F'[\\t@]' '{{print$1"\\t"$3}}' > result/duplication/temp.vfca
-		awk -F'\\t' 'NR==FNR{{a[$1]=$2;}}NR!=FNR && a[$1] {{print $0"\\t"a[$1]}}' result/duplication/temp.vfca {output.clust2} > {output.vfca}
+		cat result/duplication/temp.vf1 result/duplication/temp.ca1 |awk -F'[\\t@]' '{{print$1"\\t"$3}}' > {output.vfca}
+		#awk -F'\\t' 'NR==FNR{{a[$1]=$2;}}NR!=FNR && a[$1] {{print $0"\\t"a[$1]}}' result/duplication/temp.vfca {output.clust2} > {output.vfca}
 		rm -f  result/duplication/temp.* 
 		"""
 
+if config["Tools"] == "blastclust":
+	rule blastclust:
+		input:
+			cds="result/prokka_out/{sample}/{sample}.faa"
+		output:
+			clust1="result/duplication/{sample}.clust",
+			dup="result/duplication/{sample}.dup"
+		params:
+			coverfd=config["coverage_b"],
+			idttfd=config["identity_b"]
+		run:
+			shell_cmd1 = f"./bin/blast/bin/blastclust -i {input.cds} -o {output.clust1} -e F -S {params.idttfd} -L {params.coverfd} -b T"
+			shell(shell_cmd1)
+			with open(output[0], 'r') as infile, open(output[1], 'w') as outfile:
+				cluster_id = 1
+				for line in infile:
+					elements = line.strip().split()
+					if len(elements) > 1:
+						for item in elements:
+							outfile.write(f"{cluster_id}\t{item}\n")
+						cluster_id += 1
 
-rule duplication_2:
-	input:
-		"result/duplication/{sample}.c2"
-	output:
-		"result/duplication/{sample}.dup"
-	run:
-		with open(output[0], "w") as fileout:
-			with open(input[0], "r") as filein:
-				newmol = True
-				ele = 1
-				for line in filein:
-					newmol = True
-					if line == '\n':
-						ele = ele + 1
-						newmol = False
-					if newmol == True:
-						fileout.write(str(ele) + '\t' + str(line))	
+elif config["Tools"] == "cdhit":
+	rule cdhit:
+		input:
+			cds="result/prokka_out/{sample}/{sample}.faa"
+		output:
+			dup="result/duplication/{sample}.dup",
+			clstr1="result/duplication/{sample}.clstr",
+		params:
+			coverfd=config["coverage_c"],
+			idttfd=config["identity_c"],
+			dir="result/duplication/{sample}"
+		run:
+			shell_cmd = f"cd-hit -i {input.cds} -o {params.dir} -c {params.idttfd} -aS {params.coverfd} -d 0"
+			shell(shell_cmd)
+			with open(output[1], "r") as f, open(output[0], "w") as out_f:
+				new_cluster_id = 1
+				cluster_entries = []
+				for line in f:
+					if line.startswith(">Cluster"):
+						if len(cluster_entries) > 1:
+							for entry in cluster_entries:
+								out_f.write(f"{new_cluster_id}\t{entry}\n")
+							new_cluster_id += 1
+						cluster_entries = []
+					else:
+						entry = re.search(r'>([^ ]+?)(?=\.\.\.| |$)',line)
+						if entry:
+							cluster_entries.append(entry.group(1))
+				if len(cluster_entries) > 1:
+					for entry in cluster_entries:
+						out_f.write(f"{new_cluster_id}\t{entry}\n")
+
+elif config["Tools"] == "mmseqs":
+	rule mmseqs:
+		input:
+			cds="result/prokka_out/{sample}/{sample}.faa"
+		output:
+			dup="result/duplication/{sample}.dup",
+			clust="result/duplication/{sample}_cluster.tsv"
+		params:
+			coverfd=config["coverage_m"],
+			idttfd=config["identity_m"],
+			covmod=config["covmode"],
+			clustermode=config["clustermode"],
+			dir="result/duplication/{sample}"
+		run:
+			shell_cmd = f"mmseqs easy-cluster {input.cds} {params.dir} result/duplication/tmp --min-seq-id {params.idttfd} -c {params.coverfd} --cov-mode {params.covmod}  --cluster-mode {params.clustermode}"
+			shell(shell_cmd)
+			with open(output[1], "r") as f, open(output[0], "w") as out_f:
+				clusters = []
+				cluster_id = 1
+				for line in f:
+					first, second = line.strip().split()
+					if not clusters or clusters[-1][0] != first:
+						if len(clusters) > 1:
+							for item in clusters:
+								out_f.write(f"{cluster_id}\t{item[1]}\n")
+							cluster_id += 1
+						clusters = [(first, second)]
+					else:
+						clusters.append((first, second))
+				if len(clusters) > 1:
+					for item in clusters:
+						out_f.write(f"{cluster_id}\t{item[1]}\n")
 
 
 rule integrate_tis:
 	input:
 		dup="result/duplication/{sample}.dup",
 		tis="result/records/{sample}.tis.rec.dat",
-		vfca="result/duplication/{sample}.vfca"
+		vfca="result/duplication/{sample}.all_vfca"
 	output:
 		fin="result/duplication/{sample}.dup.tis"
 	shell:

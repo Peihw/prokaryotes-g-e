@@ -1,20 +1,13 @@
 name: SoDpipev2
 channels:
+  - anaconda
   - bioconda/label/cf201901
   - biobuilds
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
-  - anaconda
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
-  - conda-forge
   - bioconda
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
   - defaults
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
-  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
   - _openmp_mutex=4.5=2_kmp_llvm
@@ -42,10 +35,11 @@ dependencies:
   - brotlipy=0.7.0=py36he6145b8_1001
   - bzip2=1.0.8=h516909a_3
   - c-ares=1.15.0=h516909a_1001
-  - ca-certificates=2020.6.20=hecda079_0
+  - ca-certificates=2024.9.24=h06a4308_0
   - cachecontrol=0.12.6=py_0
   - cachetools=4.1.0=py_1
-  - certifi=2020.6.20=py36h9880bd3_2
+  - cd-hit=4.8.1=hdbcaa40_0
+  - certifi=2021.5.30=py36h06a4308_0
   - cffi=1.14.0=py36he30daa8_1
   - chardet=3.0.4=py36h9880bd3_1008
   - click=7.1.2=pyh9f0ad1d_0
@@ -66,6 +60,7 @@ dependencies:
   - freetype=2.10.2=he06d7ca_0
   - ftputil=3.2=py36_0
   - gast=0.2.2=py_0
+  - gawk=5.1.0=h7b6447c_0
   - gdbm=1.18.1=h14c3975_0
   - glib=2.65.0=h3eb4bd4_0
   - gmp=6.2.1=h58526e2_0
@@ -130,6 +125,7 @@ dependencies:
   - mkl-service=2.3.0=py36he8ac12f_0
   - mkl_fft=1.1.0=py36h23d657b_0
   - mkl_random=1.1.1=py36h830a2c2_0
+  - mmseqs2=13.45111=h2d02072_0
   - more-itertools=8.4.0=py_0
   - msgpack-python=1.0.0=py36h51d7077_2
   - multidict=2.1.6=py36_0
@@ -141,7 +137,7 @@ dependencies:
   - numpy-base=1.19.1=py36hfa32c7d_0
   - oauthlib=3.1.0=pyhd8ed1ab_0
   - openjdk=11.0.1=h516909a_1016
-  - openssl=1.1.1g=h516909a_1
+  - openssl=1.1.1w=h7f8727e_0
   - opt_einsum=3.1.0=py_0
   - packaging=20.4=pyh9f0ad1d_0
   - pandas=0.22.0=py36_1
@@ -249,6 +245,7 @@ dependencies:
   - urllib3=1.25.9=py_0
   - wcwidth=0.2.5=pyh9f0ad1d_2
   - werkzeug=1.0.1=pyh9f0ad1d_0
+  - wget=1.20.1=h20c2e04_0
   - wheel=0.34.2=py_1
   - wrapt=1.12.1=py36h1d69622_2
   - xlsxwriter=1.2.9=pyh9f0ad1d_0
@@ -257,4 +254,4 @@ dependencies:
   - yarl=0.10.3=py36_0
   - zipp=3.1.0=py_0
   - zlib=1.2.11=h36c2ea0_1013
-prefix: /data/phwang/miniconda3/envs/SoDpipev2
+prefix: /home/pp/miniconda3/envs/SoDpipev2
