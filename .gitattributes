@@ -1,1 +1,5 @@
 intermediate_data/clustcogvalilocusmatrix80 filter=lfs diff=lfs merge=lfs -text
+Custom_code filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+intermediate_data filter=lfs diff=lfs merge=lfs -text
+workflow.png filter=lfs diff=lfs merge=lfs -text
