@@ -23,7 +23,7 @@ conda activate SoDpipe
 ```
 3. Install the dependencies listed in Install/Requirements and setup dbs.
 ```
-prokka 鈥搒etupdb
+prokka -setupdb
 diamond makedb --in bin/db/CARD.faa -d bin/db/CARD
 diamond makedb --in bin/db/VFDB.faa -d bin/db/VFDB
 ```
