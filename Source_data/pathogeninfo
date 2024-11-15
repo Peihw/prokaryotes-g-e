@@ -1,0 +1,1804 @@
+List of pathogens collected from KEGG database and MPD.
+
+#KEGG
+Escherichia coli O157:H7 EDL933 (EHEC)	Human pathogen
+Escherichia coli O157:H7 Sakai (EHEC)	Human pathogen
+Escherichia coli O157:H7 EC4115 (EHEC)	Human pathogen
+Escherichia coli O157:H7 TW14359 (EHEC)	Human pathogen
+Escherichia coli O157:H7 Xuzhou21 (EHEC)	Human pathogen
+Escherichia coli O111:H- 11128 (EHEC)	Human pathogen
+Escherichia coli O26:H11 11368 (EHEC)	Human pathogen
+Escherichia coli O103:H2 12009 (EHEC)	Human pathogen
+Escherichia coli O145:H28 RM13514 (EHEC)	Human pathogen
+Escherichia coli O145:H28 RM13516 (EHEC)	Human pathogen
+Escherichia coli O104:H4 2011C-3493 (EAEC)	Human pathogen
+Escherichia coli O104:H4 2009EL-2071 (EAEC)	Human pathogen
+Escherichia coli O104:H4 2009EL-2050 (EAEC)	Human pathogen
+Escherichia coli 55989 (EAEC)	Human pathogen
+Escherichia coli O127:H6 E2348/69 (EPEC)	Human pathogen
+Escherichia coli O55:H7 CB9615 (EPEC)	Human pathogen
+Escherichia coli O55:H7 RM12579 (EPEC)	Human pathogen
+Escherichia coli O78:H11:K80 H10407 (ETEC)	Human pathogen
+Escherichia coli O139:H28 E24377A (ETEC)	Human pathogen
+Escherichia coli UMNK88 (ETEC, porcine)	Animal pathogen
+Escherichia coli O6:K15:H31 536 (UPEC)	Human pathogen
+Escherichia coli NA114 (UPEC)	Human pathogen
+Escherichia coli O25b:K100:H4-ST131 EC958 (UPEC)	Human pathogen
+Escherichia coli APEC O1 (APEC)	Animal pathogen
+Escherichia coli APEC O78 (APEC)	Animal pathogen
+Escherichia coli O17:K52:H18 UMN026 (ExPEC)	Human pathogen
+Escherichia coli O7:K1 IAI39 (ExPEC)	Human pathogen
+Escherichia coli O7:K1 CE10	Human pathogen
+Escherichia coli O18:K1:H7 UTI89 (UPEC)	Human pathogen
+Escherichia coli O18:K1:H7 IHE3034 (ExPEC)	Human pathogen
+Escherichia coli O45:K1:H7 S88 (ExPEC)	Human pathogen
+Escherichia coli O6:K2:H1 CFT073 (UPEC)	Human pathogen
+Escherichia coli O44:H18 042 (EAEC)	Human pathogen
+Escherichia coli O83:H1 NRG 857C (AIEC)	Human pathogen
+Escherichia coli ABU 83972	Human pathogen
+Escherichia coli UM146	Human pathogen
+Escherichia coli LF82	Human pathogen
+Escherichia coli O18:K1 PMV-1 (ExPEC)	Human pathogen
+Escherichia coli JJ1886	Human pathogen
+Escherichia albertii	Human pathogen, Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhi CT18	Human pathogen
+Salmonella enterica subsp. enterica serovar Typhi Ty2	Human pathogen
+Salmonella enterica subsp. enterica serovar Typhi P-stx-12	Human pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium LT2	Animal pathogen, Human pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium 14028S	Animal pathogen, Human pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium D23580	Human pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium SL1344	Human pathogen, Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium T000240	Animal pathogen, Human pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium UK-1	Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium ST4/74	Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium 798	Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium U288	Human pathogen, Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium var. 5- CFSAN001921	Human pathogen, Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium DT2	Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium DT104	Human pathogen, Animal pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium 138736	Human pathogen
+Salmonella enterica subsp. enterica serovar Paratyphi A ATCC9150	Human pathogen
+Salmonella enterica subsp. enterica serovar Paratyphi A AKU12601	Human pathogen
+Salmonella enterica subsp. enterica serovar Paratyphi B	Human pathogen
+Salmonella enterica subsp. enterica serovar Paratyphi C	Human pathogen
+Salmonella enterica subsp. enterica serovar Choleraesuis	Human pathogen, Animal pathogen
+Salmonella enterica subsp. enterica serovar Heidelberg SL476	Human pathogen
+Salmonella enterica subsp. enterica serovar Heidelberg B182	Human pathogen, Animal pathogen
+Salmonella enterica subsp. enterica serovar Heidelberg CFSAN002069	Human pathogen
+Salmonella enterica subsp. enterica serovar Heidelberg 41578	Human pathogen
+Salmonella enterica subsp. enterica serovar Newport SL254	Human pathogen
+Salmonella enterica subsp. enterica serovar Schwarzengrund	Human pathogen
+Salmonella enterica subsp. enterica serovar Agona SL483	Human pathogen
+Salmonella enterica subsp. enterica serovar Agona 24249	Human pathogen
+Salmonella enterica subsp. enterica serovar Dublin	Human pathogen
+Salmonella enterica subsp. enterica serovar Gallinarum 287/91	Animal pathogen
+Salmonella enterica subsp. enterica serovar Gallinarum/pullorum RKS5078	Animal pathogen
+Salmonella enterica subsp. enterica serovar Enteritidis P125109	Human pathogen
+Salmonella enterica subsp. enterica serovar Cubana	Human pathogen
+Salmonella enterica subsp. arizonae	Human pathogen
+Shigella flexneri 301 (serotype 2a)	Human pathogen
+Shigella flexneri 2457T (serotype 2a)	Human pathogen
+Shigella flexneri 8401 (serotype 5b)	Human pathogen
+Shigella flexneri 2002017 (serotype Fxv)	Human pathogen
+Shigella flexneri NCTC1 (serotype 2a)	Human pathogen
+Shigella sonnei Ss046	Human pathogen
+Shigella boydii Sb227 (serotype 4)	Human pathogen
+Shigella boydii CDC 3083-94 (serotype 18)	Human pathogen
+Shigella dysenteriae Sd197	Human pathogen
+Shigella dysenteriae 1617 (serotype 1)	Human pathogen
+Enterobacter cloacae subsp. cloacae ATCC 13047	Human pathogen, Plant pathogen
+Enterobacter hormaechei subsp. xiangfangensis	Human pathogen
+Enterobacter hormaechei subsp. steigerwaltii	Human pathogen
+Enterobacter hormaechei subsp. hormaechei	Human pathogen
+Enterobacter hormaechei subsp. hoffmannii ECNIH3	Human pathogen
+Enterobacter hormaechei subsp. hoffmannii ECR091	Human pathogen
+Enterobacter kobei ENHKU01	Plant pathogen
+Enterobacter ludwigii EcWSU1	Human pathogen, Plant pathogen
+Enterobacter roggenkampii 35734	Human pathogen
+Cronobacter sakazakii ATCC BAA-894	Human pathogen
+Cronobacter sakazakii ES15	Human pathogen
+Cronobacter sakazakii ATCC 29544	Human pathogen
+Cronobacter turicensis	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae MGH 78578 (serotype K52)	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae NTUH-K2044 (serotype K1)	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae HS11286	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae 1084 (serotype K1)	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPNIH24	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPNIH27	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPNIH29	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPNIH30	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPNIH31	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPNIH32	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPNIH10	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae KPR0928	Human pathogen
+Klebsiella pneumoniae subsp. pneumoniae ATCC 43816 KPPR1	Human pathogen
+Klebsiella pneumoniae KCTC 2242	Human pathogen
+Klebsiella pneumoniae subsp. rhinoscleromatis SB3432	Human pathogen
+Klebsiella pneumoniae 30660/NJST258_1	Human pathogen
+Klebsiella pneumoniae 30684/NJST258_2	Human pathogen
+Klebsiella pneumoniae PMK1	Human pathogen
+Klebsiella pneumoniae blaNDM-1	Human pathogen
+Klebsiella pneumoniae Kp52.145	Human pathogen, Animal pathogen
+Klebsiella michiganensis E718	Human pathogen
+Klebsiella oxytoca KONIH1	Human pathogen
+Klebsiella quasipneumoniae	Human pathogen
+Klebsiella aerogenes EA1509E	Human pathogen
+Klebsiella quasivariicola	Human pathogen
+Klebsiella huaxiensis	Human pathogen
+Citrobacter rodentium	Animal pathogen
+Citrobacter koseri	Human pathogen
+Raoultella planticola	Human pathogen, Animal pathogen
+Raoultella terrigena	Human pathogen
+Cedecea neteri M006	Human pathogen
+Kosakonia cowanii	Human pathogen
+Yersinia pestis CO92 (biovar Orientalis)	Human pathogen, Animal pathogen
+Yersinia pestis KIM10+ (biovar Mediaevalis)	Human pathogen, Animal pathogen
+Yersinia pestis Antiqua (biovar Antiqua)	Human pathogen, Animal pathogen
+Yersinia pestis Nepal516 (biovar Antiqua)	Human pathogen, Animal pathogen
+Yersinia pestis 91001 (biovar Microtus)	Animal pathogen
+Yersinia pestis Pestoides F (biovar Antiqua)	Human pathogen, Animal pathogen
+Yersinia pestis Angola	Human pathogen, Animal pathogen
+Yersinia pestis Z176003	Animal pathogen
+Yersinia pestis D106004	Human pathogen
+Yersinia pestis D182038	Human pathogen
+Yersinia pseudotuberculosis IP 32953 (serotype I)	Human pathogen, Animal pathogen
+Yersinia pseudotuberculosis IP 31758 (serotype O:1b)	Human pathogen
+Yersinia pseudotuberculosis ATCC 6904	Human pathogen
+Yersinia enterocolitica subsp. enterocolitica 8081 (serotype 0:8)	Human pathogen
+Yersinia enterocolitica subsp. palearctica 105.5R(r) (serotype:O:9)	Human pathogen
+Yersinia enterocolitica subsp. palearctica Y11 (serotype:0:3)	Human pathogen
+Yersinia enterocolitica FORC_002	Human pathogen
+Serratia marcescens SM39	Human pathogen
+Serratia proteamaculans	Human pathogen
+Pectobacterium atrosepticum SCRI1043	Plant pathogen
+Pectobacterium atrosepticum JG10-08	Plant pathogen
+Pectobacterium atrosepticum 21A	Plant pathogen
+Pectobacterium carotovorum subsp. carotovorum PC1	Plant pathogen
+Pectobacterium carotovorum subsp. carotovorum PCC21	Plant pathogen
+Pectobacterium odoriferum	Plant pathogen
+Pectobacterium parmentieri WPP163	Plant pathogen
+Pectobacterium parmentieri RNS08.42.1A	Plant pathogen
+Pectobacterium parmentieri SCC3193	Plant pathogen
+Pectobacterium wasabiae	Plant pathogen
+Pectobacterium brasiliense	Plant pathogen
+Pectobacterium punjabense	Plant pathogen
+Dickeya dadantii 3937	Plant pathogen
+Dickeya chrysanthemi	Plant pathogen
+Dickeya zeae Ech586	Plant pathogen
+Dickeya zeae EC1	Plant pathogen
+Dickeya solani IPO 2222	Plant pathogen
+Dickeya fangzhongdai DSM 101947	Plant pathogen
+Dickeya dianthicola	Plant pathogen
+Musicola paradisiaca	Plant pathogen
+Brenneria rubrifaciens	Plant pathogen
+Brenneria nigrifluens	Plant pathogen
+Erwinia amylovora CFBP1430	Plant pathogen
+Erwinia amylovora ATCC 49946	Plant pathogen
+Erwinia pyrifoliae Ep1/96	Plant pathogen
+Erwinia pyrifoliae DSM 12163	Plant pathogen
+Erwinia sp. Ejp617	Plant pathogen
+Erwinia persicina	Plant pathogen
+Pantoea ananatis LMG 20103	Plant pathogen
+Pantoea ananatis LMG 5342	Human pathogen
+Pantoea ananatis PA13	Plant pathogen
+Pantoea stewartii subsp. stewartii	Plant pathogen
+Photorhabdus laumondii subsp. laumondii TTO1	Insect pathogen
+Photorhabdus laumondii subsp. laumondii DSPV002N	Insect pathogen
+Photorhabdus asymbiotica	Human pathogen
+Proteus mirabilis HI4320	Human pathogen
+Proteus mirabilis BB2000	Human pathogen
+Xenorhabdus bovienii SS-2004	Insect pathogen
+Xenorhabdus nematophila ATCC 19061	Insect pathogen
+Xenorhabdus doucetiae	Insect pathogen
+Providencia stuartii MRSN 2154	Human pathogen
+Providencia stuartii ATCC 33672	Human pathogen
+Providencia stuartii BE2467	Human pathogen
+Providencia huaxiensis	Human pathogen
+Morganella morganii	Human pathogen
+Edwardsiella ictaluri	Fish pathogen
+Edwardsiella tarda EIB202	Fish pathogen
+Edwardsiella tarda FL6-60	Fish pathogen
+Edwardsiella anguillarum	Fish pathogen
+Edwardsiella piscicida C07-087	Fish pathogen
+Edwardsiella sp. EA181011	Fish pathogen
+Hafnia alvei	Human pathogen
+Plesiomonas shigelloides	Human pathogen
+Haemophilus influenzae Rd KW20 (serotype d)	Human pathogen
+Haemophilus influenzae 86-028NP (nontypeable)	Human pathogen
+Haemophilus influenzae PittEE (nontypeable)	Human pathogen
+Haemophilus influenzae PittGG (nontypeable)	Human pathogen
+Haemophilus influenzae F3031 (nontypeable)	Human pathogen
+Haemophilus influenzae F3047 (nontypeable)	Human pathogen
+Haemophilus influenzae 10810 (serotype b)	Human pathogen
+Haemophilus influenzae KR494 (serotype f)	Human pathogen
+Haemophilus influenzae Hi375	Human pathogen
+Haemophilus ducreyi	Human pathogen
+Glaesserella parasuis SH0165	Animal pathogen
+Glaesserella parasuis ZJ0906	Animal pathogen
+Glaesserella sp. 15-184	Animal pathogen
+Histophilus somni 129PT	Animal pathogen
+Histophilus somni 2336	Animal pathogen
+Pasteurella multocida subsp. multocida Pm70	Animal pathogen, Human pathogen
+Pasteurella multocida subsp. multocida HN06	Human pathogen, Animal pathogen
+Pasteurella multocida 36950	Animal pathogen
+Pasteurella multocida ATCC 43137	Human pathogen
+Pasteurella atlantica	Fish pathogen
+Mannheimia haemolytica USDA-ARS-USMARC-185	Animal pathogen
+Mannheimia haemolytica USDA-ARS-USMARC-183	Animal pathogen
+Mannheimia haemolytica M42548	Animal pathogen
+Mannheimia haemolytica D153	Animal pathogen
+Mannheimia haemolytica D171	Animal pathogen
+Mannheimia haemolytica D174	Animal pathogen
+Mannheimia haemolytica 89010807N	Animal pathogen
+Mannheimia haemolytica 89010807N lktA-	Animal pathogen
+Mannheimia sp. USDA-ARS-USMARC-1261	Animal pathogen
+Mannheimia varigena USDA-ARS-USMARC-1296	Animal pathogen
+Mannheimia varigena USDA-ARS-USMARC-1312	Animal pathogen
+Mannheimia varigena USDA-ARS-USMARC-1388	Animal pathogen
+Mannheimia ovis	Animal pathogen
+Mannheimia granulomatis	Animal pathogen
+Actinobacillus pleuropneumoniae L20 (serotype 5b)	Animal pathogen
+Actinobacillus pleuropneumoniae JL03 (serotype 3)	Animal pathogen
+Actinobacillus pleuropneumoniae AP76 (serotype 7)	Animal pathogen
+Actinobacillus suis H91-0380	Animal pathogen
+Actinobacillus suis ATCC 33415	Animal pathogen
+Aggregatibacter aphrophilus NJ8700	Human pathogen
+Aggregatibacter actinomycetemcomitans D11S-1	Human pathogen
+Aggregatibacter actinomycetemcomitans ANH9381	Human pathogen
+Aggregatibacter actinomycetemcomitans D7S-1	Human pathogen
+Gallibacterium anatis	Animal pathogen
+Bibersteinia trehalosi USDA-ARS-USMARC-188	Animal pathogen
+Bibersteinia trehalosi USDA-ARS-USMARC-189	Animal pathogen
+Bibersteinia trehalosi USDA-ARS-USMARC-190	Animal pathogen
+Avibacterium paragallinarum	Animal pathogen
+Xylella fastidiosa 9a5c	Plant pathogen
+Xylella fastidiosa Temecula1	Plant pathogen
+Xylella fastidiosa M12	Plant pathogen
+Xylella fastidiosa M23	Plant pathogen
+Xylella fastidiosa subsp. fastidiosa GB514	Plant pathogen
+Xylella fastidiosa MUL0034	Plant pathogen
+Xylella fastidiosa subsp. sandyi Ann-1	Plant pathogen
+Xanthomonas campestris pv. campestris ATCC 33913	Plant pathogen
+Xanthomonas campestris pv. campestris 8004	Plant pathogen
+Xanthomonas campestris pv. campestris B100	Plant pathogen
+Xanthomonas campestris pv. raphani	Plant pathogen
+Xanthomonas campestris pv. vesicatoria	Plant pathogen
+Xanthomonas axonopodis pv. citrumelo F1	Plant pathogen
+Xanthomonas citri pv. citri 306	Plant pathogen
+Xanthomonas citri subsp. citri Aw12879	Plant pathogen
+Xanthomonas citri subsp. citri A306	Plant pathogen
+Xanthomonas citri subsp. citri UI6	Plant pathogen
+Xanthomonas citri pv. citri UI7	Plant pathogen
+Xanthomonas citri pv. citri NT17	Plant pathogen
+Xanthomonas citri pv. citri MN10	Plant pathogen
+Xanthomonas citri pv. citri MN11	Plant pathogen
+Xanthomonas citri pv. citri MN12	Plant pathogen
+Xanthomonas citri pv. citri mf20	Plant pathogen
+Xanthomonas citri pv. fuscans	Plant pathogen
+Xanthomonas oryzae pv. oryzae MAFF 311018	Plant pathogen
+Xanthomonas oryzae pv. oryzae KACC 10331	Plant pathogen
+Xanthomonas oryzae pv. oryzae PXO99A	Plant pathogen
+Xanthomonas oryzae pv. oryzae PXO86	Plant pathogen
+Xanthomonas oryzae pv. oryzicola BLS256	Plant pathogen
+Xanthomonas oryzae pv. oryzicola CFBP7342	Plant pathogen
+Xanthomonas albilineans	Plant pathogen
+Xanthomonas translucens	Plant pathogen
+Xanthomonas fragariae	Plant pathogen
+Xanthomonas vesicatoria	Plant pathogen
+Xanthomonas hortorum pv. gardneri	Plant pathogen
+Xanthomonas phaseoli	Plant pathogen
+Xanthomonas theicola	Plant pathogen
+Stenotrophomonas maltophilia K279a	Human pathogen
+Stenotrophomonas maltophilia D457	Human pathogen
+Vibrio cholerae O1 El Tor N16961	Human pathogen
+Vibrio cholerae O1 El Tor FJ147	Human pathogen
+Vibrio cholerae O1 El Tor MS6	Human pathogen
+Vibrio cholerae O1 2010EL-1786	Human pathogen
+Vibrio cholerae O1 2012EL-2176	Human pathogen
+Vibrio cholerae O1 MJ-1236	Human pathogen
+Vibrio cholerae O1 IEC224	Human pathogen
+Vibrio cholerae O1 O395	Human pathogen
+Vibrio cholerae O1 M66-2	Human pathogen
+Vibrio vulnificus CMCP6	Human pathogen
+Vibrio vulnificus YJ016	Human pathogen
+Vibrio vulnificus MO6-24/O	Human pathogen
+Vibrio vulnificus 93U204	Fish pathogen
+Vibrio parahaemolyticus RIMD 2210633	Human pathogen
+Vibrio parahaemolyticus O1:K33 CDC_K4557	Human pathogen
+Vibrio alginolyticus	Human pathogen
+Vibrio atlanticus	Animal pathogen
+Vibrio furnissii	Human pathogen, Animal pathogen
+Vibrio nigripulchritudo	Shrimp pathogen
+Vibrio anguillarum 775	Fish pathogen
+Vibrio anguillarum NB10	Fish pathogen
+Vibrio tubiashii	Shellfish pathogen
+Vibrio europaeus	Shellfish pathogen
+Aliivibrio salmonicida	Animal pathogen
+Aliivibrio wodanis	Fish pathogen
+Pseudomonas aeruginosa PAO1	Human pathogen
+Pseudomonas aeruginosa UCBPP-PA14	Human pathogen, Animal pathogen, Plant pathogen, Denitrification
+Pseudomonas aeruginosa PA7	Human pathogen
+Pseudomonas aeruginosa LESB58	Human pathogen
+Pseudomonas aeruginosa NCGM2.S1	Human pathogen, Denitrification
+Pseudomonas aeruginosa DK2	Human pathogen, Denitrification
+Pseudomonas aeruginosa RP73	Human pathogen
+Pseudomonas aeruginosa PA1	Human pathogen
+Pseudomonas aeruginosa SCV20265	Human pathogen
+Pseudomonas aeruginosa c7447m	Human pathogen
+Pseudomonas putida HB3267	Insect pathogen
+Pseudomonas putida NBRC 14164	Human pathogen
+Pseudomonas syringae pv. tomato DC3000	Plant pathogen
+Pseudomonas syringae pv. syringae B728a	Plant pathogen
+Pseudomonas syringae CC1557	Plant pathogen
+Pseudomonas savastanoi pv. phaseolicola 1448A	Plant pathogen
+Pseudomonas cichorii	Plant pathogen
+Pseudomonas viridiflava	Plant pathogen
+Pseudomonas entomophila	Insect pathogen
+Acinetobacter baumannii ATCC 17978	Human pathogen
+Acinetobacter baumannii AYE	Human pathogen
+Acinetobacter baumannii ACICU	Human pathogen
+Acinetobacter baumannii AB0057	Human pathogen
+Acinetobacter baumannii AB307-0294	Human pathogen
+Acinetobacter baumannii 1656-2	Human pathogen
+Acinetobacter baumannii MDR-ZJ06	Human pathogen
+Acinetobacter baumannii MDR-TJ	Human pathogen
+Acinetobacter baumannii TCDC-AB0715	Human pathogen
+Acinetobacter baumannii TYTH-1	Human pathogen
+Acinetobacter baumannii D1279779	Human pathogen
+Acinetobacter baumannii BJAB07104	Human pathogen
+Acinetobacter baumannii BJAB0715	Human pathogen
+Acinetobacter baumannii BJAB0868	Human pathogen
+Acinetobacter baumannii AbH12O-A2	Human pathogen
+Acinetobacter baumannii AB030	Human pathogen
+Acinetobacter baumannii AB031	Human pathogen
+Acinetobacter baumannii AC29	Human pathogen
+Acinetobacter baumannii LAC-4	Human pathogen
+Acinetobacter haemolyticus	Human pathogen
+Moraxella catarrhalis BBH18	Human pathogen
+Moraxella catarrhalis 25240	Human pathogen
+Moraxella catarrhalis 25239	Human pathogen
+Shewanella khirikhana	Shrimp pathogen
+Moritella viscosa	Fish pathogen
+Coxiella burnetii RSA 493	Human pathogen, Animal pathogen
+Coxiella burnetii RSA 331	Human pathogen
+Coxiella burnetii Dugway 5J108-111	Animal pathogen
+Coxiella burnetii CbuG_Q212	Human pathogen
+Coxiella burnetii CbuK_Q154	Human pathogen
+Legionella pneumophila subsp. pneumophila Philadelphia 1 (serogroup 1)	Human pathogen
+Legionella pneumophila subsp. pneumophila Thunder Bay	Human pathogen
+Legionella pneumophila Lens (serogroup 1)	Human pathogen
+Legionella pneumophila Paris (serogroup 1)	Human pathogen
+Legionella pneumophila Corby	Human pathogen
+Legionella pneumophila 2300/99 Alcoy (serogroup 1)	Human pathogen
+Legionella pneumophila subsp. pneumophila ATCC 43290 (serogroup 12)	Human pathogen
+Legionella longbeachae	Human pathogen
+Legionella sainthelensi	Human pathogen
+Francisella tularensis subsp. tularensis SCHU S4	Human pathogen
+Francisella tularensis subsp. tularensis WY96-3418	Human pathogen
+Francisella tularensis subsp. tularensis NE061598	Human pathogen
+Francisella tularensis subsp. tularensis TI0902	Animal pathogen
+Francisella tularensis subsp. holarctica OSU18	Human pathogen, Animal pathogen
+Francisella tularensis subsp. holarctica FTNF002-00	Human pathogen, Animal pathogen
+Francisella tularensis subsp. holarctica F92	Human pathogen, Animal pathogen
+Francisella philomiragia subsp. philomiragia ATCC 25015 O	Animal pathogen
+Francisella orientalis Toba 04	Fish pathogen
+Piscirickettsia salmonis	Fish pathogen
+Aeromonas hydrophila subsp. hydrophila ATCC 7966	Human pathogen, Animal pathogen
+Aeromonas hydrophila ML09-119	Fish pathogen
+Aeromonas hydrophila subsp. hydrophila AL09-71	Fish pathogen
+Aeromonas hydrophila pc104A	Fish pathogen
+Aeromonas hydrophila AL06-06	Fish pathogen
+Aeromonas salmonicida subsp. salmonicida A449	Fish pathogen
+Aeromonas veronii TH0426	Fish pathogen
+Aeromonas schubertii	Fish pathogen
+Aeromonas caviae	Human pathogen
+Dichelobacter nodosus	Animal pathogen
+Neisseria meningitidis MC58 (serogroup B)	Human pathogen
+Neisseria meningitidis H44/76 (serogroup B)	Human pathogen
+Neisseria meningitidis G2136 (serogroup B)	Human pathogen
+Neisseria meningitidis M01-240149 (serogroup B)	Human pathogen
+Neisseria meningitidis M01-240355 (serogroup B)	Human pathogen
+Neisseria meningitidis M04-240196 (serogroup B)	Human pathogen
+Neisseria meningitidis NZ-05/33 (serogroup B)	Human pathogen
+Neisseria meningitidis Z2491 (serogroup A)	Human pathogen
+Neisseria meningitidis WUE 2594 (serogroup A)	Human pathogen
+Neisseria meningitidis 510612 (serogroup A)	Human pathogen
+Neisseria meningitidis FAM18 (serogroup C)	Human pathogen
+Neisseria meningitidis 053442 (serogroup C)	Human pathogen
+Neisseria meningitidis 8013 (serogroup C)	Human pathogen
+Neisseria gonorrhoeae FA 1090	Human pathogen
+Neisseria gonorrhoeae NCCP11945	Human pathogen
+Neisseria brasiliensis	Human pathogen
+Kingella kingae	Human pathogen
+Chromobacterium violaceum	Human pathogen
+Laribacter hongkongensis	Human pathogen
+Ralstonia solanacearum GMI1000	Plant pathogen
+Ralstonia solanacearum CFBP2957	Plant pathogen
+Ralstonia solanacearum PSI07	Plant pathogen
+Ralstonia solanacearum Po82	Plant pathogen
+Ralstonia solanacearum CMR15	Plant pathogen
+Ralstonia solanacearum FQY_4	Plant pathogen
+Ralstonia solanacearum UY031	Plant pathogen
+Ralstonia pseudosolanacearum	Plant pathogen
+Burkholderia mallei ATCC 23344	Human pathogen, Animal pathogen
+Burkholderia mallei NCTC 10229	Animal pathogen
+Burkholderia mallei NCTC 10247	Human pathogen, Animal pathogen
+Burkholderia pseudomallei K96243	Human pathogen, Animal pathogen
+Burkholderia pseudomallei 1710b	Human pathogen, Animal pathogen
+Burkholderia pseudomallei 1106a	Human pathogen, Animal pathogen
+Burkholderia pseudomallei 668	Human pathogen, Animal pathogen
+Burkholderia pseudomallei MSHR346	Human pathogen
+Burkholderia pseudomallei MSHR305	Human pathogen
+Burkholderia pseudomallei 1026b	Human pathogen, Animal pathogen
+Burkholderia pseudomallei BPC006	Human pathogen
+Burkholderia pseudomallei A79A	Human pathogen
+Burkholderia cenocepacia AU 1054	Human pathogen, Animal pathogen
+Burkholderia cenocepacia HI2424	Human pathogen
+Burkholderia cenocepacia MC0-3	Human pathogen, Plant pathogen
+Burkholderia cenocepacia J2315	Human pathogen, Opportunistic pathogen
+Burkholderia cenocepacia H111	Human pathogen
+Burkholderia stabilis	Human pathogen
+Burkholderia glumae BGR1	Plant pathogen
+Burkholderia gladioli BSR3	Plant pathogen
+Burkholderia plantarii PG1	Plant pathogen
+Burkholderia plantarii ATCC 43733	Plant pathogen
+Pandoraea pnomenusa DSM 16536	Human pathogen
+Pandoraea apista	Human pathogen
+Pandoraea fibrosis	Human pathogen
+Bordetella pertussis Tohama I	Human pathogen, Vaccine strain
+Bordetella pertussis CS	Human pathogen
+Bordetella pertussis B1917	Human pathogen
+Bordetella parapertussis 12822	Human pathogen
+Bordetella bronchiseptica RB50	Animal pathogen, Human pathogen
+Bordetella bronchiseptica S798	Animal pathogen
+Bordetella petrii	Human pathogen, Denitrification
+Bordetella avium	Animal pathogen
+Bordetella holmesii ATCC 51541	Human pathogen
+Bordetella holmesii 44057	Human pathogen
+Bordetella hinzii	Human pathogen
+Bordetella bronchialis	Human pathogen
+Bordetella flabilis	Human pathogen
+Bordetella pseudohinzii	Animal pathogen
+Bordetella sp. H567	Human pathogen
+Achromobacter xylosoxidans NH44784-1996	Human pathogen
+Achromobacter xylosoxidans NBRC 15126 = ATCC 27061	Human pathogen
+Achromobacter insolitus	Human pathogen
+Achromobacter spanius	Human pathogen
+Taylorella equigenitalis MCE9	Animal pathogen
+Taylorella equigenitalis ATCC 35865	Animal pathogen
+Taylorella equigenitalis 14/56	Animal pathogen
+Taylorella asinigenitalis 14/45	Animal pathogen
+Kerstersia gyiorum	Human pathogen
+Acidovorax citrulli	Plant pathogen
+Acidovorax avenae	Plant pathogen
+Janthinobacterium tructae	Fish pathogen
+Herbaspirillum rubrisubalbicans	Plant pathogen
+Helicobacter pylori 26695	Human pathogen
+Helicobacter pylori J99	Human pathogen
+Helicobacter pylori HPAG1	Human pathogen
+Helicobacter pylori Shi470	Human pathogen
+Helicobacter pylori G27	Human pathogen
+Helicobacter pylori P12	Human pathogen
+Helicobacter pylori B38	Human pathogen
+Helicobacter pylori B8	Human pathogen, Animal pathogen
+Helicobacter pylori 908	Human pathogen
+Helicobacter pylori 2017	Human pathogen
+Helicobacter pylori 2018	Human pathogen
+Helicobacter pylori F16	Human pathogen
+Helicobacter pylori F30	Human pathogen
+Helicobacter pylori F32	Human pathogen
+Helicobacter pylori F57	Human pathogen
+Helicobacter pylori v225d	Human pathogen
+Helicobacter pylori SouthAfrica7	Human pathogen
+Helicobacter pylori XZ274	Human pathogen
+Helicobacter pylori Aklavik117	Human pathogen
+Helicobacter pylori Aklavik86	Human pathogen
+Helicobacter pylori oki102	Human pathogen
+Helicobacter pylori oki112	Human pathogen
+Helicobacter pylori oki128	Human pathogen
+Helicobacter pylori oki154	Human pathogen
+Helicobacter pylori oki422	Human pathogen
+Helicobacter pylori oki673	Human pathogen
+Helicobacter pylori oki828	Human pathogen
+Helicobacter pylori oki898	Human pathogen
+Helicobacter pylori UM037	Human pathogen
+Helicobacter pylori UM066	Human pathogen
+Helicobacter pylori BM012A	Human pathogen
+Helicobacter pylori BM012S	Human pathogen
+Helicobacter hepaticus	Animal pathogen
+Helicobacter acinonychis	Animal pathogen
+Helicobacter mustelae	Animal pathogen
+Helicobacter felis	Animal pathogen
+Helicobacter cetorum MIT 00-7128	Animal pathogen
+Helicobacter cinaedi PAGU611	Human pathogen
+Helicobacter cinaedi CCUG 18818 = ATCC BAA-847	Human pathogen
+Helicobacter heilmannii	Animal pathogen, Human pathogen
+Helicobacter sp. MIT 01-6242	Animal pathogen
+Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819	Human pathogen
+Campylobacter jejuni subsp. jejuni 81-176	Human pathogen
+Campylobacter jejuni subsp. jejuni 81116	Human pathogen, Animal pathogen
+Campylobacter jejuni subsp. jejuni ICDCCJ07001	Human pathogen
+Campylobacter jejuni subsp. jejuni M1	Human pathogen
+Campylobacter jejuni subsp. jejuni YH001	Human pathogen
+Campylobacter jejuni RM1221	Human pathogen
+Campylobacter jejuni subsp. doylei 269.97	Human pathogen
+Campylobacter fetus subsp. fetus 82-40	Human pathogen, Animal pathogen
+Campylobacter fetus subsp. fetus 04/554	Animal pathogen
+Campylobacter fetus subsp. venerealis cfvi03/293	Animal pathogen
+Campylobacter fetus subsp. venerealis 97/608	Animal pathogen
+Campylobacter fetus subsp. venerealis 84-112	Human pathogen, Animal pathogen
+Campylobacter curvus	Human pathogen
+Campylobacter concisus 13826	Human pathogen
+Campylobacter lari RM2100	Human pathogen, Animal pathogen
+Campylobacter coli CVM N29710	Human pathogen
+Campylobacter coli 15-537360	Human pathogen
+Campylobacter helveticus	Animal pathogen
+Aliarcobacter butzleri RM4018	Human pathogen
+Lawsonia intracellularis PHE/MN1-00	Animal pathogen
+Lawsonia intracellularis N343	Animal pathogen
+Desulfobulbus oralis	Human pathogen
+Rickettsia prowazekii Madrid E	Human pathogen
+Rickettsia prowazekii Rp22	Human pathogen
+Rickettsia prowazekii Breinl	Human pathogen
+Rickettsia prowazekii NMRC Madrid E	Human pathogen
+Rickettsia typhi Wilmington	Human pathogen
+Rickettsia conorii	Human pathogen
+Rickettsia felis	Human pathogen, Animal pathogen
+Rickettsia rickettsii Sheila Smith	Human pathogen
+Rickettsia rickettsii R	Animal pathogen
+Rickettsia massiliae MTU5	Human pathogen
+Rickettsia africae	Human pathogen
+Rickettsia heilongjiangensis	Human pathogen
+Rickettsia japonica	Human pathogen
+Rickettsia slovaca 13-B	Human pathogen
+Orientia tsutsugamushi Boryong	Human pathogen
+Orientia tsutsugamushi Ikeda	Human pathogen
+Anaplasma marginale St. Maries	Animal pathogen
+Anaplasma marginale Florida	Animal pathogen
+Anaplasma marginale Gypsy Plains	Animal pathogen
+Anaplasma phagocytophilum HZ	Human pathogen
+Anaplasma ovis	Animal pathogen
+Ehrlichia ruminantium Welgevonden (South Africa)	Animal pathogen
+Ehrlichia ruminantium Welgevonden (France)	Animal pathogen
+Ehrlichia ruminantium Gardel	Animal pathogen
+Ehrlichia canis	Animal pathogen
+Ehrlichia chaffeensis Arkansas	Human pathogen
+Ehrlichia muris	Animal pathogen
+Neorickettsia sennetsu	Human pathogen
+Neorickettsia risticii	Animal pathogen
+Neorickettsia findlayensis	Animal pathogen
+Agrobacterium fabrum	Plant pathogen
+Agrobacterium fabacearum Ach5	Plant pathogen
+Agrobacterium vitis	Plant pathogen
+Candidatus Liberibacter asiaticus psy62	Plant pathogen
+Candidatus Liberibacter asiaticus gxpsy	Plant pathogen
+Candidatus Liberibacter asiaticus Ishi-1	Plant pathogen
+Candidatus Liberibacter solanacearum	Plant pathogen
+Candidatus Liberibacter americanus	Plant pathogen
+Candidatus Liberibacter africanus	Plant pathogen
+Brucella melitensis bv. 1 16M	Human pathogen, Animal pathogen, Denitrification
+Brucella melitensis ATCC 23457	Human pathogen, Animal pathogen
+Brucella melitensis M28	Human pathogen, Animal pathogen, Denitrification
+Brucella melitensis M5-90	Animal pathogen, Vaccine strain for animal, Denitrification
+Brucella melitensis NI	Animal pathogen, Denitrification
+Brucella abortus 2308	Human pathogen, Animal pathogen, Denitrification
+Brucella abortus bv. 1 9-941	Human pathogen, Animal pathogen, Denitrification
+Brucella abortus A13334	Animal pathogen, Denitrification
+Brucella suis 1330	Human pathogen, Animal pathogen, Denitrification
+Brucella suis bv. 1	Animal pathogen, Vaccine strain for animal
+Brucella suis bv. 2 Bs143CITA	Animal pathogen
+Brucella suis bv. 2 PT09143	Animal pathogen
+Brucella suis bv. 2 PT09172	Animal pathogen
+Brucella suis ATCC 23445	Animal pathogen, Denitrification
+Brucella suis VBI22	Animal pathogen, Denitrification
+Brucella ovis	Animal pathogen
+Brucella canis ATCC 23365	Animal pathogen, Denitrification
+Brucella canis HSK A52141	Animal pathogen, Denitrification
+Brucella canis Oliveri	Animal pathogen
+Brucella canis SVA13	Animal pathogen
+Brucella microti	Animal pathogen, Denitrification
+Brucella pinnipedialis B2/94	Animal pathogen, Denitrification
+Brucella ceti TE10759-12	Animal pathogen, Denitrification
+Ochrobactrum anthropi ATCC 49188	Human pathogen
+Brucella anthropi	Human pathogen
+Bartonella henselae Houston-1	Human pathogen
+Bartonella quintana Toulouse	Human pathogen
+Bartonella bacilliformis	Human pathogen
+Bartonella tribocorum CIP 105476	Animal pathogen
+Bartonella grahamii	Human pathogen, Animal pathogen
+Bartonella clarridgeiae	Animal pathogen
+Bartonella ancashensis	Human pathogen
+Granulibacter bethesdensis CGDNIH1	Human pathogen, Methylotroph
+Bacillus anthracis Ames	Human pathogen, Animal pathogen
+Bacillus anthracis Ames Ancestor	Human pathogen, Animal pathogen
+Bacillus anthracis A0248	Human pathogen, Animal pathogen
+Bacillus anthracis H9401	Human pathogen, Animal pathogen
+Bacillus anthracis SVA11	Human pathogen, Animal pathogen
+Bacillus anthracis Vollum	Human pathogen
+Bacillus cereus E33L	Animal pathogen
+Bacillus cereus AH187	Human pathogen
+Bacillus cereus B4264	Human pathogen
+Bacillus cereus AH820	Human pathogen
+Bacillus cereus G9842	Human pathogen
+Bacillus cereus 03BB102	Human pathogen
+Bacillus cereus biovar anthracis CI	Human pathogen, Animal pathogen
+Bacillus cereus NC7401	Human pathogen
+Bacillus cytotoxicus	Human pathogen
+Bacillus thuringiensis serovar konkukian 97-27	Human pathogen
+Bacillus thuringiensis Al Hakam	Insect pathogen
+Bacillus thuringiensis BMB171	Insect pathogen
+Bacillus thuringiensis Bt407	Insect pathogen
+Bacillus mycoides KBAB4	Human pathogen
+Bacillus mycoides WSBC 10204	Human pathogen
+Bacillus bombysepticus	Insect pathogen
+Bacillus wiedmannii	Insect pathogen
+Staphylococcus aureus subsp. aureus N315 (MRSA/VSSA)	Human pathogen
+Staphylococcus aureus subsp. aureus Mu50 (MRSA/VISA)	Human pathogen
+Staphylococcus aureus subsp. aureus Mu3 (MRSA/hetero-VISA)	Human pathogen
+Staphylococcus aureus subsp. aureus JH1 (MRSA/VSSA)	Human pathogen
+Staphylococcus aureus subsp. aureus JH9 (MRSA/VISA)	Human pathogen
+Staphylococcus aureus subsp. aureus MW2 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus MSSA476 (MSSA)	Human pathogen
+Staphylococcus aureus subsp. aureus MRSA252 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus COL (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus USA300_TCH1516 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus USA300_FPR3757 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus NCTC8325	Human pathogen
+Staphylococcus aureus subsp. aureus Newman	Human pathogen, Animal pathogen
+Staphylococcus aureus subsp. aureus ED98	Animal pathogen
+Staphylococcus aureus subsp. aureus M013 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus VC40	Human pathogen
+Staphylococcus aureus subsp. aureus ED133	Animal pathogen
+Staphylococcus aureus subsp. aureus JKD6159 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus JKD6008 (MRSA/VISA)	Human pathogen
+Staphylococcus aureus subsp. aureus ECT-R 2 (MSSA)	Human pathogen
+Staphylococcus aureus subsp. aureus T0131 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus 11819-97 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus 71193 (MSSA)	Human pathogen
+Staphylococcus aureus subsp. aureus HO 5096 0412 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus TW20 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST398 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus 6850 (MSSA)	Human pathogen
+Staphylococcus aureus subsp. aureus CN1 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus SA957 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus SA268 (CA-MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus Z172 (MRSA/VISA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/10388 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/10497 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/15532 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/16035 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/18412 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/16125 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/18341 (MRSA)	Human pathogen
+Staphylococcus aureus subsp. aureus ST228/18583 (MRSA)	Human pathogen
+Staphylococcus aureus RF122	Animal pathogen
+Staphylococcus aureus M1 (MRSA)	Human pathogen
+Staphylococcus aureus Bmb9393 (MRSA)	Human pathogen
+Staphylococcus epidermidis RP62A (MRSE)	Human pathogen
+Staphylococcus epidermidis ATCC 12228	Animal pathogen
+Staphylococcus epidermidis PM221	Animal pathogen
+Staphylococcus haemolyticus JCSC1435	Human pathogen
+Staphylococcus saprophyticus	Human pathogen
+Staphylococcus lugdunensis HKU09-01	Human pathogen
+Staphylococcus lugdunensis N920143	Human pathogen
+Staphylococcus pseudintermedius HKU10-03	Animal pathogen
+Staphylococcus pseudintermedius ED99	Animal pathogen
+Staphylococcus hyicus	Animal pathogen
+Staphylococcus capitis subsp. capitis	Human pathogen
+Staphylococcus schleiferi 1360-13	Animal pathogen
+Staphylococcus schleiferi 2317-03	Animal pathogen
+Staphylococcus agnetis	Animal pathogen
+Mammaliicoccus lentus	Human pathogen, Animal pathogen
+Macrococcus canis	Animal pathogen
+Listeria monocytogenes EGD-e (serotype 1/2a)	Human pathogen, Animal pathogen
+Listeria monocytogenes 08-5578 (serotype 1/2a)	Human pathogen, Animal pathogen
+Listeria monocytogenes 08-5923 (serotype 1/2a)	Human pathogen, Animal pathogen
+Listeria monocytogenes SLCC5850 (serotype 1/2a)	Human pathogen, Animal pathogen
+Listeria monocytogenes La111 (serotype 1/2a)	Human pathogen
+Listeria monocytogenes N53-1 (serotype 1/2a)	Human pathogen
+Listeria monocytogenes EGD (serotype 1/2a)	Human pathogen
+Listeria monocytogenes 6179 (serotype 1/2a)	Human pathogen
+Listeria monocytogenes R479a (serotype 1/2a)	Human pathogen
+Listeria monocytogenes Lm60 (serotype 1/2a)	Human pathogen
+Listeria monocytogenes F2365 (serotype 4b)	Human pathogen, Animal pathogen
+Listeria monocytogenes CLIP 80459 (serotype 4b)	Human pathogen, Animal pathogen
+Listeria monocytogenes serotype 4b LL195	Human pathogen
+Listeria monocytogenes 07PF0776 (serotype 4b)	Human pathogen, Animal pathogen
+Listeria monocytogenes L312 (serotype 4b)	Human pathogen, Animal pathogen
+Listeria monocytogenes J1816 (serotype 4b)	Human pathogen
+Listeria monocytogenes J1-220 (serotype 4b)	Human pathogen
+Listeria monocytogenes SLCC2372 (serotype 1/2c)	Human pathogen
+Listeria monocytogenes serotype 7 SLCC2482	Human pathogen, Animal pathogen
+Listeria monocytogenes SLCC2376 (serotype 4c)	Human pathogen, Animal pathogen
+Listeria monocytogenes SLCC2540 (serotype 3b)	Human pathogen
+Listeria monocytogenes ATCC 19117 (serotype 4d)	Human pathogen, Animal pathogen
+Listeria ivanovii subsp. ivanovii PAM 55	Animal pathogen
+Listeria ivanovii subsp. ivanovii WSLC 3010	Animal pathogen
+Listeria ivanovii subsp. londoniensis WSLC 30167	Animal pathogen
+Listeria ivanovii subsp. londoniensis WSLC 30151	Animal pathogen
+Brevibacillus laterosporus	Invertebrate pathogen
+Paenibacillus larvae	Insect pathogen
+Lactococcus garvieae Lg2	Fish pathogen, Human pathogen, Animal pathogen
+Streptococcus pyogenes M1 GAS (serotype M1)	Human pathogen
+Streptococcus pyogenes MGAS5005 (serotype M1)	Human pathogen
+Streptococcus pyogenes M1 476 (serotype M1)	Human pathogen
+Streptococcus pyogenes A20 (serotype M1)	Human pathogen
+Streptococcus pyogenes MGAS8232 (serotype M18)	Human pathogen
+Streptococcus pyogenes MGAS315 (serotype M3)	Human pathogen
+Streptococcus pyogenes SSI-1 (serotype M3)	Human pathogen
+Streptococcus pyogenes MGAS10270 (serotype M2)	Human pathogen
+Streptococcus pyogenes MGAS10750 (serotype M4)	Human pathogen
+Streptococcus pyogenes MGAS2096 (serotype M12)	Human pathogen
+Streptococcus pyogenes MGAS9429 (serotype M12)	Human pathogen
+Streptococcus pyogenes Manfredo (serotype M5)	Human pathogen
+Streptococcus pyogenes MGAS10394 (serotype M6)	Human pathogen
+Streptococcus pyogenes MGAS6180 (serotype M28)	Human pathogen
+Streptococcus pyogenes MGAS15252 (serotype M59)	Human pathogen
+Streptococcus pyogenes MGAS1882 (serotype M59)	Human pathogen
+Streptococcus pyogenes NZ131 (serotype M49)	Human pathogen
+Streptococcus pyogenes Alab49 (serotype M53)	Human pathogen
+Streptococcus pyogenes HSC5 (serotype M14)	Human pathogen
+Streptococcus pyogenes STAB901 (serotype M44)	Human pathogen
+Streptococcus pneumoniae TIGR4 (virulent serotype 4)	Human pathogen
+Streptococcus pneumoniae D39 (virulent serotype 2)	Human pathogen, Animal pathogen
+Streptococcus pneumoniae CGSP14 (serotype 14)	Human pathogen
+Streptococcus pneumoniae G54 (serotype 19F)	Human pathogen, Animal pathogen
+Streptococcus pneumoniae ST556 (serotype 19F)	Human pathogen
+Streptococcus pneumoniae A026 (serotype 19F)	Human pathogen
+Streptococcus pneumoniae ATCC 700669 (serotype 23F ST81 lineage)	Human pathogen
+Streptococcus pneumoniae gamPNI0373 (virulent serotype 1)	Human pathogen
+Streptococcus pneumoniae AP200 (serotype 11A)	Human pathogen
+Streptococcus pneumoniae SPN994038 (serotype 3)	Human pathogen
+Streptococcus pneumoniae SPN994039 (serotype 3)	Human pathogen
+Streptococcus agalactiae 2603 (serotype V)	Human pathogen
+Streptococcus agalactiae NEM316 (serotype III)	Human pathogen
+Streptococcus agalactiae A909 (serotype Ia)	Human pathogen, Animal pathogen
+Streptococcus agalactiae GD201008-001 (serotype Ia)	Fish pathogen
+Streptococcus agalactiae SA20	Fish pathogen
+Streptococcus agalactiae 2-22 (serotype Ib)	Fish pathogen
+Streptococcus agalactiae 09mas018883	Animal pathogen
+Streptococcus agalactiae ILRI005	Animal pathogen
+Streptococcus agalactiae ILRI112	Animal pathogen
+Streptococcus agalactiae 138P	Fish pathogen
+Streptococcus agalactiae COH1	Human pathogen
+Streptococcus agalactiae CNCTC 10/84	Human pathogen
+Streptococcus mutans UA159 (serotype c)	Human pathogen
+Streptococcus mutans NN2025 (serotype c)	Human pathogen
+Streptococcus mutans GS-5 (serotype c)	Human pathogen
+Streptococcus mutans LJ23 (serotype k)	Human pathogen
+Streptococcus sanguinis	Human pathogen
+Streptococcus suis BM407 (serotype 2)	Human pathogen, Animal pathogen
+Streptococcus suis 05ZYH33 (serotype 2)	Human pathogen, Animal pathogen
+Streptococcus suis 98HAH33 (serotype 2)	Human pathogen, Animal pathogen
+Streptococcus suis P1/7 (serotype 2)	Animal pathogen
+Streptococcus suis SC84 (serotype 2)	Human pathogen, Animal pathogen
+Streptococcus suis A7 (serotype 2)	Animal pathogen
+Streptococcus suis GZ1 (serotype 2)	Human pathogen, Animal pathogen
+Streptococcus suis S735 (serotype 2)	Animal pathogen
+Streptococcus suis SC070731 (serotype 2)	Animal pathogen
+Streptococcus suis ST3 (serotype 3)	Animal pathogen
+Streptococcus suis D12 (serotype 9)	Animal pathogen
+Streptococcus suis D9 (serotype 7)	Animal pathogen
+Streptococcus suis JS14 (serotype 14)	Animal pathogen
+Streptococcus suis SS12 (serotype 1/2)	Animal pathogen
+Streptococcus suis ST1 (serotype 1)	Animal pathogen
+Streptococcus gordonii	Human pathogen
+Streptococcus equi subsp. zooepidemicus MGCS10565	Animal pathogen, Human pathogen
+Streptococcus equi subsp. zooepidemicus H70	Animal pathogen
+Streptococcus equi subsp. zooepidemicus ATCC 35246	Animal pathogen
+Streptococcus equi subsp. equi 4047	Animal pathogen
+Streptococcus uberis	Animal pathogen
+Streptococcus dysgalactiae subsp. equisimilis GGS_124	Animal pathogen
+Streptococcus dysgalactiae subsp. equisimilis ATCC 12394	Human pathogen
+Streptococcus dysgalactiae subsp. equisimilis RE378	Human pathogen
+Streptococcus dysgalactiae subsp. equisimilis 167	Human pathogen
+Streptococcus gallolyticus UCN34	Human pathogen, Animal pathogen
+Streptococcus gallolyticus subsp. gallolyticus ATCC BAA-2069	Human pathogen, Animal pathogen
+Streptococcus gallolyticus subsp. gallolyticus ATCC 43143	Human pathogen
+Streptococcus parauberis	Fish pathogen
+Streptococcus parasanguinis FW213	Human pathogen
+Streptococcus salivarius CCHSS3	Human pathogen
+Streptococcus salivarius 57.I	Human pathogen
+Streptococcus pseudopneumoniae	Human pathogen
+Streptococcus intermedius B196	Human pathogen
+Streptococcus intermedius C270	Human pathogen
+Streptococcus anginosus C1051	Human pathogen
+Streptococcus anginosus C238	Human pathogen
+Streptococcus anginosus SA1	Human pathogen
+Streptococcus constellatus subsp. pharyngis C1050	Human pathogen
+Streptococcus constellatus subsp. pharyngis C232	Human pathogen
+Streptococcus constellatus subsp. pharyngis C818	Human pathogen
+Streptococcus iniae SF1	Fish pathogen
+Streptococcus iniae ISET0901	Fish pathogen
+Streptococcus iniae SFST01-82	Fish pathogen
+Streptococcus ilei I-G2	Human pathogen
+Streptococcus ilei I-P16	Human pathogen
+Streptococcus sp. VT 162	Human pathogen
+Streptococcus sp. NPS 308	Human pathogen
+Streptococcus periodonticum	Human pathogen
+Streptococcus pluranimalium	Animal pathogen
+Leuconostoc mesenteroides subsp. mesenteroides J18	Plant pathogen
+Weissella ceti WS08	Fish pathogen
+Weissella ceti WS74	Fish pathogen
+Weissella ceti WS105	Fish pathogen
+Enterococcus faecalis V583	Human pathogen
+Enterococcus faecalis DENG1	Human pathogen
+Enterococcus faecium Aus0004	Human pathogen
+Enterococcus faecium Aus0085	Human pathogen
+Enterococcus faecium DO	Human pathogen
+Enterococcus faecium T110	Human pathogen
+Enterococcus avium	Human pathogen
+Melissococcus plutonius ATCC 35311	Insect pathogen
+Melissococcus plutonius DAT561	Insect pathogen
+Aerococcus urinae CCUG36881	Human pathogen
+Aerococcus sanguinicola	Human pathogen
+Aerococcus christensenii	Human pathogen
+Aerococcus urinaehominis	Human pathogen
+Clostridium perfringens 13	Human pathogen, Animal pathogen
+Clostridium perfringens ATCC 13124	Human pathogen
+Clostridium perfringens SM101	Human pathogen
+Clostridium tetani E88	Human pathogen, Animal pathogen, Vaccine strain
+Clostridium botulinum A ATCC 3502	Human pathogen, Animal pathogen
+Clostridium botulinum A ATCC 19397	Human pathogen
+Clostridium botulinum A Hall	Human pathogen
+Clostridium botulinum A2	Human pathogen
+Clostridium botulinum A3 Loch Maree	Human pathogen
+Clostridium botulinum B1 Okra	Human pathogen
+Clostridium botulinum Ba4	Human pathogen
+Clostridium botulinum BKT015925	Animal pathogen
+Clostridium botulinum E3	Human pathogen
+Clostridium botulinum F Langeland	Human pathogen
+Clostridium botulinum F 230613	Human pathogen, Animal pathogen
+Clostridium botulinum H04402 065	Human pathogen
+Clostridium chauvoei	Animal pathogen
+Clostridioides difficile 630	Human pathogen
+Clostridioides difficile CD196	Human pathogen
+Clostridioides difficile R20291	Human pathogen
+Finegoldia magna	Human pathogen
+Parvimonas micra	Human pathogen
+Acidaminococcus fermentans	Animal pathogen, Human pathogen
+Acidaminococcus intestini	Human pathogen
+Erysipelothrix rhusiopathiae Fujisawa	Animal pathogen, Human pathogen
+Erysipelothrix rhusiopathiae SY1027	Animal pathogen
+Erysipelothrix piscisicarius	Fish pathogen
+Mycoplasma genitalium G37	Human pathogen
+Mycoplasma genitalium M2288	Human pathogen
+Mycoplasma genitalium M2321	Human pathogen
+Mycoplasma genitalium M6282	Human pathogen
+Mycoplasma genitalium M6320	Human pathogen
+Mycoplasma pneumoniae M129	Human pathogen
+Mycoplasma pneumoniae 309	Human pathogen
+Mycoplasma pneumoniae FH	Human pathogen
+Mycoplasma pneumoniae M129-B7	Human pathogen
+Mycoplasma penetrans	Human pathogen
+Mycoplasma gallisepticum R(low)	Animal pathogen
+Mycoplasma gallisepticum R(high)	Animal pathogen
+Mycoplasma gallisepticum F	Animal pathogen, Vaccine strain for animal
+Mycoplasma gallisepticum NC06_2006.080-5-2P	Animal pathogen
+Mycoplasma gallisepticum NC95_13295-2-2P	Animal pathogen
+Mycoplasma gallisepticum NY01_2001.047-5-1P	Animal pathogen
+Mycoplasma gallisepticum VA94_7994-1-7P	Animal pathogen
+Mycoplasma gallisepticum WI01_2001.043-13-2P	Animal pathogen
+Mycoplasma gallisepticum CA06_2006.052-5-2P	Animal pathogen
+Mycoplasma gallisepticum NC08_2008.031-4-3P	Animal pathogen
+Mycoplasma gallisepticum NC96_1596-4-2P	Animal pathogen
+Mycoplasma mycoides subsp. mycoides SC PG1	Animal pathogen
+Mycoplasma mycoides subsp. mycoides SC Gladysdale	Animal pathogen
+Mycoplasma mycoides subsp. mycoides izsam_mm5713	Animal pathogen
+Mycoplasma mycoides subsp. capri LC 95010	Animal pathogen
+Mycoplasma capricolum subsp. capricolum ATCC 27343	Animal pathogen
+Mycoplasma capricolum subsp. capripneumoniae 9231-Abomsa	Animal pathogen
+Mycoplasma capricolum subsp. capripneumoniae F38	Animal pathogen
+Mycoplasma capricolum subsp. capripneumoniae ILRI181	Animal pathogen
+Mycoplasma capricolum subsp. capripneumoniae 87001	Animal pathogen
+Mycoplasma leachii PG50	Animal pathogen
+Mycoplasma mobile	Fish pathogen
+Mycoplasma hyopneumoniae 232	Animal pathogen
+Mycoplasma hyopneumoniae 7448	Animal pathogen
+Mycoplasma hyopneumoniae 168	Animal pathogen
+Mycoplasma hyopneumoniae 7422	Animal pathogen
+Mycoplasma arthritidis	Animal pathogen
+Mycoplasma conjunctivae	Animal pathogen
+Mycoplasma hominis ATCC 23114	Human pathogen
+Mycoplasma crocodyli	Animal pathogen
+Mycoplasma hyorhinis HUB-1	Animal pathogen
+Mycoplasma hyorhinis GDL-1	Animal pathogen
+Mycoplasma hyorhinis SK76	Animal pathogen
+Mycoplasma haemofelis Langford 1	Animal pathogen
+Mycoplasma haemofelis Ohio2	Animal pathogen
+Mycoplasma suis Illinois	Animal pathogen
+Mycoplasma suis KI3806	Animal pathogen
+Mycoplasma putrefaciens KS1	Animal pathogen
+Mycoplasma putrefaciens Mput9231	Animal pathogen
+Mycoplasma haemocanis	Animal pathogen
+Mycoplasma wenyonii	Animal pathogen
+Candidatus Mycoplasma haemolamae	Animal pathogen
+Mycoplasma ovis	Animal pathogen
+Mycoplasma bovoculi	Animal pathogen
+Mycoplasma flocculare	Animal pathogen
+Mycoplasma canadense	Animal pathogen
+Mycoplasma phocidae	Animal pathogen
+Mycoplasma cloacale	Animal pathogen
+Mycoplasma amphoriforme	Human pathogen
+Mycoplasma anserisalpingitidis	Animal pathogen
+Mycoplasma phocicerebrale	Animal pathogen
+Mycoplasma anseris	Animal pathogen
+Mycoplasma nasistruthionis	Animal pathogen
+Mycoplasma struthionis	Animal pathogen
+Mycoplasmopsis californica	Animal pathogen
+Mycoplasmopsis californicum	Animal pathogen
+Mycoplasmopsis gallinacea	Animal pathogen
+Mycoplasma pulmonis	Animal pathogen
+Mycoplasma synoviae 53	Animal pathogen
+Mycoplasma agalactiae PG2	Animal pathogen
+Mycoplasma agalactiae 5632	Animal pathogen
+Mycoplasmopsis fermentans JER	Human pathogen
+Mycoplasma fermentans M64	Human pathogen
+Mycoplasmopsis bovis PG45	Animal pathogen
+Mycoplasma bovis Hubei-1	Animal pathogen
+Mycoplasma bovis HB0801	Animal pathogen
+Mycoplasma cynos	Animal pathogen
+Mycoplasma arginini	Animal pathogen
+Mycoplasma pullorum	Animal pathogen
+Mycoplasma bovigenitalium	Animal pathogen
+Mycoplasmopsis bovirhinis	Animal pathogen
+Mycoplasmopsis anatis	Animal pathogen
+Mycoplasmopsis phocirhinis	Animal pathogen
+Mycoplasmopsis felis	Animal pathogen
+Ureaplasma parvum serovar 3 ATCC 700970	Human pathogen
+Ureaplasma parvum serovar 3 ATCC 27815	Human pathogen
+Ureaplasma parvum serovar 3 SV3F4	Human pathogen
+Ureaplasma urealyticum	Human pathogen
+Onion yellows phytoplasma OY-M	Plant pathogen
+Dolichospermum sp. UHCC 0315A	Photosynthesis, Animal pathogen
+Chlamydia trachomatis D/UW-3/CX	Human pathogen
+Chlamydia trachomatis D/SotonD1	Human pathogen
+Chlamydia trachomatis D/SotonD5	Human pathogen
+Chlamydia trachomatis D/SotonD6	Human pathogen
+Chlamydia trachomatis A/HAR-13	Human pathogen
+Chlamydia trachomatis A2497	Human pathogen
+Chlamydia trachomatis A/363	Human pathogen
+Chlamydia trachomatis A/5291	Human pathogen
+Chlamydia trachomatis A/7249	Human pathogen
+Chlamydia trachomatis L1/1322/p2	Human pathogen
+Chlamydia trachomatis L1/115	Human pathogen
+Chlamydia trachomatis L1/224	Human pathogen
+Chlamydia trachomatis L1/440/LN	Human pathogen
+Chlamydia trachomatis 434/Bu	Human pathogen
+Chlamydia trachomatis L2/25667R	Human pathogen
+Chlamydia trachomatis L2/434/Bu(f)	Human pathogen
+Chlamydia trachomatis L2/434/Bu(i)	Human pathogen
+Chlamydia trachomatis L2b/UCH-1/proctitis	Human pathogen
+Chlamydia trachomatis L2b/UCH-2	Human pathogen
+Chlamydia trachomatis L2b/LST	Human pathogen
+Chlamydia trachomatis L2b/CV204	Human pathogen
+Chlamydia trachomatis L2b/Ams1	Human pathogen
+Chlamydia trachomatis L2b/Ams2	Human pathogen
+Chlamydia trachomatis L2b/Ams3	Human pathogen
+Chlamydia trachomatis L2b/Ams4	Human pathogen
+Chlamydia trachomatis L2b/Ams5	Human pathogen
+Chlamydia trachomatis L2b/Canada1	Human pathogen
+Chlamydia trachomatis L2b/Canada2	Human pathogen
+Chlamydia trachomatis L2b/795	Human pathogen
+Chlamydia trachomatis L2b/8200/07	Human pathogen
+Chlamydia trachomatis L2c	Human pathogen
+Chlamydia trachomatis L3/404/LN	Human pathogen
+Chlamydia trachomatis B/Jali20/OT	Human pathogen
+Chlamydia trachomatis B/TZ1A828/OT	Human pathogen
+Chlamydia trachomatis E/11023	Human pathogen
+Chlamydia trachomatis E/150	Human pathogen
+Chlamydia trachomatis Sweden2	Human pathogen
+Chlamydia trachomatis E/SW3	Human pathogen
+Chlamydia trachomatis E/Bour	Human pathogen
+Chlamydia trachomatis E/SotonE4	Human pathogen
+Chlamydia trachomatis E/SotonE8	Human pathogen
+Chlamydia trachomatis F/SW4	Human pathogen
+Chlamydia trachomatis F/SW5	Human pathogen
+Chlamydia trachomatis F/SWFPminus	Human pathogen
+Chlamydia trachomatis F/SotonF3	Human pathogen
+Chlamydia trachomatis F/11-96	Human pathogen
+Chlamydia trachomatis G/11074	Human pathogen
+Chlamydia trachomatis G/11222	Human pathogen
+Chlamydia trachomatis G/9301	Human pathogen
+Chlamydia trachomatis G/9768	Human pathogen
+Chlamydia trachomatis G/SotonG1	Human pathogen
+Chlamydia trachomatis IU824	Human pathogen
+Chlamydia trachomatis IU888	Human pathogen
+Chlamydia trachomatis Ia/SotonIa1	Human pathogen
+Chlamydia trachomatis Ia/SotonIa3	Human pathogen
+Chlamydia trachomatis K/SotonK1	Human pathogen
+Chlamydia trachomatis C/TW-3	Human pathogen
+Chlamydia muridarum Nigg	Animal pathogen
+Chlamydia muridarum Nigg3 clone G0.1.1	Animal pathogen
+Chlamydia muridarum Nigg3 clone G28.38.1	Animal pathogen
+Chlamydia pneumoniae CWL029	Human pathogen
+Chlamydia pneumoniae AR39	Human pathogen
+Chlamydia pneumoniae J138	Human pathogen
+Chlamydia pneumoniae TW-183	Human pathogen
+Chlamydia pneumoniae LPCoLN	Animal pathogen
+Chlamydia pecorum E58	Animal pathogen
+Chlamydia pecorum P787	Animal pathogen
+Chlamydia pecorum PV3056/3	Animal pathogen
+Chlamydia pecorum W73	Animal pathogen
+Chlamydia psittaci 6BC	Human pathogen, Animal pathogen
+Chlamydia psittaci 01DC11	Animal pathogen
+Chlamydia psittaci 02DC15	Animal pathogen
+Chlamydia psittaci 08DC60	Human pathogen, Animal pathogen
+Chlamydia psittaci C19/98	Animal pathogen
+Chlamydia psittaci RD1	Human pathogen, Animal pathogen
+Chlamydia psittaci 84/55	Animal pathogen
+Chlamydia psittaci M56	Animal pathogen
+Chlamydia psittaci MN	Human pathogen
+Chlamydia psittaci WC	Animal pathogen
+Chlamydia psittaci 01DC12	Animal pathogen
+Chlamydia avium	Animal pathogen
+Chlamydia caviae	Animal pathogen
+Chlamydia abortus S26/3	Human pathogen, Animal pathogen
+Chlamydia abortus AB7	Animal pathogen
+Chlamydia felis Fe/C-56	Animal pathogen
+Chlamydia suis	Animal pathogen
+Waddlia chondrophila	Animal pathogen, Human pathogen
+Simkania negevensis	Human pathogen
+Borreliella burgdorferi B31	Human pathogen, Animal pathogen
+Borreliella burgdorferi ZS7	Human pathogen
+Borreliella burgdorferi N40	Human pathogen
+Borreliella burgdorferi JD1	Human pathogen
+Borreliella bavariensis	Human pathogen
+Borreliella garinii BgVir	Human pathogen
+Borreliella garinii CIP 103362	Human pathogen
+Borrelia afzelii (FLI)	Human pathogen, Animal pathogen
+Borrelia afzelii (Maryland)	Human pathogen
+Borreliella afzelii HLJ01	Human pathogen
+Borreliella afzelii K78	Human pathogen
+Borreliella bissettii	Human pathogen
+Borreliella mayonii	Human pathogen
+Borrelia turicatae	Human pathogen, Animal pathogen
+Borrelia hermsii DAH	Human pathogen
+Borrelia duttonii	Human pathogen
+Borrelia recurrentis	Human pathogen
+Borrelia crocidurae	Human pathogen, Animal pathogen
+Borrelia miyamotoi LB-2001	Human pathogen
+Treponema pallidum subsp. pallidum Nichols	Human pathogen
+Treponema pallidum subsp. pallidum SS14	Human pathogen, Animal pathogen
+Treponema pallidum subsp. pallidum DAL-1	Human pathogen
+Treponema pallidum subsp. pallidum Chicago	Human pathogen
+Treponema pallidum subsp. pallidum Mexico A	Human pathogen
+Treponema pallidum subsp. pallidum Sea 81-4	Human pathogen
+Treponema pallidum subsp. pertenue CDC2	Human pathogen
+Treponema pallidum subsp. pertenue Gauthier	Human pathogen
+Treponema pallidum subsp. pertenue SamoaD	Human pathogen
+Treponema pallidum Fribourg-Blanc	Human pathogen, Animal pathogen
+Treponema denticola	Human pathogen
+Treponema paraluiscuniculi	Animal pathogen
+Treponema pedis	Animal pathogen
+Treponema putidum	Human pathogen
+Treponema sp. OMZ 838	Human pathogen
+Treponema phagedenis	Animal pathogen
+Leptospira interrogans serovar Lai 56601	Human pathogen, Animal pathogen
+Leptospira interrogans serovar Lai IPAV	Human pathogen, Animal pathogen
+Leptospira interrogans serovar Copenhageni	Human pathogen, Animal pathogen
+Leptospira interrogans serovar Linhai	Human pathogen
+Leptospira borgpetersenii JB197	Human pathogen, Animal pathogen
+Leptospira borgpetersenii L550	Human pathogen, Animal pathogen
+Leptospira santarosai	Human pathogen, Animal pathogen
+Leptospira tipperaryensis	Human pathogen, Animal pathogen
+Leptospira mayottensis	Animal pathogen
+Leptospira kmetyi	Human pathogen, Animal pathogen
+Brachyspira hyodysenteriae WA1	Animal pathogen
+Brachyspira hyodysenteriae ATCC 27164	Animal pathogen
+Brachyspira pilosicoli 95/1000	Animal pathogen
+Brachyspira pilosicoli B2904	Animal pathogen
+Brachyspira pilosicoli P43/6/78	Animal pathogen
+Brachyspira pilosicoli WesB	Human pathogen
+Brachyspira intermedia	Animal pathogen
+Brachyspira hampsonii	Animal pathogen
+Fusobacterium nucleatum subsp. nucleatum ATCC 25586	Human pathogen
+Fusobacterium varium	Human pathogen
+Fusobacterium necrophorum subsp. funduliforme	Human pathogen
+Streptobacillus moniliformis	Human pathogen
+Sneathia vaginalis	Human pathogen
+Bacteroides fragilis YCH46	Human pathogen
+Bacteroides fragilis NCTC 9343	Human pathogen
+Bacteroides fragilis 638R	Human pathogen
+Bacteroides fragilis BOB25	Human pathogen
+Bacteroides helcogenes	Animal pathogen
+Porphyromonas gingivalis W83	Human pathogen
+Porphyromonas gingivalis ATCC 33277	Human pathogen
+Porphyromonas gingivalis TDC60	Human pathogen
+Parabacteroides distasonis	Human pathogen
+Odoribacter splanchnicus	Human pathogen
+Flavobacterium psychrophilum JIP02/86	Fish pathogen
+Flavobacterium psychrophilum FPG3	Fish pathogen
+Flavobacterium psychrophilum V3-5	Fish pathogen
+Flavobacterium psychrophilum V4-24	Fish pathogen
+Flavobacterium psychrophilum v4-33	Fish pathogen
+Flavobacterium branchiophilum	Fish pathogen
+Flavobacterium columnare	Fish pathogen
+Capnocytophaga ochracea	Human pathogen
+Capnocytophaga canimorsus	Human pathogen
+Myroides sp. A21	Human pathogen
+Myroides odoratimimus	Human pathogen
+Tenacibaculum dicentrarchi	Fish pathogen
+Tenacibaculum maritimum	Fish pathogen
+Riemerella anatipestifer ATCC 11845 = DSM 15868	Animal pathogen
+Riemerella anatipestifer RA-GD	Animal pathogen
+Riemerella anatipestifer RA-CH-1	Animal pathogen
+Riemerella anatipestifer RA-CH-2	Animal pathogen
+Riemerella anatipestifer CH3	Animal pathogen
+Ornithobacterium rhinotracheale ORT-UMN 88	Animal pathogen
+Elizabethkingia anophelis NUHP1	Human pathogen
+Elizabethkingia anophelis FMS-007	Human pathogen
+Bergeyella cardium	Human pathogen
+Ichthyobacterium seriolicida	Fish pathogen
+Xanthomonas fragariae 	Plant pathogen
+Candidatus Phytoplasma australiense 	Plant pathogen
+Pseudomonas cichorii 	Plant pathogen
+Ralstonia solanacearum 	Plant pathogen
+Xanthomonas phaseoli 	Plant pathogen
+Xanthomonas citri pv. fuscans 	Plant pathogen
+Clavibacter michiganensis subsp. michiganensis 	Plant pathogen
+Clavibacter michiganensis subsp. capsici 	Plant pathogen
+Pseudomonas syringae pv. syringae 	Plant pathogen
+Xanthomonas campestris 	Plant pathogen
+Xanthomonas citri subsp. citri 	Plant pathogen
+Xanthomonas axonopodis pv. citri 306 	Plant pathogen
+Xanthomonas theicola 	Plant pathogen
+Dickeya fangzhongdai DSM 101947 	Plant pathogen
+Brenneria nigrifluens 	Plant pathogen
+Brenneria rubrifaciens 	Plant pathogen
+Pseudomonas syringae 	Plant pathogen
+Rhodococcus fascians 	Plant pathogen
+Pantoea agglomerans	Plant pathogen
+Acidovorax citrulli 	Plant pathogen
+Pectobacterium carotovorum subsp. carotovorum 	Plant pathogen
+Burkholderia glumae 	Plant pathogen
+Pectobacterium atrosepticum 	Plant pathogen
+Pseudomonas aeruginosa	Plant pathogen
+Xanthomonas oryzae pv. oryzae 	Plant pathogen
+Xanthomonas oryzae pv. oryzicola 	Plant pathogen
+Acidovorax avenae 	Plant pathogen
+Burkholderia gladioli 	Plant pathogen
+Dickeya paradisiaca 	Plant pathogen
+Dickeya dadantii 3937 	Plant pathogen
+Erwinia sp. Ejp617 	Plant pathogen
+Erwinia pyrifoliae Ep1/96 	Plant pathogen
+Dickeya chrysanthemi 	Plant pathogen
+Dickeya zeae Ech586 	Plant pathogen
+Dickeya solani 	Plant pathogen
+Pseudomonas aeruginosa UCBPP-PA14 	Plant pathogen
+Pectobacterium parmentieri 	Plant pathogen
+Pectobacterium wasabiae 	Plant pathogen
+Pectobacterium odoriferum 	Plant pathogen
+Pectobacterium brasiliense 	Plant pathogen
+Erwinia persicina 	Plant pathogen
+Leuconostoc mesenteroides	Plant pathogen
+Xanthomonas axonopodis pv. citrumelo F1 	Plant pathogen
+Xanthomonas campestris pv. vesicatoria 	Plant pathogen
+Xanthomonas campestris pv. raphani 	Plant pathogen
+Xanthomonas gardneri 	Plant pathogen
+Xanthomonas vesicatoria 	Plant pathogen
+Agrobacterium tumefaciens 	Plant pathogen
+Pectobacterium carotovorum 	Plant pathogen
+Pseudomonas syringae pv. tomato DC3000 	Plant pathogen
+Bacillus megaterium	Plant pathogen
+Ralstonia pseudosolanacearum 	Plant pathogen
+Clavibacter michiganensis subsp. insidiosus 	Plant pathogen
+Xanthomonas translucens 	Plant pathogen
+Clavibacter michiganensis subsp. sepedonicus 	Plant pathogen
+Pectobacterium parmentieri SCC3193 	Plant pathogen
+Xanthomonas campestris pv. campestris 	Plant pathogen
+Pseudomonas syringae pv. syringae B728a 	Plant pathogen
+Pantoea ananatis 	Plant pathogen
+Clavibacter zhangzhiyongii 	Plant pathogen
+Xylella fastidiosa 9a5c 	Plant pathogen
+Rhizorhapis suberifaciens	Plant pathogen
+Spiroplasma kunkelii 	Plant pathogen
+Agrobacterium tumefaciens C58 	Plant pathogen
+Agrobacterium vitis S4 	Plant pathogen
+Xylella fastidiosa subsp. fastidiosa 	Plant pathogen
+Enterobacter cloacae 	Plant pathogen
+Erwinia amylovora 	Plant pathogen
+Erwinia pyrifoliae 	Plant pathogen
+Clavibacter michiganensis subsp. nebraskensis 	Plant pathogen
+Pseudomonas savastanoi pv. phaseolicola 	Plant pathogen
+Candidatus Liberibacter africanus 	Plant pathogen
+Candidatus Liberibacter americanus 	Plant pathogen
+Candidatus Liberibacter asiaticus 	Plant pathogen
+Xanthomonas albilineans 	Plant pathogen
+Xylella fastidiosa M12 	Plant pathogen
+Xylella fastidiosa M23 	Plant pathogen
+Herbaspirillum rubrisubalbicans 	Plant pathogen
+Xylella fastidiosa 	Plant pathogen
+Xylella fastidiosa Temecula1 	Plant pathogen
+Pseudomonas fluorescens	Plant pathogen
+Candidatus Liberibacter solanacearum 	Plant pathogen
+Leifsonia xyli subsp. xyli 	Plant pathogen
+Streptomyces scabiei 	Plant pathogen
+Burkholderia plantarii 	Plant pathogen
+Burkholderia cepacia	Plant pathogen
+Rathayibacter tritici 	Plant pathogen
+Pseudomonas viridiflava 	Plant pathogen
+Pantoea stewartii subsp. stewartii 	Plant pathogen
+Spiroplasma citri 	Plant pathogen
+Leifsonia xyli subsp. cynodontis 	Plant pathogen
+Rhodococcus sp. PBTS 	Plant pathogen
+Candidatus Phytoplasma mali 	Plant pathogen
+Candidatus Phytoplasma ziziphi 	Plant pathogen
+Candidatus Phytoplasma luffae 	Plant pathogen
+Onion yellows phytoplasma OY-M 	Plant pathogen
+Aster yellows witches'-broom phytoplasma AYWB 	Plant pathogen
+Escherichia coli O157:H7 	Human pathogen
+Escherichia coli O26:H11 	Human pathogen
+Escherichia coli O111:H- 	Human pathogen
+Escherichia coli O103:H2 	Human pathogen
+Escherichia coli O104:H4 	Human pathogen
+Escherichia coli O145:H28 	Human pathogen
+Escherichia coli O127:H6 	Human pathogen
+Escherichia coli O55:H7 	Human pathogen
+Escherichia coli O78:H11 	Human pathogen
+Escherichia coli O139:H28 	Human pathogen
+Escherichia coli (EAEC) 	Human pathogen
+Escherichia coli (UPEC) 	Human pathogen
+Escherichia coli (NMEC) 	Human pathogen
+Escherichia coli ABU 83972 	Human pathogen
+Salmonella enterica subsp. enterica serovar Typhi 	Human pathogen
+Salmonella enterica serovar Paratyphi A 	Human pathogen
+Salmonella enterica serovar Paratyphi B 	Human pathogen
+Salmonella enterica serovar Paratyphi C 	Human pathogen
+Salmonella enterica subsp. enterica serovar Typhimurium 	Human pathogen
+Salmonella enterica subsp. enterica serovar Choleraesuis 	Human pathogen
+Salmonella enterica subsp. enterica serovar Heidelberg 	Human pathogen
+Salmonella enterica subsp. enterica serovar Newport 	Human pathogen
+Salmonella enterica subsp. enterica serovar Schwarzengrund 	Human pathogen
+Salmonella enterica subsp. enterica serovar Agona 	Human pathogen
+Salmonella enterica subsp. enterica serovar Dublin 	Human pathogen
+Salmonella enterica subsp. enterica serovar Enteritidis 	Human pathogen
+Salmonella enterica subsp. enterica Serovar Cubana 	Human pathogen
+Salmonella enterica subsp. arizonae serovar 62:z4,z23:- RSK2980 	Human pathogen
+Shigella flexneri 	Human pathogen
+Shigella sonnei 	Human pathogen
+Shigella boydii 	Human pathogen
+Shigella dysenteriae 	Human pathogen
+Enterobacter cloacae 	Human pathogen
+Enterobacter hormaechei 	Human pathogen
+Cronobacter sakazakii 	Human pathogen
+Cronobacter turicensis 	Human pathogen
+Klebsiella pneumoniae 	Human pathogen
+Klebsiella oxytoca 	Human pathogen
+Klebsiella quasipneumoniae 	Human pathogen
+Klebsiella aerogenes 	Human pathogen
+Klebsiella quasivariicola 	Human pathogen
+Klebsiella sp. WCHKl090001 	Human pathogen
+Citrobacter koseri (infants and immunocompromised) 	Human pathogen
+Yersinia pestis CO92 (biovar Orientalis) 	Human pathogen
+Yersinia pestis KIM (biovar Mediaevalis) 	Human pathogen
+Yersinia pestis Antiqua,Nepal516 (biovar Antiqua) 	Human pathogen
+Yersinia pestis Pestoides F 	Human pathogen
+Yersinia pestis Angola 	Human pathogen
+Yersinia pestis D106004 	Human pathogen
+Yersinia pestis D182038 	Human pathogen
+Yersinia pseudotuberculosis 	Human pathogen
+Yersinia enterocolitica 	Human pathogen
+Serratia marcescens 	Human pathogen
+Serratia proteamaculans 	Human pathogen
+Pantoea ananatis 	Human pathogen
+Proteus mirabilis 	Human pathogen
+Providencia stuartii 	Human pathogen
+Morganella morganii subsp. morganii KT 	Human pathogen
+Hafnia alvei 	Human pathogen
+Haemophilus influenzae 	Human pathogen
+Haemophilus influenzae (nontypeable) 	Human pathogen
+Haemophilus influenzae biogroup aegyptius 	Human pathogen
+Haemophilus ducreyi 	Human pathogen
+Pasteurella multocida 	Human pathogen
+Aggregatibacter aphrophilus 	Human pathogen
+Aggregatibacter actinomycetemcomitans 	Human pathogen
+Stenotrophomonas maltophilia 	Human pathogen
+Vibrio cholerae O1 	Human pathogen
+Vibrio parahaemolyticus 	Human pathogen
+Vibrio vulnificus 	Human pathogen
+Vibrio furnissii 	Human pathogen
+Pseudomonas aeruginosa 	Human pathogen
+Acinetobacter baumannii 	Human pathogen
+Moraxella catarrhalis 	Human pathogen
+Coxiella burnetii 	Human pathogen
+Legionella pneumophila 	Human pathogen
+Legionella longbeachae 	Human pathogen
+Legionella sainthelensi 	Human pathogen
+Francisella tularensis 	Human pathogen
+Aeromonas hydrophila 	Human pathogen
+Aeromonas caviae 	Human pathogen
+Neisseria meningitidis serogroup A 	Human pathogen
+Neisseria meningitidis serogroup B 	Human pathogen
+Neisseria meningitidis serogroup C 	Human pathogen
+Neisseria gonorrhoeae 	Human pathogen
+Chromobacterium violaceum ATCC 12472 	Human pathogen
+Laribacter hongkongensis HLHK9 	Human pathogen
+Burkholderia mallei 	Human pathogen
+Burkholderia pseudomallei 	Human pathogen
+Bordetella pertussis 	Human pathogen
+Bordetella parapertussis 	Human pathogen
+Bordetella petrii 	Human pathogen
+Bordetella hinzii 	Human pathogen
+Bordetella bronchiseptica 	Human pathogen
+Bordetella holmesii 	Human pathogen
+Achromobacter xylosoxidans 	Human pathogen
+Helicobacter pylori 	Human pathogen
+Helicobacter cinaedi 	Human pathogen
+Helicobacter heilmannii 	Human pathogen
+Campylobacter jejuni 	Human pathogen
+Arcobacter butzleri 	Human pathogen
+Rickettsia prowazekii 	Human pathogen
+Rickettsia typhi 	Human pathogen
+Rickettsia akari 	Human pathogen
+Rickettsia rickettsii 	Human pathogen
+Rickettsia conorii 	Human pathogen
+Rickettsia felis 	Human pathogen
+Rickettsia massiliae 	Human pathogen
+Rickettsia africae 	Human pathogen
+Rickettsia japonica 	Human pathogen
+Rickettsia heilongjiangensis 	Human pathogen
+Rickettsia slovaca 	Human pathogen
+Orientia tsutsugamushi 	Human pathogen
+Anaplasma phagocytophilum 	Human pathogen
+Ehrlichia chaffeensis 	Human pathogen
+Neorickettsia sennetsu 	Human pathogen
+Brucella melitensis 	Human pathogen
+Brucella abortus 	Human pathogen
+Brucella suis 	Human pathogen
+Ochrobactrum anthropi 	Human pathogen
+Bartonella henselae (Cat-scratch disease) 	Human pathogen
+Bartonella bacilliformis (Oroya fever and bacillary angiomatosis) 	Human pathogen
+Bartonella quintana (Trench fever and bacillary angiomatosis) 	Human pathogen
+Bartonella grahami (Neuroretinitis) 	Human pathogen
+Candidatus Bartonella ancashi 	Human pathogen
+Bartonella quintana 	Human pathogen
+Granulibacter bethesdensis 	Human pathogen
+Bacillus anthracis 	Human pathogen
+Bacillus cereus 	Human pathogen
+Bacillus cytotoxicus 	Human pathogen
+Bacillus thuringiensis 	Human pathogen
+Staphylococcus aureus 	Human pathogen
+Staphylococcus epidermidis 	Human pathogen
+Staphylococcus saprophyticus 	Human pathogen
+Mammaliicoccus lentus 	Human pathogen
+Staphylococcus lugdunensis 	Human pathogen
+Staphylococcus haemolyticus 	Human pathogen
+Listeria monocytogenes 	Human pathogen
+Lactococcus garvieae 	Human pathogen
+Streptococcus pyogenes 	Human pathogen
+Streptococcus agalactiae 	Human pathogen
+Streptococcus equi 	Human pathogen
+Streptococcus dysgalactiae 	Human pathogen
+Streptococcus pneumoniae 	Human pathogen
+Streptococcus suis 	Human pathogen
+Streptococcus pseudopneumoniae 	Human pathogen
+Streptococcus sanguinis 	Human pathogen
+Streptococcus parasanguinis 	Human pathogen
+Streptococcus gordonii 	Human pathogen
+Streptococcus constellatus 	Human pathogen
+Streptococcus ilei 	Human pathogen
+Streptococcus intermedius 	Human pathogen
+Streptococcus anginosus 	Human pathogen
+Streptococcus mutans 	Human pathogen
+Streptococcus salivarius 	Human pathogen
+Streptococcus gallolyticus 	Human pathogen
+Aerococcus urinae 	Human pathogen
+Clostridium perfringens 	Human pathogen
+Clostridium tetani 	Human pathogen
+Clostridium botulinum 	Human pathogen
+Clostridioides difficile 	Human pathogen
+Enterococcus faecalis 	Human pathogen
+Enterococcus faecium 	Human pathogen
+Enterococcus avium 	Human pathogen
+Erysipelothrix rhusiopathiae 	Human pathogen
+Mycoplasma pneumoniae 	Human pathogen
+Mycoplasma penetrans 	Human pathogen
+Mycoplasma genitalium 	Human pathogen
+Mycoplasma hominis 	Human pathogen
+Ureaplasma urealyticum 	Human pathogen
+Ureaplasma parvum 	Human pathogen
+Mycobacterium tuberculosis 	Human pathogen
+Mycobacterium canettii 	Human pathogen
+Mycobacterium intracellulare 	Human pathogen
+Mycobacterium chimaera 	Human pathogen
+Mycobacterium marinum 	Human pathogen
+Mycobacterium sp. MOTT36Y 	Human pathogen
+Mycobacterium haemophilum 	Human pathogen
+Mycobacterium shigaense 	Human pathogen
+Mycobacterium florentinum 	Human pathogen
+Mycobacterium stomatepiae 	Human pathogen
+Mycobacterium noviomagense 	Human pathogen
+Mycobacterium seoulense 	Human pathogen
+Mycobacterium heckeshornense 	Human pathogen
+Mycobacterium gallinarum 	Human pathogen
+Mycobacterium doricum 	Human pathogen
+Mycobacterium abscessus 	Human pathogen
+Mycobacterium chelonae 	Human pathogen
+Mycobacterium sp. JDM601 	Human pathogen
+Mycolicibacterium aichiense 	Human pathogen
+Mycolicibacterium insubricum 	Human pathogen
+Mycolicibacterium alvei 	Human pathogen
+Mycolicibacterium aubagnense 	Human pathogen
+Mycolicibacterium phocaicum 	Human pathogen
+Mycobacterium leprae 	Human pathogen
+Mycobacterium ulcerans 	Human pathogen
+Corynebacterium diphtheriae 	Human pathogen
+Corynebacterium ulcerans 	Human pathogen
+Nocardia farcinica 	Human pathogen
+Nocardia cyriacigeorgica 	Human pathogen
+Nocardia brasiliensis 	Human pathogen
+Nocardiopsis dassonvillei 	Human pathogen
+Rhodococcus equi 	Human pathogen
+Gordonia bronchialis 	Human pathogen
+Tsukamurella paurometabola 	Human pathogen
+Tsukamurella tyrosinosolvens 	Human pathogen
+Tropheryma whipplei 	Human pathogen
+Propionibacterium acnes 	Human pathogen
+Saccharomonospora viridis 	Human pathogen
+Gardnerella vaginalis 	Human pathogen
+Chlamydia trachomatis 	Human pathogen
+Chlamydophila pneumoniae 	Human pathogen
+Chlamydia psittaci 	Human pathogen
+Simkania negevensis 	Human pathogen
+Borrelia burgdorferi (Lyme disease) 	Human pathogen
+Borrelia garinii 	Human pathogen
+Borrelia afzelii 	Human pathogen
+Borrelia bissettii 	Human pathogen
+Borrelia mayonii 	Human pathogen
+Borrelia recurrentis 	Human pathogen
+Borrelia duttonii 	Human pathogen
+Borrelia hermsii 	Human pathogen
+Borrelia turicatae 	Human pathogen
+Borrelia crocidurae 	Human pathogen
+Treponema pallidum 	Human pathogen
+Treponema pallidum subsp. pertenue 	Human pathogen
+Leptospira interrogans 	Human pathogen
+Leptospira borgpetersenii 	Human pathogen
+Leptospira santarosai 	Human pathogen
+Leptospira kmetyi 	Human pathogen
+Streptobacillus moniliformis 	Human pathogen
+Bacteroides fragilis 	Human pathogen
+Capnocytophaga ochracea 	Human pathogen
+Capnocytophaga canimorsus 	Human pathogen
+Rothia aeria 	Human pathogen
+Cryptobacterium curtum 	Human pathogen
+Fusobacterium nucleatum 	Human pathogen
+Porphyromonas gingivalis 	Human pathogen
+Treponema denticola 	Human pathogen
+Treponema putidum 	Human pathogen
+Treponema sp. OMZ 838 	Human pathogen
+Olsenella uli 	Human pathogen
+Aster yellows witches-broom phytoplasma AYWB	Plant pathogen
+Candidatus Phytoplasma mali	Plant pathogen
+Candidatus Phytoplasma australiense	Plant pathogen
+Strawberry lethal yellows phytoplasma (CPA) NZSb11	Plant pathogen
+Candidatus Phytoplasma solani	Plant pathogen
+Candidatus Phytoplasma ziziphi	Plant pathogen
+Candidatus Phytoplasma luffae	Plant pathogen
+Spiroplasma taiwanense	Insect pathogen
+Spiroplasma apis	Insect pathogen
+Spiroplasma kunkelii	Plant pathogen
+Spiroplasma citri	Plant pathogen
+Spiroplasma floricola	Insect pathogen
+Spiroplasma phoeniceum	Plant pathogen
+Mycobacterium tuberculosis H37Rv	Human pathogen, Animal pathogen
+Mycobacterium tuberculosis CDC1551	Human pathogen
+Mycobacterium tuberculosis F11	Human pathogen
+Mycobacterium tuberculosis KZN 1435	Human pathogen
+Mycobacterium tuberculosis KZN 4207	Human pathogen
+Mycobacterium tuberculosis RGTB327	Human pathogen
+Mycobacterium tuberculosis RGTB423	Human pathogen
+Mycobacterium tuberculosis CCDC5079	Human pathogen
+Mycobacterium tuberculosis CCDC5180	Human pathogen
+Mycobacterium tuberculosis CTRI-2	Human pathogen
+Mycobacterium tuberculosis UT205	Human pathogen
+Mycobacterium tuberculosis Erdman = ATCC 35801	Human pathogen
+Mycobacterium tuberculosis Beijing/NITR203	Human pathogen
+Mycobacterium tuberculosis CAS/NITR204	Human pathogen
+Mycobacterium tuberculosis EAI5/NITR206	Human pathogen
+Mycobacterium tuberculosis EAI5	Human pathogen
+Mycobacterium tuberculosis Haarlem/NITR202	Human pathogen
+Mycobacterium tuberculosis variant bovis AF2122/97	Animal pathogen
+Mycobacterium tuberculosis variant africanum	Human pathogen
+Mycobacterium tuberculosis variant microti	Animal pathogen
+Mycobacterium canettii CIPT 140010059	Human pathogen
+Mycobacterium canettii CIPT 140060008	Human pathogen
+Mycobacterium canettii CIPT 140070008	Human pathogen
+Mycobacterium canettii CIPT 140070010	Human pathogen
+Mycobacterium canettii CIPT 140070017	Human pathogen
+Mycobacterium leprae TN	Human pathogen, Animal pathogen
+Mycobacterium leprae Br4923	Human pathogen
+Mycobacterium avium subsp. paratuberculosis K-10	Animal pathogen
+Mycobacterium avium subsp. paratuberculosis MAP4	Animal pathogen, Human pathogen
+Mycobacterium intracellulare MOTT-02	Human pathogen
+Mycobacterium intracellulare ATCC 13950	Human pathogen
+Mycobacterium intracellulare subsp. chimaera	Human pathogen
+Mycobacterium paraintracellulare	Human pathogen
+Mycobacterium lepraemurium	Animal pathogen
+Mycobacterium ulcerans	Human pathogen
+Mycobacterium marinum M	Human pathogen, Animal pathogen, Fish pathogen
+Mycobacterium sp. MOTT36Y	Human pathogen
+Mycobacterium liflandii	Amphibian pathogen
+Mycobacterium kansasii ATCC 12478	Human pathogen
+Mycobacterium haemophilum	Human pathogen
+Mycobacterium shigaense	Human pathogen
+Mycobacterium florentinum	Human pathogen
+Mycobacterium stomatepiae	Human pathogen
+Mycobacterium grossiae	Human pathogen
+Mycobacterium noviomagense	Human pathogen
+Mycobacterium seoulense	Human pathogen
+Mycobacterium pseudoshottsii	Fish pathogen
+Mycobacterium heckeshornense	Human pathogen
+Mycobacterium gallinarum	Human pathogen
+Mycobacterium koreense	Human pathogen
+Mycolicibacterium duvalii	Human pathogen
+Mycobacterium doricum	Human pathogen
+Mycolicibacterium aichiense	Human pathogen
+Mycolicibacterium insubricum	Human pathogen
+Mycolicibacterium alvei	Human pathogen
+Mycolicibacterium aubagnense	Human pathogen
+Mycolicibacterium phocaicum	Human pathogen
+Mycobacteroides abscessus ATCC 19977	Human pathogen
+Mycobacteroides abscessus subsp. massiliense GO 06	Human pathogen
+Mycobacteroides abscessus subsp. bolletii 50594	Human pathogen
+Mycobacteroides abscessus subsp. massiliense CCUG 48898 = JCM 15300	Human pathogen
+Mycobacteroides chelonae	Human pathogen
+Mycobacterium stephanolepidis	Fish pathogen
+Mycolicibacter sinensis	Human pathogen
+Corynebacterium diphtheriae NCTC 13129	Human pathogen
+Corynebacterium diphtheriae 241	Human pathogen
+Corynebacterium diphtheriae INCA 402	Human pathogen
+Corynebacterium diphtheriae HC01	Human pathogen
+Corynebacterium diphtheriae HC02	Human pathogen
+Corynebacterium diphtheriae HC03	Human pathogen
+Corynebacterium diphtheriae HC04	Human pathogen
+Corynebacterium diphtheriae 31A	Human pathogen
+Corynebacterium diphtheriae BH8	Human pathogen
+Corynebacterium diphtheriae CDCE 8392	Human pathogen
+Corynebacterium diphtheriae PW8	Human pathogen, Vaccine strain
+Corynebacterium diphtheriae VA01	Human pathogen
+Corynebacterium jeikeium	Human pathogen
+Corynebacterium urealyticum DSM 7109	Human pathogen
+Corynebacterium aurimucosum	Human pathogen
+Corynebacterium kroppenstedtii	Human pathogen
+Corynebacterium pseudotuberculosis FRC41	Human pathogen, Animal pathogen
+Corynebacterium pseudotuberculosis 3/99-5	Animal pathogen
+Corynebacterium pseudotuberculosis 316	Animal pathogen
+Corynebacterium pseudotuberculosis P54B96	Animal pathogen
+Corynebacterium pseudotuberculosis 1002	Animal pathogen
+Corynebacterium pseudotuberculosis C231	Animal pathogen
+Corynebacterium pseudotuberculosis I19	Animal pathogen
+Corynebacterium pseudotuberculosis PAT10	Animal pathogen
+Corynebacterium pseudotuberculosis 267	Animal pathogen
+Corynebacterium pseudotuberculosis 31	Animal pathogen
+Corynebacterium pseudotuberculosis 1/06-A	Animal pathogen
+Corynebacterium pseudotuberculosis 42/02-A	Animal pathogen
+Corynebacterium pseudotuberculosis CIP 52.97	Animal pathogen
+Corynebacterium pseudotuberculosis 258	Animal pathogen
+Corynebacterium pseudotuberculosis Cp162	Animal pathogen
+Corynebacterium pseudotuberculosis 48252	Human pathogen, Animal pathogen
+Corynebacterium pseudotuberculosis Ft_2193/67	Animal pathogen
+Corynebacterium resistens	Human pathogen
+Corynebacterium ulcerans BR-AD22	Animal pathogen
+Corynebacterium ulcerans 809	Human pathogen
+Corynebacterium ulcerans 0102	Human pathogen, Animal pathogen
+Corynebacterium ulcerans 210932	Human pathogen, Animal pathogen
+Corynebacterium ulcerans FRC11	Human pathogen
+Corynebacterium argentoratense	Human pathogen
+Corynebacterium imitans	Human pathogen
+Corynebacterium ureicelerivorans	Human pathogen
+Corynebacterium kutscheri	Animal pathogen
+Nocardia farcinica IFM 10152	Human pathogen, Animal pathogen
+Nocardia cyriacigeorgica	Human pathogen
+Nocardia brasiliensis	Human pathogen
+Nocardia seriolae	Fish pathogen
+Nocardia wallacei	Human pathogen
+Rhodococcus hoagii	Human pathogen, Animal pathogen
+Rhodococcus fascians	Plant pathogen
+Rhodococcus sp. PBTS 2	Plant pathogen
+Rhodococcus sp. PBTS 1	Plant pathogen
+Gordonia bronchialis	Human pathogen
+Tsukamurella paurometabola	Human pathogen
+Tsukamurella tyrosinosolvens	Human pathogen
+Streptomyces scabiei	Plant pathogen
+Tropheryma whipplei Twist	Human pathogen
+Tropheryma whipplei TW08/27	Human pathogen
+Leifsonia xyli subsp. xyli CTCB07	Plant pathogen
+Leifsonia xyli subsp. cynodontis DSM 46306	Plant pathogen
+Clavibacter michiganensis subsp. michiganensis	Plant pathogen
+Clavibacter michiganensis subsp. sepedonicus	Plant pathogen
+Clavibacter michiganensis subsp. nebraskensis	Plant pathogen
+Clavibacter michiganensis subsp. insidiosus	Plant pathogen
+Clavibacter michiganensis subsp. capsici	Plant pathogen
+Clavibacter zhangzhiyongii	Plant pathogen
+Rathayibacter toxicus WAC3373	Plant pathogen
+Rathayibacter tritici	Plant pathogen
+Glutamicibacter creatinolyticus	Human pathogen
+Renibacterium salmoninarum	Fish pathogen
+Rothia aeria	Human pathogen
+Jonesia denitrificans	Animal pathogen, Denitrification
+Cutibacterium acnes KPA171202	Human pathogen
+Cutibacterium acnes TypeIA2 P.acn17	Human pathogen
+Cutibacterium acnes TypeIA2 P.acn31	Human pathogen
+Cutibacterium acnes TypeIA2 P.acn33	Human pathogen
+Cutibacterium acnes 266	Human pathogen
+Cutibacterium acnes subsp. defendens ATCC 11828	Human pathogen
+Cutibacterium acnes HL096PA1	Human pathogen
+Cutibacterium acnes KCOM 1861 (= ChDC B594)	Human pathogen
+Nocardiopsis dassonvillei	Human pathogen
+Saccharomonospora viridis	Human pathogen
+Arcanobacterium haemolyticum	Human pathogen, Animal pathogen
+Trueperella pyogenes TP6375	Animal pathogen
+Actinotignum schaalii	Human pathogen
+Actinomyces sp. Chiba101	Animal pathogen
+Gardnerella vaginalis ATCC 14019	Human pathogen
+Cryptobacterium curtum	Human pathogen
+Eggerthella lenta	Human pathogen
+Olsenella uli	Human pathogen
+
+#MPD
+Anaplasma phagocytophilum
+Bacillus anthracis
+Brucella spp
+Burkholderia mallei
+Burkholderia pseudomallei
+Coxiella burnetii
+Francisella tularensis
+Mycobacterium bovis
+Mycobacterium tuberculosis
+Rickettsia spp
+Vibrio cholerae
+Yersinia pestis
+Acinetobacter baumannii
+Acinetobacter lwoffi
+Actinomadura madurae
+Actinomadura pelletieri
+Actinomyces bovis
+Actinomyces gerencseriae
+Actinomyces israelii
+Actinomyces naeslundii
+Aeromonas hydrophila
+Aeromonas punctata
+Afipia spp
+Aggregatibacter actinomycetemcomitans
+Arachnia propionica
+Arcanobacterium equi
+Arcanobacterium haemolyticum
+Bacillus cereus
+Bacteroides fragilis
+Bartonella bacilliformis
+Bartonella clarridgeiae
+Bartonella doshiae
+Bartonella elizabethae
+Bartonella grahamii
+Bartonella henselae
+Bartonella koehlerae
+Bartonella quintana
+Bartonella tribocorum
+Bartonella vinsonii subsp. Vinsonii
+Bordetella bronchiseptica
+Bordetella parapertussis
+Bordetella pertussis
+Borreliella burgdorferi
+Borrelia duttonii
+Borrelia recurrentis
+Borrelia vincenti
+Brachyspira
+Calymmatobacterium granulomatis
+Campylobacter coli
+Campylobacter fetus
+Campylobacter jejuni
+Campylobacter sputorum
+Chlamydophila pneumoniae
+Chlamydophila psittaci
+Chlamydia trachomatis
+Clostridium botulinum
+Clostridioides difficile
+Clostridium equi
+Clostridium haemolyticum
+Clostridium novyi
+Clostridium perfringens
+Clostridium tetani
+Corynebacterium bovis
+Corynebacterium diphtheriae
+Corynebacterium minutissimum
+Corynebacterium pseudotuberculosis
+Corynebacterium striatum
+Corynebacterium ulcerans
+Dermatophilus congolensis
+Edwardsiella tarda
+Ehrlichia Chaffeensis
+Eikenella corrodens
+Enterobacter aerogenes / cloacae
+Enterobacter spp
+Erlichia sennetsu
+Erysipelothrix rhusiopathiae
+Erysipelothrix spp
+Elizabethkingia meningoseptica
+Fluoribacter bozemanae
+Francisella tularensis subsp. novicida
+Fusobacterium necrophorum
+Gardnerella vaginalis
+Haemophilus ducreyi
+Haemophilus influenzae
+Hathewaya histolytica
+Helicobacter pylori
+Kingella kingae
+Klebsiella oxytoca
+Klebsiella pnenmoniae
+Legionella pneumophila
+Leptospira interrogans
+Listeria ivanovii
+Listeria monocytogenes
+Mima polymorpha
+Morganella morganii
+Mycobacterium africanum
+Mycobacterium asiaticum
+Mycobacterium avium
+Mycobacterium chelonae
+Mycobacterium fortuitum
+Other Mycobacterium species
+Mycobacterium kansasii
+Mycobacterium leprae
+Mycobacterium malmoenes
+Mycobacterium microti
+Mycobacterium avium subsp. paratuberculosis
+Mycobacterium scrofulaceum
+Mycobacterium simiae
+Mycobacterium szulgai
+Mycobacterium ulcerans
+Mycobacterium xenopi
+Mycoplasma pneumoniae
+Neisseria gonorrhoeae
+Neisseria meningitidis
+Nocardia asteroides
+Nocardia brasiliensis
+Nocardia carnea
+Nocardia farcinica
+Nocardia nova
+Nocardia otitidiscaviarum
+Nocardia transvalensis
+Paeniclostridium sordellii
+Pasteurella multocida
+Rodentibacter pneumotropicus
+Pathogenic Escherichia coli
+Peptostreptococcus anaerobius
+Plesiomonas shigelloides
+Prevotella spp
+Proteus mirabilis
+Proteus penneri
+Proteus vulgaris
+Providencia alcalifaciens
+Providencia rettgeri
+Pseudomonas aeruginosa
+Pseudonocardia autotrophica
+Rhodococcus equi
+Salmonella
+Serratia liquefaciens
+Serratia marcescens
+Shigella spp
+Staphylococcus aureus
+Staphylococcus epidermidis
+Streptobacillus moniliformis
+Streptococcus pneumoniae
+Streptococcus pyogenes
+Streptococcus spp
+Streptococcus suis
+Treponema carateum
+Treponema pallidum
+Treponema pertenue
+Treponema vincentii
+Trueperella pyogenes
+Ureaplasma urealyticum
+Vibrio vulnificus
+Vibrio spp（non-cholerae)
+Yersinia enterocolitica
+Yersinia pseudotuberculosis
+Mycoplasma genitalium
+neonatal meningitis escherichia coli，NMEC
+Vibrio
+diffusely adherent escherichia coli，DAEC
+uropathogenic escherichia coli，UPEC
+proteus
+mycobacterium
