@@ -149,14 +149,14 @@ rule signal_scanning:
 	params:
 		dir="result/records/"
 	shell:
-		"./bin/FP/codes/TIS -o {params.dir} -g {wildcards.sample} -rd result/wtotri/ -q result/signal/model/ -f result/TISseq/ -d {input.sig} -R"
+		"./bin/FP/codes/TIS -o {params.dir} -g {wildcards.sample} -rd result/Tritisa/ -q result/signal/model/ -f result/TISseq/ -d {input.sig} -R"
 
 
 ## Promoters detection
 
 rule longer_utr_sequence:
 	input:
-		rec="result/Tritia/{sample}.tritisa.rec.dat",
+		rec="result/Tritisa/{sample}.tritisa.rec.dat",
 		genome="result/prokka_out/{sample}/{sample}.fna",
 		dup="result/duplication/{sample}.dup"
 	output:
